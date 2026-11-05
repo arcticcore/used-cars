@@ -1,0 +1,7 @@
+---
+import CarDetail from '../../components/CarDetail.astro';
+import {reviewed} from '../../lib/cars';
+export function getStaticPaths(){return reviewed.map(car=>({params:{id:car.id},props:{car}}));}
+const {car}=Astro.props;
+---
+<CarDetail car={car}/>

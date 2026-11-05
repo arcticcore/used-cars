@@ -4,7 +4,7 @@
 
 En svensk, mobilvänlig faktaguide för begagnade bilar kring 100 000 kr. Besökaren ska förstå skillnader mellan motorvarianter och kunna ta med konkreta frågor till säljaren eller verkstaden. Undvik ett förenklat totalbetyg som får osäkra uppgifter att se exakta ut.
 
-Första versionen är en statiskt genererad webbplats med Astro och TypeScript, som föreslaget teknikval. JSON är datakällan; ingen databas, inloggning eller administration behövs. Webbteknik och beroendeversioner verifieras när implementationen börjar. Genererade HTML-sidor kan hostas på valfri statisk hosting. Ingen hosting är vald eller aktiverad nu.
+Första versionen är en statiskt genererad webbplats med Astro och TypeScript, som föreslaget teknikval. JSON är datakällan; ingen databas, inloggning eller administration behövs. Webbteknik och beroendeversioner verifieras när implementationen börjar. Genererade HTML-sidor kan hostas på valfri statisk hosting. GitHub Pages är vald hosting enligt användarens uppdrag den 5 november 2026.
 
 ## Tre startmodeller
 
@@ -32,7 +32,7 @@ För varje modell:
 - Om/metodik med AI-transparens, informationsbegränsningar och rättelseväg.
 - Bidra-länk till modellens JSON på GitHub och färdigt issueformulär.
 
-Modellsidan visar uttryckligen vad som saknar underlag. En tom problemlista betyder inte att modellen är problemfri. `draft` får inte förekomma bland publicerade modellkort, i publikt sökindex eller i sitemap. Granskade uppgifter äldre än sex månader får en tydlig markering om att uppdatering behövs.
+Modellsidan visar uttryckligen vad som saknar underlag. En tom problemlista betyder inte att modellen är problemfri. `draft` får inte förekomma bland granskade modellkort, i guidernas publika sökindex eller i sitemap. För att testa webbplatsen före faktagranskning visas utkast i en separat sektion ”På arbetsbänken” och på tydligt märkta `/forhandsvisning/`-sidor med `noindex, nofollow`. Dessa sidor visar researchfrågor och proveniens, inte ogranskade motor- eller feluppgifter. Granskade uppgifter äldre än sex månader får en tydlig markering om att uppdatering behövs.
 
 Visuellt: saklig svensk konsumentguide, god typografi, tydliga tabeller på desktop och läsbara variantkort på mobil. Varningar uttrycks med text och inte bara färg. Inga stockbilder eller märkeslogotyper behövs för första versionen.
 
@@ -51,3 +51,7 @@ Granska innehållet 2–4 gånger per år och vid relevanta rättelser. Uppdater
 5. Välj hosting och publicera webbplatsen.
 
 En fjärde bilmodell ska kunna läggas till med endast en ny validerad datafil, utan ändringar i sidkomponenterna. En bidragsgivare ska kunna föreslå en rättelse utan att installera utvecklingsverktyg genom GitHubs webbgränssnitt.
+
+## Implementerat 5 november 2026
+
+Statisk Astro-webbplats med responsiv grafit/lime-design, generiska SVG-bilillustrationer, datadrivna modell- och förhandsvisningssidor, metodsida, 404-sida och sitemap. Sök/märkes-/drivmedelsfilter aktiveras när granskade poster finns. CI kontrollerar data, typer, bygge och interna länkar innan GitHub Pages publicerar. Faktaresearch och mänsklig granskning återstår separat.
