@@ -1,4 +1,3 @@
-import copy
 import json
 import unittest
 from scripts.validate_data import ROOT, validate
