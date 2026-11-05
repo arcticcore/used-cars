@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "bmw-3-series-e90-e91",
+  "brand": "BMW",
+  "model": "3-serie",
+  "generation": "E90/E91",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Planerat researchunderlag. Prisnivåer och tekniska uppgifter är ännu inte verifierade.",
+  "researchTasks": [
+    "Kontrollera svenska annonspriser; jämför sedan och Touring.",
+    "Avgränsa bensin- och dieselmotorer med motorkoder och tillverkningsår.",
+    "Utred vilka motorvarianter som har dokumenterade kamkedjeproblem.",
+    "Skilj dokumenterade fel från allmänna kontrollpunkter för äldre bilar."
+  ],
+  "variants": [],
+  "issues": [],
+  "sources": [],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": "OpenAI",
+    "model": null,
+    "generatedAt": "2026-11-05",
+    "reviewedBy": null,
+    "reviewedAt": null
+  }
+}

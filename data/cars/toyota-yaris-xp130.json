@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "toyota-yaris-xp130",
+  "brand": "Toyota",
+  "model": "Yaris",
+  "generation": "XP130",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Planerat researchunderlag. Prisnivåer och tekniska uppgifter är ännu inte verifierade.",
+  "researchTasks": [
+    "Kontrollera svenska annonspriser för bensin respektive hybrid kring målbudgeten.",
+    "Identifiera motorer, växellådor och årsmodellsskillnader.",
+    "Undersök dokumenterade brister samt kontroll av hybridbatteri där det är relevant.",
+    "Verifiera servicekrav och svenska återkallelser."
+  ],
+  "variants": [],
+  "issues": [],
+  "sources": [],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": "OpenAI",
+    "model": null,
+    "generatedAt": "2026-11-05",
+    "reviewedBy": null,
+    "reviewedAt": null
+  }
+}

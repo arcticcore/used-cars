@@ -1,0 +1,344 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/arcticcore/used-cars/blob/main/schemas/car.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "brand": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "reviewed"
+      ]
+    },
+    "market": {
+      "const": "SE"
+    },
+    "budgetTargetSek": {
+      "const": 100000
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "researchTasks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "variants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "engineCodes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "fuel": {
+            "enum": [
+              "petrol",
+              "diesel",
+              "hybrid",
+              "electric"
+            ]
+          },
+          "yearFrom": {
+            "type": "integer",
+            "minimum": 1900,
+            "maximum": 2100
+          },
+          "yearTo": {
+            "type": "integer",
+            "minimum": 1900,
+            "maximum": 2100
+          },
+          "transmission": {
+            "type": "string",
+            "minLength": 1
+          },
+          "timingDrive": {
+            "enum": [
+              "chain",
+              "belt",
+              "not-applicable",
+              "unknown"
+            ]
+          },
+          "sourceIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "engineCodes",
+          "fuel",
+          "yearFrom",
+          "yearTo",
+          "transmission",
+          "timingDrive",
+          "sourceIds"
+        ]
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "variantIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "symptoms": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "checks": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "evidence": {
+            "enum": [
+              "documented",
+              "reported"
+            ]
+          },
+          "sourceIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "variantIds",
+          "description",
+          "symptoms",
+          "checks",
+          "evidence",
+          "sourceIds"
+        ]
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https?://"
+          },
+          "accessedAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "kind": {
+            "enum": [
+              "manufacturer",
+              "recall",
+              "inspection",
+              "independent-test",
+              "market-listings",
+              "other"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "url",
+          "accessedAt",
+          "kind"
+        ]
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "enum": [
+            "human",
+            "ai-assisted"
+          ]
+        },
+        "provider": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "model": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "generatedAt": {
+          "type": "string",
+          "format": "date"
+        },
+        "reviewedBy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "method",
+        "provider",
+        "model",
+        "generatedAt",
+        "reviewedBy",
+        "reviewedAt"
+      ]
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "brand",
+    "model",
+    "generation",
+    "status",
+    "market",
+    "budgetTargetSek",
+    "summary",
+    "researchTasks",
+    "variants",
+    "issues",
+    "sources",
+    "provenance"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "reviewed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "variants": {
+            "minItems": 1
+          },
+          "sources": {
+            "minItems": 1
+          },
+          "provenance": {
+            "properties": {
+              "reviewedBy": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reviewedAt": {
+                "type": "string",
+                "format": "date"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

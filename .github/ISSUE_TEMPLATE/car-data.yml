@@ -1,0 +1,25 @@
+name: Bildata eller rättelse
+description: Föreslå en bilmodell, uppdatering eller korrigering.
+title: "[Bildata] "
+body:
+  - type: input
+    id: vehicle
+    attributes:
+      label: Bil och motorvariant
+      description: Märke, modell, generation, årsmodell och motorkod om känd.
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Förslag eller rättelse
+      description: Vad ska läggas till eller ändras? Skilj egna erfarenheter från dokumenterade uppgifter.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Källor
+      description: Länkar och vad de stöder. Skriv om underlag saknas.
+    validations:
+      required: true

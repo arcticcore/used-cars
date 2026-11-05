@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "volkswagen-golf-vi",
+  "brand": "Volkswagen",
+  "model": "Golf",
+  "generation": "VI",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Planerat researchunderlag. Prisnivåer och tekniska uppgifter är ännu inte verifierade.",
+  "researchTasks": [
+    "Kontrollera svenska annonspriser och välj relevanta årsmodeller kring målbudgeten.",
+    "Identifiera exakta motorkoder och vilka TSI-varianter som har kedja respektive rem.",
+    "Källbelägg eventuella kedjeproblem och avgränsa berörda motorer och tillverkningsår.",
+    "Separera manuell växellåda och olika DSG-varianter."
+  ],
+  "variants": [],
+  "issues": [],
+  "sources": [],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": "OpenAI",
+    "model": null,
+    "generatedAt": "2026-11-05",
+    "reviewedBy": null,
+    "reviewedAt": null
+  }
+}
