@@ -5,7 +5,7 @@ En JSON-fil per modell och generation i `data/cars/`. Filnamnet ska matcha `id`.
 ## Innehåll för köparen
 
 - `focusYears`: guidens årsurval (`from`, `to`), inte generationens hela tillverkningsperiod. `null` om okänt.
-- `budgetTargetSek`: målbudget, inte prisbedömning.
+- `budgetTargetSek`: målbudget som positivt heltal i kronor, inte prisbedömning. Standardvärdet i mallen är 100 000 kr; varje guide kan ha en egen budget.
 - `priceObservations`: daterade annonsobservationer med beskrivning, årsmodell, miltal i svenska mil, pris i SEK och källreferenser. Ange extra avgifter i beskrivningen. Gamla annonser är historiska prisankare, inte erbjudanden eller marknadsvärderingar.
 - `variants`: annonsnamn, drivmedel, årsavgränsning, motorkoder, växellåda, kamdrivning, `buyerSummary` och källor. Tomma motorkoder är tillåtna endast i utkast; ange uttryckligen kvarstående identifiering. Årsintervall i utkast kan vara researchurval och får inte presenteras som verifierad produktionsperiod.
 - `issues`: högst fem prioriterade punkter totalt, inklusive rost. Ingen utfyllnad med normalt slitage. `category` är `engine`, `transmission`, `rust` eller `other`. `kind` är `known-problem`, `usage-risk` eller `general-check`. En dokumenterad konstruktionsrisk är inte bevis för vanligt förekommande skador.

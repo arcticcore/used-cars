@@ -22,6 +22,8 @@ npm ci
 python -m scripts.new_car --id volvo-v70-p3 --brand Volvo --model V70 --generation P3 --year-from 2010 --year-to 2013
 ```
 
+För en annan målbudget, lägg till exempelvis `--budget-target-sek 350000`.
+
 Åren ovan är ett researchurval, inte verifierad bildata. Hjälparen skapar ett utkast med dagens datum och vägrar skriva över filer. Använder du AI lägger du till `--method ai-assisted --provider LEVERANTÖR`, och `--model-id EXAKT-ID` endast när det är känt. För en befintlig generation uppdaterar du dess fil; skapa inte en ny fil per årsmodell.
 
 Fyll filen enligt [dataformatet](docs/DATA.md). Ange högst fem prioriterade problem, enkel köpartext, rätt motor-/kaross-/marknadsavgränsning och källor. Samla datum och miltal för annonspriser. Saknade belägg blir researchfrågor. Ingen AI, betald tjänst eller API-nyckel krävs.

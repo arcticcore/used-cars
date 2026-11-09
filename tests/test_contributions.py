@@ -18,6 +18,15 @@ class ContributionTests(unittest.TestCase):
             with self.assertRaises(FileExistsError): create_car(*args,output_dir=directory)
             self.assertEqual(path.read_bytes(),original)
 
+    def test_custom_budget_is_validated_and_preserved(self):
+        with tempfile.TemporaryDirectory() as directory:
+            args=('example-car','Example','Car','II',2018,2018)
+            path=create_car(*args,output_dir=directory,budget_target_sek=350000)
+            self.assertEqual(json.loads(path.read_text())['budgetTargetSek'],350000)
+            for budget in [0,-1,350000.5,'350000']:
+                with self.assertRaises(ValueError):
+                    create_car(*args,output_dir=directory,budget_target_sek=budget)
+
     def test_invalid_input_creates_no_file(self):
         with tempfile.TemporaryDirectory() as directory:
             for car_id, start, end in [('../escape',2010,2012),('valid-id',2012,2010)]:

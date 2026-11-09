@@ -36,7 +36,8 @@
       "const": "SE"
     },
     "budgetTargetSek": {
-      "const": 100000
+      "type": "integer",
+      "minimum": 1
     },
     "summary": {
       "type": "string",
