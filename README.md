@@ -2,7 +2,7 @@
 
 Ett öppet kunskapsprojekt för svenska begagnatmarknaden: motorvarianter, dokumenterade brister och kontrollpunkter inför köp. Målbudgeten är cirka 100 000 kronor, inte ett verifierat marknadspris eller en köprekommendation.
 
-**Webbplats:** [Begagnat / 100](https://arcticcore.github.io/used-cars/), byggd med Astro och TypeScript, automatiskt publicerad via GitHub Pages. Golf VI, BMW 3-serie E90/E91 och Toyota Yaris XP130 visas i en separat förhandsvisning som researchutkast. Inga tekniska biluppgifter är ännu granskade.
+**Webbplats:** [Begagnat / 100](https://arcticcore.github.io/used-cars/), byggd med Astro och TypeScript, automatiskt publicerad via GitHub Pages. Golf VII med motoröversikt samt Golf VI, BMW 3-serie E90/E91 och Toyota Yaris XP130 visas i en separat förhandsvisning som researchutkast. Inga tekniska biluppgifter är ännu granskade.
 
 - [Plan för webbplatsen](docs/PLAN.md)
 - [Bidra med en bilmodell eller rättelse](CONTRIBUTING.md)
@@ -46,6 +46,8 @@ npm run build
 npm test
 ```
 
-Alla granskade JSON-poster blir automatiskt guider under `/modeller/`. Utkast visas enbart i den tydligt märkta arbetssektionen och under `/forhandsvisning/`, med `noindex, nofollow`. De ingår inte i guidernas sök/filter eller sitemap. Kontroller för sök och drivmedel visas när minst en granskad guide finns.
+Alla granskade JSON-poster blir automatiskt guider under `/modeller/`. Utkast visas enbart i den tydligt märkta arbetssektionen och under `/forhandsvisning/`, med `noindex, nofollow`. Startsökningen hittar både granskade guider och tydligt separerade utkast. Utkast ingår inte i sitemap. Modellsidan filtrerar varningar efter motor, växellåda och kaross, med försiktiga besked vid saknat underlag.
 
-GitHub Actions bygger och testar på pull requests. Push till `main` publicerar efter godkända kontroller. GitHub Pages använder Actions som källa; webbplatsens basväg är `/used-cars/`. Bilderna är egna generiska SVG-illustrationer och ska inte tolkas som korrekta avbildningar av bilmodeller. Typsnitt hämtas från Google Fonts med lokala fallback-typsnitt.
+GitHub Actions bygger och testar på pull requests. Push till `main` publicerar efter godkända kontroller. GitHub Pages använder Actions som källa; webbplatsens basväg är `/used-cars/`. Designen är ljus och avskalad med systemtypsnitt, utan externa typsnitt eller dekorativa bilillustrationer.
+
+Dataformatet är version 2. Kopiera `data/templates/car.json` för en ny generation och följ `docs/DATA.md`. Golf VII är ett källbelagt innehållsexempel med ofullständig variantidentifiering och utan mänsklig granskning.

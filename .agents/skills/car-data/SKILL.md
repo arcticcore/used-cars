@@ -5,7 +5,7 @@ description: Research, add, correct or refresh Swedish used-car model and engine
 
 # Bildata för svenska begagnatmarknaden
 
-Läs `docs/DATA.md`, `schemas/car.schema.json` och den datapost som ska ändras från repots rot. Följ `CONTRIBUTING.md` för bidragsflödet. Ny post utgår från en befintlig utkastfil och får unikt ID/filnamn.
+Läs `docs/DATA.md`, `schemas/car.schema.json` och den datapost som ska ändras från repots rot. Följ `CONTRIBUTING.md` för bidragsflödet. Ny post utgår från `data/templates/car.json` och får unikt ID/filnamn.
 
 ## Research och avgränsning
 
@@ -26,3 +26,13 @@ Sätt nya och sakligt ändrade poster till `draft`; nollställ mänsklig granskn
 Kör `python scripts/validate_data.py` och `python -m unittest discover -s tests`. Åtgärda struktur- och referensfel. Kontrollera sedan manuellt att länkarna stödjer respektive påstående och rätt motorvariant; CI kan inte avgöra detta.
 
 Redovisa ändrade filer, källor, kontroller och återstående kunskapsluckor. En färdig dataändring kräver ingen ny sidkomponent. Följ användarens uppdrag för commit eller PR; skillen ger inte själv tillstånd att publicera eller kontakta andra.
+
+## Köparguide i format v2
+
+Följ `docs/DATA.md`. Använd högst fem prioriterade problem inklusive rost och högst fem enkla visningsfrågor. Prioritera motorval, kostsamma risker och begripliga symptom; utelämna hjullager, krängningshämmare och långa slitagedelslistor.
+
+Beskriv problem → gäller → du kan märka → vårt råd. Skilj `known-problem`, `usage-risk` och `general-check`. En känd konstruktionsrisk bevisar inte hur vanligt ett fel är. Formulera villkorade råd utan generella ”säker bil”-betyg. Tyst motor eller saknade feluppgifter bevisar inte felfrihet.
+
+Skriv annonsnamn och en kort köparsammanfattning per motor. Lägg motorkoder i detaljerna. Begränsa `appliesTo` efter motor, kaross, växellåda och utrustning; för inte över Golf VI:s kedjevarning till Golf VII. Beskriv eventuella årsbegränsningar i läsbar tillämplighet. Rost ska inte artificiellt kopplas till en motor.
+
+Lagra lästa annonspriser som daterade observationer med miltal och källa, inte som garanti om marknadsvärde. Lägg inte in gissade motorkoder: utkast tillåter tom lista och ska tydligt ange kvarstående avgränsning.

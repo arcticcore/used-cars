@@ -21,17 +21,23 @@ def validate(record):
             errors.append(f'{collection}: duplicate IDs')
     source_ids = {item['id'] for item in record['sources']}
     variant_ids = {item['id'] for item in record['variants']}
-    for item in record['variants'] + record['issues']:
+    for item in record['variants'] + record['issues'] + record['priceObservations']:
         if set(item['sourceIds']) - source_ids:
-            errors.append(f'{item["id"]}: unknown source reference')
+            errors.append(f'{item.get("id", "price")}: unknown source reference')
     for issue in record['issues']:
-        if set(issue['variantIds']) - variant_ids:
+        if set(issue['appliesTo']['variantIds']) - variant_ids:
             errors.append(f'{issue["id"]}: unknown variant reference')
     for variant in record['variants']:
         if variant['yearFrom'] > variant['yearTo']:
             errors.append(f'{variant["id"]}: reversed year range')
+    years = record['focusYears']
+    if years and years['from'] > years['to']:
+        errors.append('reversed focus year range')
+    priorities = [i['priority'] for i in record['issues']]
+    if len(priorities) != len(set(priorities)):
+        errors.append('duplicate issue priorities')
     provenance = record['provenance']
-    dates = [provenance['generatedAt']] + [s['accessedAt'] for s in record['sources']]
+    dates = [p['observedAt'] for p in record['priceObservations']] + [provenance['generatedAt']] + [s['accessedAt'] for s in record['sources']]
     if provenance['reviewedAt']:
         dates.append(provenance['reviewedAt'])
         if provenance['reviewedAt'] < provenance['generatedAt']:

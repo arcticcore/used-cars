@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 2,
+  "id": "marke-modell-generation",
+  "brand": "Märke",
+  "model": "Modell",
+  "generation": "Generation",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Researchutkast. Uppgifter återstår att verifiera.",
+  "researchTasks": [
+    "Identifiera årsmodeller och motorvarianter.",
+    "Samla källor och daterade prisobservationer."
+  ],
+  "variants": [],
+  "issues": [],
+  "sources": [],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": null,
+    "model": null,
+    "generatedAt": "2026-11-05",
+    "reviewedBy": null,
+    "reviewedAt": null
+  },
+  "focusYears": null,
+  "priceObservations": [],
+  "viewingChecklist": []
+}

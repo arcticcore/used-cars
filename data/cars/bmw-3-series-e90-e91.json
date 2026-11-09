@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "bmw-3-series-e90-e91",
   "brand": "BMW",
   "model": "3-serie",
@@ -24,5 +24,8 @@
     "generatedAt": "2026-11-05",
     "reviewedBy": null,
     "reviewedAt": null
-  }
+  },
+  "focusYears": null,
+  "priceObservations": [],
+  "viewingChecklist": []
 }

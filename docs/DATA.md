@@ -1,19 +1,31 @@
-# Dataformat
+# Dataformat version 2
 
-Det maskinläsbara kontraktet finns i `schemas/car.schema.json`. Filnamnet i `data/cars/` ska vara postens `id` följt av `.json`. Kopiera en befintlig utkastfil för att börja.
+En JSON-fil per modell och generation i `data/cars/`. Filnamnet ska matcha `id`. Kontraktet är `schemas/car.schema.json`. Kopiera `data/templates/car.json`, byt identitet och lägg den under `data/cars/`.
 
-- `brand`, `model`, `generation`: identitet, en generation per fil.
-- `budgetTargetSek`: projektets målbudget, inte uppmätt marknadspris.
-- `status`: `draft` eller `reviewed`. Endast `reviewed` är avsett för framtida publicering.
-- `variants`: avgränsade motor-/växellådskombinationer med motorkoder, årsintervall, drivmedel och kamdrivning. Dela upp poster vid tekniska ändringar. Årsintervall måste förklaras i källunderlaget; registreringsår räcker inte alltid för identifiering.
-- `issues`: varje brist hänvisar till `variantIds` och `sourceIds`. Beskriv begränsningar i `description`, och använd inte belagd förekomst som bevis på hög frekvens. `documented` betyder att bristen är dokumenterad, inte att alla exemplar drabbas.
-- `sources`: stabilt ID, titel, full URL, källtyp och faktiskt åtkomstdatum. Länka till relevanta dokument eller sidor, inte till sökresultat.
-- `provenance`: ursprung för den aktuella sammanställningen; `method`, `provider`, `model`, `generatedAt`, `reviewedBy`, `reviewedAt`. Datumformat är YYYY-MM-DD. `generatedAt` används även som sammanställningsdatum för mänskligt skrivet innehåll.
+## Innehåll för köparen
 
-`model` betyder AI-modell under `provenance`, och bilmodell på toppnivån. Skriv det verkliga modell-ID som arbetsverktyget ger; anta inte ett exakt modellnamn utifrån produktnamnet. `null` är tillåtet i utkast när modellidentiteten saknas. Mänskligt sammanställt innehåll har `method: human` och `provider/model: null`; märk inte AI-text som mänsklig enbart för att den har korrekturlästs.
+- `focusYears`: guidens årsurval (`from`, `to`), inte generationens hela tillverkningsperiod. `null` om okänt.
+- `budgetTargetSek`: målbudget, inte prisbedömning.
+- `priceObservations`: daterade annonsobservationer med beskrivning, årsmodell, miltal i svenska mil, pris i SEK och källreferenser. Ange extra avgifter i beskrivningen. Gamla annonser är historiska prisankare, inte erbjudanden eller marknadsvärderingar.
+- `variants`: annonsnamn, drivmedel, årsavgränsning, motorkoder, växellåda, kamdrivning, `buyerSummary` och källor. Tomma motorkoder är tillåtna endast i utkast; ange uttryckligen kvarstående identifiering. Årsintervall i utkast kan vara researchurval och får inte presenteras som verifierad produktionsperiod.
+- `issues`: högst fem prioriterade punkter totalt, inklusive rost. Ingen utfyllnad med normalt slitage. `category` är `engine`, `transmission`, `rust` eller `other`. `kind` är `known-problem`, `usage-risk` eller `general-check`. En dokumenterad konstruktionsrisk är inte bevis för vanligt förekommande skador.
+- Varje problem har unik `priority` (1–5), beskrivning, `symptoms`, `advice`, `action` (`check` eller `resolve-before-buying`) och `sourceIds`. Råd är redaktionell tolkning; källor ska stödja sakpåståenden.
+- `viewingChecklist`: högst fem allmänna, enkla kontrollfrågor. De är inte i sig påståenden om modellfel.
 
-En granskad post kräver minst en källbelagd variant, granskare och granskningsdatum. AI-assisterade granskade poster kräver dessutom leverantör och modellidentitet. Granskaren anges med ett frivilligt offentligt namn eller GitHub-alias. Inga privata personuppgifter, registreringsnummer eller VIN ska läggas till.
+## Vad gäller problemet?
 
-Kör `python scripts/validate_data.py`. Valideraren kontrollerar schema, referenser, ID:n, datum och årsintervall. Den verifierar **inte** att källor stödjer uppgifterna eller att en angiven granskare verkligen har granskat. Det kontrolleras vid PR-granskning.
+`appliesTo` innehåller `variantIds`, `bodyStyles`, `transmissions`, `equipment` och en läsbar `label`. Tom array betyder ingen begränsning i just den dimensionen. Alla tomma arrayer betyder hela generationen. Ange alltid begränsningar för årsmodell och undersökt underlag i `label`; motorvarianternas årsintervall ska avgränsas när det behövs.
 
-Vid en sakändring: sätt status till `draft`, uppdatera proveniens och nollställ `reviewedBy`/`reviewedAt`. Markera `reviewed` först efter faktisk granskning av det nya underlaget. Vid flera AI-körningar dokumenteras detaljerna i PR:n och den senaste sammanställningens modell i posten; tidigare versioner finns i Git-historiken.
+Filtrering använder AND mellan dimensioner och OR inom en array. Okänt val behåller möjliga varningar. Utrustning filtreras inte i första UI-versionen: utrustningsberoende varningar ligger kvar med tydlig villkorstext. Motorn måste inte anges för kaross-/utrustningsproblem. Använd `Halvkombi`, `Kombi`, `Manuell` och `DSG` konsekvent; nya värden får tillkomma via data och visas automatiskt som filterval.
+
+## Källor och granskning
+
+`sourceIds` måste motsvara källor i samma fil. Varje källa har titel, full HTTP(S)-URL, typ och faktiskt åtkomstdatum. Länka inte till sökresultat och kopiera inte artiklar.
+
+`status` är `draft` eller `reviewed`. Utkast kan visas i en separat, uttryckligen märkt förhandsvisning med noindex. De ingår inte i sitemap eller granskat guideutbud. Startsökningen hittar även utkast i deras separata sektion; det är inte ett påstående om granskning.
+
+`provenance` anger sammanställningssätt, verklig AI-leverantör/modell, sammanställningsdatum och faktisk mänsklig granskare/datum. Okänt AI-modell-ID anges som `null`, aldrig gissning. Granskade AI-poster kräver verkligt modell-ID. En människas korrekturläsning gör inte AI-text mänskligt genererad.
+
+Vid sakändring: sätt `draft`, uppdatera proveniens och nollställ granskare/datum. Teknisk migration utan faktabyte ändrar inte ursprungsdatum. Märk inte `reviewed` utan faktisk granskning; Git-historiken bevarar tidigare versioner.
+
+Kör datavalidering och tester enligt README. Kontrollerna bevisar inte att källan stöder en uppgift. Granskaren måste kontrollera sakunderlag, årsintervall, motorkoder och tillämplighet manuellt. Inga privata personuppgifter, VIN eller registreringsnummer ska lagras.

@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 2,
+  "id": "volkswagen-golf-vii",
+  "brand": "Volkswagen",
+  "model": "Golf",
+  "generation": "VII",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Fokus på vanliga bensin- och dieselmotorer kring 100 000 kr. Börja med generationen och motorbeteckningen i annonsen. Underlaget nedan är ett källbelagt exempel som ännu inte har granskats av en människa.",
+  "researchTasks": [
+    "Verifiera motorkoder, exakta årsintervall och växellådsvarianter för svensk marknad.",
+    "Komplettera prisurvalet med fler jämförbara bensin- och dieselannonser.",
+    "Granska vilka karosser och årsmodeller rostunderlaget kan tillämpas på."
+  ],
+  "variants": [
+    {
+      "id": "12-tsi",
+      "label": "1.2 TSI",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell eller DSG – exakt variant återstår att verifiera",
+      "timingDrive": "belt",
+      "sourceIds": [
+        "adac-vii"
+      ],
+      "buyerSummary": "Golf VII:s 1.2 TSI har kamrem. Kontrollera att annonsen avser rätt generation; TSI-namnet ensamt identifierar inte motorn."
+    },
+    {
+      "id": "14-tsi",
+      "label": "1.4 TSI",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell eller DSG – exakt variant återstår att verifiera",
+      "timingDrive": "belt",
+      "sourceIds": [
+        "adac-vii"
+      ],
+      "buyerSummary": "Golf VII:s 1.4 TSI har kamrem. Kontrollera rätt generation och servicehistorik. Kamrem innebär inte att motorn är problemfri."
+    },
+    {
+      "id": "16-tdi",
+      "label": "1.6 TDI",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell eller DSG – exakt variant återstår att verifiera",
+      "timingDrive": "unknown",
+      "sourceIds": [
+        "adac-vii",
+        "vw-diesel"
+      ],
+      "buyerSummary": "Tänk igenom körmönstret. Nästan enbart korta resor passar sämre för diesel med partikelfilter."
+    },
+    {
+      "id": "20-tdi",
+      "label": "2.0 TDI",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell eller DSG – exakt variant återstår att verifiera",
+      "timingDrive": "unknown",
+      "sourceIds": [
+        "adac-vii",
+        "vw-diesel"
+      ],
+      "buyerSummary": "Samma risk med nästan enbart kortkörning. Servicekrav och motorkod behöver verifieras för det aktuella exemplaret."
+    }
+  ],
+  "issues": [
+    {
+      "id": "dsg-jerking",
+      "title": "Automatlådan rycker när bilen börjar rulla",
+      "category": "transmission",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {
+        "variantIds": [
+          "12-tsi",
+          "14-tsi"
+        ],
+        "bodyStyles": [],
+        "transmissions": [
+          "DSG"
+        ],
+        "equipment": [],
+        "label": "Bensin med DSG; exakt växellådsvariant är ännu inte verifierad"
+      },
+      "description": "ADAC nämner ryckig igångkörning med DSG. Underlaget anger inte hur ofta det inträffar eller att varje ryck har samma orsak.",
+      "symptoms": [
+        "Tydliga ryck vid start eller låg fart."
+      ],
+      "advice": "Prova att börja rulla och köra långsamt. Vårt köpråd är att inte köpa ett exemplar med tydliga, oförklarade ryck innan orsaken har kontrollerats. Det är ingen diagnos eller generell avrådan från DSG.",
+      "sourceIds": [
+        "adac-vii"
+      ],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "diesel-short-trips",
+      "title": "Diesel vid nästan enbart kortkörning",
+      "category": "engine",
+      "kind": "usage-risk",
+      "priority": 2,
+      "appliesTo": {
+        "variantIds": [
+          "16-tdi",
+          "20-tdi"
+        ],
+        "bodyStyles": [],
+        "transmissions": [],
+        "equipment": [],
+        "label": "1.6 TDI och 2.0 TDI, särskilt vid korta resor"
+      },
+      "description": "Volkswagen beskriver att korta resor med många stopp kan hindra partikelfiltret från att rena sig ordentligt. Detta är en användningsrisk, inte ett belagt ovanligt vanligt Golf-fel.",
+      "symptoms": [
+        "Körmönstret är viktigare än något enskilt synligt tecken. Fråga hur bilen har använts."
+      ],
+      "advice": "Överväg bensin om du nästan bara kör korta sträckor. Begär utredning av eventuella varningslampor före köp; en kort provtur bevisar inte att filtret är friskt.",
+      "sourceIds": [
+        "vw-diesel"
+      ],
+      "action": "check"
+    },
+    {
+      "id": "rust-front-doors",
+      "title": "Titta efter rost framför framdörrarna",
+      "category": "rust",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {
+        "variantIds": [],
+        "bodyStyles": [
+          "Halvkombi"
+        ],
+        "transmissions": [],
+        "equipment": [],
+        "label": "Testad Golf halvkombi 2013; tillämpning på andra årsmodeller behöver granskas"
+      },
+      "description": "Vi Bilägares test pekar ut fuktsugande material framför framdörrarna som en möjlig framtida rostfälla. Det är en konstruktionsrisk, inte belägg för att alla exemplar rostar.",
+      "symptoms": [
+        "Synlig rost eller lackblåsor i området framför framdörrarna."
+      ],
+      "advice": "Titta på båda sidor. Be om en närmare kontroll om lacken bubblar eller rost syns. Dold rost kan inte uteslutas med en snabb titt. Testets rostskyddsbetyg när bilen var ny beskriver inte skicket idag.",
+      "sourceIds": [
+        "rust-test"
+      ],
+      "action": "check"
+    }
+  ],
+  "sources": [
+    {
+      "id": "adac-vii",
+      "title": "ADAC: Golf VII bensin",
+      "url": "https://assets.adac.de/image/upload/Autodatenbank/GWInfo/gw0259-vw-golf-vii-2012-2020-benziner-bericht.pdf",
+      "kind": "independent-test",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "vw-diesel",
+      "title": "Volkswagen: diesel och korta resor",
+      "url": "https://www.volkswagen.co.uk/en/need-help/need-help-faqs/technology.html",
+      "kind": "manufacturer",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "rust-test",
+      "title": "Vi Bilägare: rosttest Golf 2013",
+      "url": "https://www.vibilagare.se/test/rost/rosttest-volkswagen-golf-2013",
+      "kind": "independent-test",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "price-example",
+      "title": "Blocket: Golf Sportscombi 1.6 TDI DSG 2014",
+      "url": "https://www.blocket.se/mobility/item/20115090",
+      "kind": "market-listings",
+      "accessedAt": "2026-11-09"
+    }
+  ],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": "OpenAI",
+    "model": null,
+    "generatedAt": "2026-11-09",
+    "reviewedBy": null,
+    "reviewedAt": null
+  },
+  "focusYears": {
+    "from": 2013,
+    "to": 2016
+  },
+  "priceObservations": [
+    {
+      "label": "Sportscombi 1.6 TDI DSG, 105 hk. Annonsen anger även 595 kr registreringsavgift.",
+      "year": 2014,
+      "mileageMil": 16000,
+      "priceSek": 99900,
+      "observedAt": "2026-11-09",
+      "sourceIds": [
+        "price-example"
+      ]
+    }
+  ],
+  "viewingChecklist": [
+    "Be säljaren visa vilken generation, motor och växellåda bilen har.",
+    "Be om servicehistorik och kvitton; ett tyst motorljud är ingen garanti.",
+    "Prova start och låg fart. Fråga om tydliga ryck innan du går vidare.",
+    "Titta efter lackblåsor och synlig rost, särskilt framför framdörrarna.",
+    "Prova AC, fönster och lås. Det är allmänna kontroller, inte belagda Golf-fel."
+  ]
+}

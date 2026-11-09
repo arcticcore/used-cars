@@ -1,9 +1,11 @@
 ---
-import CarArt from './CarArt.astro';
-import {url, stale, type Car} from '../lib/cars';
-const {car,index=0,preview=false} = Astro.props as {car:Car;index?:number;preview?:boolean};
-const tones=['#bfcac0','#c8d3e2','#dfc3a3'];
+import {url,type Car} from '../lib/cars';
+const {car,preview=false} = Astro.props as {car:Car;preview?:boolean};
 ---
-<article class="car-card" data-card data-brand={car.brand} data-fuels={car.variants.map(v=>v.fuel).join(' ')} data-search={`${car.brand} ${car.model} ${car.generation}`.toLowerCase()}>
-<a class="card-link" href={url(`${preview?'forhandsvisning':'modeller'}/${car.id}/`)}><div class={`car-image tone-${index%3}`}><span class="card-number">0{index+1} / {car.brand.toUpperCase()}</span><span class="pill">{preview?'UNDER ARBETE':'GRANSKAD GUIDE'}</span><CarArt id={car.id} tone={tones[index%3]} compact={index%2===1}/><span class="art-note">ILLUSTRATION</span></div><div class="card-body"><div class="eyebrow">{car.brand} <span>GEN. {car.generation}</span></div><h3>{car.model}<span class="round-arrow">↗</span></h3><p>{preview?'Vi kartlägger motorerna, skillnaderna och frågorna att ställa före köp.':car.summary}</p><div class="card-meta"><span>{preview?'Research pågår':`Granskad ${car.provenance.reviewedAt}`}</span><span>{preview?'Se förhandsvisning':stale(car.provenance.reviewedAt)?'Uppdatering behövs':'Läs guiden'} →</span></div></div></a>
-</article>
+<li class="model-row" data-model data-search={`${car.brand} ${car.model} ${car.generation}`}>
+  <a href={url(`${preview?'forhandsvisning':'modeller'}/${car.id}/`)}>
+    <div><h3>{car.brand} {car.model} <span>{car.generation}</span></h3>
+    <p>{car.focusYears ? `Fokus ${car.focusYears.from}–${car.focusYears.to}` : 'Årsmodeller kartläggs'} · Målbudget cirka {car.budgetTargetSek.toLocaleString('sv-SE')} kr</p></div>
+    <span class="row-status">{preview?(car.variants.length?'Se innehållsutkast':'Research pågår'):'Läs guiden'} →</span>
+  </a>
+</li>

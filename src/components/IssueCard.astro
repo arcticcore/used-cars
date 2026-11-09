@@ -1,0 +1,15 @@
+---
+import {kindNames,type Issue} from '../lib/cars';
+const {issue}=Astro.props as {issue:Issue};
+---
+<article class="issue" data-issue data-scope={JSON.stringify(issue.appliesTo)} data-category={issue.category}>
+  <p class="issue-kind">{kindNames[issue.kind]}</p>
+  <h3>{issue.title}</h3>
+  <p>{issue.description}</p>
+  <dl>
+    <dt>Gäller</dt><dd>{issue.appliesTo.label}</dd>
+    <dt>Du kan märka</dt><dd>{issue.symptoms.join(' ')}</dd>
+    <dt>{issue.action==='resolve-before-buying'?'Avstå om detta inte är utrett':'Kontrollera före köp'}</dt><dd>{issue.advice}</dd>
+  </dl>
+  <p class="small">Källor: {issue.sourceIds.map((id,index)=><><a href={`#source-${id}`}>Källa {index+1}</a>{index<issue.sourceIds.length-1?' · ':''}</>)}</p>
+</article>

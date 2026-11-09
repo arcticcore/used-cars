@@ -5,7 +5,7 @@
   "additionalProperties": false,
   "properties": {
     "schemaVersion": {
-      "const": 1
+      "const": 2
     },
     "id": {
       "type": "string",
@@ -66,7 +66,7 @@
               "type": "string",
               "minLength": 1
             },
-            "minItems": 1,
+            "minItems": 0,
             "uniqueItems": true
           },
           "fuel": {
@@ -107,6 +107,10 @@
             },
             "minItems": 1,
             "uniqueItems": true
+          },
+          "buyerSummary": {
+            "type": "string",
+            "minLength": 1
           }
         },
         "required": [
@@ -118,7 +122,8 @@
           "yearTo",
           "transmission",
           "timingDrive",
-          "sourceIds"
+          "sourceIds",
+          "buyerSummary"
         ]
       }
     },
@@ -136,15 +141,6 @@
             "type": "string",
             "minLength": 1
           },
-          "variantIds": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "minLength": 1
-            },
-            "minItems": 1,
-            "uniqueItems": true
-          },
           "description": {
             "type": "string",
             "minLength": 1
@@ -158,21 +154,6 @@
             "minItems": 1,
             "uniqueItems": true
           },
-          "checks": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "minLength": 1
-            },
-            "minItems": 1,
-            "uniqueItems": true
-          },
-          "evidence": {
-            "enum": [
-              "documented",
-              "reported"
-            ]
-          },
           "sourceIds": {
             "type": "array",
             "items": {
@@ -181,19 +162,102 @@
             },
             "minItems": 1,
             "uniqueItems": true
+          },
+          "category": {
+            "enum": [
+              "engine",
+              "transmission",
+              "rust",
+              "other"
+            ]
+          },
+          "kind": {
+            "enum": [
+              "known-problem",
+              "usage-risk",
+              "general-check"
+            ]
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "appliesTo": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "variantIds": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "bodyStyles": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "transmissions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "equipment": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "variantIds",
+              "bodyStyles",
+              "transmissions",
+              "equipment",
+              "label"
+            ]
+          },
+          "advice": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "enum": [
+              "check",
+              "resolve-before-buying"
+            ]
           }
         },
         "required": [
           "id",
           "title",
-          "variantIds",
           "description",
           "symptoms",
-          "checks",
-          "evidence",
-          "sourceIds"
+          "sourceIds",
+          "category",
+          "kind",
+          "priority",
+          "appliesTo",
+          "advice",
+          "action"
         ]
-      }
+      },
+      "maxItems": 5
     },
     "sources": {
       "type": "array",
@@ -290,6 +354,86 @@
         "reviewedBy",
         "reviewedAt"
       ]
+    },
+    "focusYears": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "from": {
+              "type": "integer",
+              "minimum": 1900
+            },
+            "to": {
+              "type": "integer",
+              "maximum": 2100
+            }
+          },
+          "required": [
+            "from",
+            "to"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "priceObservations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "year": {
+            "type": "integer",
+            "minimum": 1900,
+            "maximum": 2100
+          },
+          "mileageMil": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "priceSek": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "observedAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "sourceIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true,
+            "minItems": 1
+          }
+        },
+        "required": [
+          "label",
+          "year",
+          "mileageMil",
+          "priceSek",
+          "observedAt",
+          "sourceIds"
+        ]
+      }
+    },
+    "viewingChecklist": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     }
   },
   "required": [
@@ -306,7 +450,10 @@
     "variants",
     "issues",
     "sources",
-    "provenance"
+    "provenance",
+    "focusYears",
+    "priceObservations",
+    "viewingChecklist"
   ],
   "allOf": [
     {
@@ -320,7 +467,14 @@
       "then": {
         "properties": {
           "variants": {
-            "minItems": 1
+            "minItems": 1,
+            "items": {
+              "properties": {
+                "engineCodes": {
+                  "minItems": 1
+                }
+              }
+            }
           },
           "sources": {
             "minItems": 1

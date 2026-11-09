@@ -1,11 +1,27 @@
 ---
 import '../styles/global.css';
 import {url,repo} from '../lib/cars';
-const {title='Lär känna bilen. Innan du köper den.',description='En öppen svensk bilguide för dig som letar begagnat kring 100 000 kronor. Motorvarianter, kontrollpunkter och tydliga källor.',noindex=false} = Astro.props;
+const {title='Hitta bilmodell och kända problem',description='En enkel guide till motorval, kända problem och kontroller inför köp av begagnad bil kring 100 000 kronor.',noindex=false} = Astro.props;
 ---
-<!doctype html><html lang="sv"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={description}/><meta name="theme-color" content="#171d1a"/><title>{title} — Begagnat / 100</title>{noindex && <meta name="robots" content="noindex, nofollow"/>}<link rel="icon" type="image/svg+xml" href={url('favicon.svg')}/></head><body>
-<a class="skip" href="#main">Hoppa till innehåll</a>
-<header class="header wrap"><a class="logo" href={url()} aria-label="Begagnat 100, startsida"><span class="logo-mark">b<span>↗</span></span>begagnat<span class="logo-slash">/</span><strong>100</strong></a><nav aria-label="Huvudmeny"><a href={url('#modeller')}>Bilguiden</a><a href={url('metodik/')}>Så funkar det</a><a class="nav-contribute" href={`${repo}/blob/main/CONTRIBUTING.md`}>Bidra <span>↗</span></a></nav></header>
-<main id="main"><slot/></main>
-<footer class="wrap"><div class="footer-top"><a class="logo" href={url()}>begagnat <span class="logo-slash">/</span> 100</a><p>Mer kunskap. Färre överraskningar.</p><a href={repo}>Byggt öppet på GitHub ↗</a></div><div class="footer-bottom"><p>Allmän information, ingen individuell köprekommendation eller garanti. Kontrollera alltid det enskilda exemplarets skick och historik.</p><a href={url('metodik/')}>Källor & transparens</a><span>FÖR SVENSKA VÄGAR · SE</span></div></footer>
-</body></html>
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content={description}/><meta name="theme-color" content="#fafaf7"/>
+  <title>{title} — Begagnat / 100</title>
+  {noindex && <meta name="robots" content="noindex, nofollow"/>}
+  <link rel="icon" type="image/svg+xml" href={url('favicon.svg')}/>
+</head>
+<body>
+  <a class="skip" href="#main">Hoppa till innehåll</a>
+  <header class="wrap header">
+    <a class="logo" href={url()} aria-label="Begagnat 100, startsida">begagnat <span>/ 100</span></a>
+    <nav aria-label="Huvudmeny"><a href={url()}>Hitta bil</a><a href={url('metodik/')}>Om guiden</a></nav>
+  </header>
+  <main id="main" class="wrap"><slot/></main>
+  <footer class="wrap">
+    <p>Allmän information, ingen garanti för det enskilda exemplaret. Kontrollera bilens skick och servicehistorik.</p>
+    <a href={repo}>Bidra eller rätta en uppgift på GitHub ↗</a>
+  </footer>
+</body>
+</html>

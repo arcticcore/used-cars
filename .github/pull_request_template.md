@@ -14,3 +14,7 @@ Ange om AI användes, leverantör och verkligt modell-ID (eller att det saknas).
 - [ ] Källor och berörda motorvarianter är angivna.
 - [ ] Inga privata uppgifter eller otillåtet kopierat material ingår.
 - [ ] Datavalidering och tester är godkända, lokalt eller i CI.
+
+- [ ] Problemtyp och tillämplighet är angivna, även kaross/utrustning där det behövs.
+- [ ] Högst fem prioriterade problem och fem enkla visningsfrågor.
+- [ ] Prisankare har datum, miltal och källor och beskrivs inte som marknadsvärde.
