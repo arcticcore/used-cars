@@ -1,6 +1,6 @@
-# Svenska begagnatbilar kring 100 000 kr
+# Svenska begagnatbilar
 
-Ett öppet kunskapsprojekt för svenska begagnatmarknaden: motorvarianter, dokumenterade brister och kontrollpunkter inför köp. Målbudgeten är cirka 100 000 kronor, inte ett verifierat marknadspris eller en köprekommendation.
+Ett öppet kunskapsprojekt för svenska begagnatmarknaden: motorvarianter, dokumenterade brister och kontrollpunkter inför köp. Varje modellguide anger sin målbudget, inte ett verifierat marknadspris eller en köprekommendation.
 
 **Webbplats:** [Begagnat / 100](https://arcticcore.github.io/used-cars/), byggd med Astro och TypeScript, automatiskt publicerad via GitHub Pages. Range Rover L322 (2012) och Golf VII med motoröversikt samt Golf VI, BMW 3-serie E90/E91 och Toyota Yaris XP130 visas i en separat förhandsvisning som researchutkast. Inga tekniska biluppgifter är ännu granskade.
 

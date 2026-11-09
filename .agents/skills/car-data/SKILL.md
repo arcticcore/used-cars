@@ -19,7 +19,7 @@ Läs primärkällor: tillverkardokument, återkallelser, besiktningstester och o
 
 Avgränsa varje tekniskt påstående till rätt motor/årsmodell/marknad. En amerikansk servicebulletin är inte automatiskt en svensk återkallelse. Tillämplighet för en specifik bil kan behöva kontrolleras av verkstad. För inte över problem från äldre motorer eller liknande modellnamn. Kopiera inte VIN, registreringsnummer, säljares namn eller kontaktuppgifter från annonser.
 
-Prisobservationer ska ha datum, miltal och källa. Utgå inte från att en efterfrågad modell ryms inom 100 000 kr. Om den ligger över målbudgeten, skriv det tydligt; hitta inte på billigare exempel för att passa projektet.
+Prisobservationer ska ha datum, miltal och källa. Ange efterfrågad målbudget med `--budget-target-sek` (standard 100000). Utgå inte från att en efterfrågad modell ryms inom budgeten. Om den ligger över målbudgeten, skriv det tydligt; hitta inte på billigare exempel för att passa projektet.
 
 ## Skriv för en ovan köpare
 
