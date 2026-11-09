@@ -100,3 +100,15 @@ test('XC90 uses its own budget and keeps diesel-only risks off T5',()=>{
  assert.equal(car.budgetTargetSek,350000);
  assert.ok(html.includes('Inte mänskligt granskat'));
 });
+
+test('BMW keeps N43 and N47 warnings separate and unknown engine retains both',()=>{
+ const car=cars.find(c=>c.id==='bmw-3-series-e90-e91');
+ const matching=variantIds=>car.issues.filter(i=>matchesScope(i.appliesTo,{variantIds})).map(i=>i.id);
+ for(const id of ['318i-n43','320i-n43'])assert.deepEqual(matching(id),['n43-timing-chain','n43-rough-running']);
+ for(const id of ['318d-n47','320d-n47'])assert.deepEqual(matching(id),['n47-timing-chain','diesel-short-trips']);
+ assert.equal(matching('').length,4);
+ const html=read('dist/forhandsvisning/bmw-3-series-e90-e91/index.html');
+ assert.ok(html.includes('Vi saknar specifikt rostunderlag'));
+ assert.ok(html.includes('Inte mänskligt granskat'));
+ assert.ok(!html.includes('Planerat researchunderlag'));
+});

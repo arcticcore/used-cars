@@ -7,25 +7,328 @@
   "status": "draft",
   "market": "SE",
   "budgetTargetSek": 100000,
-  "summary": "Planerat researchunderlag. Prisnivåer och tekniska uppgifter är ännu inte verifierade.",
+  "summary": "BMW 3-serie E90 är sedan och E91 är Touring/kombi. Här fokuserar vi på årsmodell 2010 och fyra vanliga fyrcylindriga motorval kring 100 000 kr. Svenska annonsobservationer ligger mellan 69 700 och 105 900 kr; skick, miltal och historik behöver jämföras. Välj efter körmönster och dokumenterade reparationer: bensin vid mycket kortkörning är ett jämförelsealternativ, men N43 är ingen problemfri genväg. Dieselns N47 kräver särskild kontroll av kedjehistoriken. Beteckningen 320 räcker inte för att identifiera motorn. Coupé, cabriolet, sexcylindriga motorer och andra årsmodeller är inte bedömda i denna version.",
   "researchTasks": [
-    "Kontrollera svenska annonspriser; jämför sedan och Touring.",
-    "Avgränsa bensin- och dieselmotorer med motorkoder och tillverkningsår.",
-    "Utred vilka motorvarianter som har dokumenterade kamkedjeproblem.",
-    "Skilj dokumenterade fel från allmänna kontrollpunkter för äldre bilar."
+    "Komplettera med motorernas fullständiga underkoder och svensk produktionsavgränsning. Här anges N43 och N47 som motorfamiljer; kontrollera den enskilda bilen hos BMW, särskilt import och motorbyte.",
+    "Utöka till andra årsmodeller, N46/M47 och sexcylindriga alternativ separat. Dra inte slutsatsen att motorer utanför denna guide är fria från problem.",
+    "Komplettera med modellspecifikt rostunderlag för E90 och E91 samt dokumenterade växellåds-, xDrive- och karossfel. Rosttesten för F30 får inte användas som belägg för E90/E91."
   ],
-  "variants": [],
-  "issues": [],
-  "sources": [],
+  "variants": [
+    {
+      "id": "318i-n43",
+      "label": "318i 143 hk – N43",
+      "engineCodes": [
+        "N43"
+      ],
+      "fuel": "petrol",
+      "yearFrom": 2010,
+      "yearTo": 2010,
+      "transmission": "Manuell eller automat beroende på exemplar; kontrollera bilens specifikation och servicehistorik.",
+      "timingDrive": "chain",
+      "sourceIds": [
+        "bmw-2010",
+        "adac-petrol",
+        "adac-diesel",
+        "n43-chain",
+        "n43-running"
+      ],
+      "buyerSummary": "Bensin med kamkedja. Här avses N43, inte N46 som också förekommer under samma modellnamn på vissa marknader. Kontrollera både kedjehistorik och ojämn motorgång. Motorfamiljen ska bekräftas före köp."
+    },
+    {
+      "id": "320i-n43",
+      "label": "320i 170 hk – N43",
+      "engineCodes": [
+        "N43"
+      ],
+      "fuel": "petrol",
+      "yearFrom": 2010,
+      "yearTo": 2010,
+      "transmission": "Manuell eller automat beroende på exemplar; kontrollera bilens specifikation och servicehistorik.",
+      "timingDrive": "chain",
+      "sourceIds": [
+        "bmw-2010",
+        "adac-petrol",
+        "adac-diesel",
+        "n43-chain",
+        "n43-running"
+      ],
+      "buyerSummary": "Bensin med kamkedja och samma två huvudkontroller som 318i N43: kedjan och motorns gång. Att välja 320i i stället för 318i tar inte bort dessa risker. Importbilar kan ha annan motorfamilj."
+    },
+    {
+      "id": "318d-n47",
+      "label": "318d 143 hk – N47",
+      "engineCodes": [
+        "N47"
+      ],
+      "fuel": "diesel",
+      "yearFrom": 2010,
+      "yearTo": 2010,
+      "transmission": "Manuell eller automat beroende på exemplar; kontrollera bilens specifikation och servicehistorik.",
+      "timingDrive": "chain",
+      "sourceIds": [
+        "bmw-2010",
+        "adac-diesel",
+        "n47-chain",
+        "dpf-usage"
+      ],
+      "buyerSummary": "Diesel med kamkedja. Kontrollera dokumentation av kedjearbeten och låt en specialist bedöma oklara ljud. Passar sämre om bilen nästan bara ska köras korta sträckor."
+    },
+    {
+      "id": "320d-n47",
+      "label": "320d 177/184 hk – N47",
+      "engineCodes": [
+        "N47"
+      ],
+      "fuel": "diesel",
+      "yearFrom": 2010,
+      "yearTo": 2010,
+      "transmission": "Manuell eller automat beroende på exemplar; kontrollera bilens specifikation och servicehistorik.",
+      "timingDrive": "chain",
+      "sourceIds": [
+        "bmw-2010",
+        "adac-diesel",
+        "n47-chain"
+      ],
+      "buyerSummary": "Diesel med kamkedja. Motorutbudet ändrades under 2010; kontrollera effekt, tillverkningsdatum och exakt motor. Ett annat effektuttag eller xDrive gör inte kedjevarningen irrelevant. EfficientDynamics-versionen på 163 hk ingår inte i urvalet."
+    }
+  ],
+  "issues": [
+    {
+      "id": "n47-timing-chain",
+      "title": "Diesel: utred kedjan innan du köper",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {
+        "variantIds": [
+          "318d-n47",
+          "320d-n47"
+        ],
+        "bodyStyles": [],
+        "transmissions": [],
+        "equipment": [],
+        "label": "318d/320d med N47, här årsmodell 2010 i E90/E91. Gäller både manuell och automat, även 320d xDrive. Inte en varning för alla BMW-dieslar."
+      },
+      "description": "BMW-specialisten Element Performance beskriver kedjefel på N47 och även återkommande fel efter vissa tidigare kedjebyten. Det är verkstadserfarenheter, inte svensk felfrekvens eller en återkallelse.",
+      "symptoms": [
+        "Rassel vid kallstart är en varningssignal som behöver felsökas. Kedjefel kan också finnas utan hörbart rassel."
+      ],
+      "advice": "Begär specificerade kvitton om säljaren säger att kedjan är bytt. Låt en BMW-kunnig verkstad bedöma historik och motor; ett byte eller tyst gång är ingen garanti. Avstå vid oförklarat rassel tills orsaken är utredd.",
+      "action": "resolve-before-buying",
+      "sourceIds": [
+        "n47-chain",
+        "chain-symptoms"
+      ]
+    },
+    {
+      "id": "n43-timing-chain",
+      "title": "Bensin: kedjans styrningar kan skadas",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {
+        "variantIds": [
+          "318i-n43",
+          "320i-n43"
+        ],
+        "bodyStyles": [],
+        "transmissions": [],
+        "equipment": [],
+        "label": "318i/320i med bekräftad N43, här årsmodell 2010. Uppgiften ska inte automatiskt föras över till N46 eller sexcylindriga motorer."
+      },
+      "description": "Element Performance beskriver skadade kedjestyrningar på N43. Lösa delar kan påverka oljeförsörjningen. Underlaget visar en reparationsrisk, inte hur stor andel bilar som drabbas.",
+      "symptoms": [
+        "Oförklarat rassel eller oljetrycksvarning. Frånvaro av ljud utesluter inte skador."
+      ],
+      "advice": "Be om kvitton på eventuellt kedjearbete och vad som kontrollerades då. Avstå med oljetrycksvarning eller oförklarat rassel tills verkstad har fastställt orsaken; provkör inte vidare med oljetrycksvarning.",
+      "action": "resolve-before-buying",
+      "sourceIds": [
+        "n43-chain",
+        "chain-symptoms"
+      ]
+    },
+    {
+      "id": "n43-rough-running",
+      "title": "Bensin: ryckig gång och motorlampa behöver en diagnos",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {
+        "variantIds": [
+          "318i-n43",
+          "320i-n43"
+        ],
+        "bodyStyles": [],
+        "transmissions": [],
+        "equipment": [],
+        "label": "N43 i guidens 318i/320i, årsmodell 2010. Specialistkällan behandlar N43/N53; här tillämpas rådet endast på de angivna N43-varianterna."
+      },
+      "description": "Bimmerprofs beskriver flera orsaker till ojämn gång: bland annat insprutare, tändning och NOx-system. Samma symptom kan ha olika orsaker; det är inte bevis för att en viss del måste bytas.",
+      "symptoms": [
+        "Motorn skakar på tomgång, rycker vid lätt gas eller visar motorvarning. Problemen kan variera med temperatur."
+      ],
+      "advice": "Prova kallstart och normal körning efter uppvärmning. Begär felsökning och kostnadsförslag före köp vid ojämn gång; nöj dig inte med ett obekräftat påstående om att det bara är ett tändstift.",
+      "action": "resolve-before-buying",
+      "sourceIds": [
+        "n43-running"
+      ]
+    },
+    {
+      "id": "diesel-short-trips",
+      "title": "Diesel: tänk igenom kortkörningen",
+      "category": "engine",
+      "kind": "usage-risk",
+      "priority": 4,
+      "appliesTo": {
+        "variantIds": [
+          "318d-n47",
+          "320d-n47"
+        ],
+        "bodyStyles": [],
+        "transmissions": [],
+        "equipment": [],
+        "label": "Diesel med partikelfilter, här 318d/320d årsmodell 2010. En generell användningsrisk, inte ett särskilt belagt vanligt E90/E91-fel."
+      },
+      "description": "Mycket korta resor kan hindra partikelfiltret från att nå temperatur för sin rengöring. Ett igensatt filter kan kräva verkstadsåtgärd.",
+      "symptoms": [
+        "Partikelfilter- eller motorvarning. En varning visar inte ensam vilken del som är fel."
+      ],
+      "advice": "Om nästan alla resor är korta: jämför med bensin och läs även dess varningar. Fråga om tidigare filterproblem och körmönster. Utred återkommande varningar före köp enligt bilens handbok och verkstadens råd.",
+      "action": "check",
+      "sourceIds": [
+        "dpf-usage",
+        "adac-diesel"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "bmw-2010",
+      "title": "BMW: modell- och motorfamiljer för E90/E91, modellår 2010",
+      "url": "https://myair-bdr.bmwgroup.com/static/manual/RadReif/00/alte_Baureihen/E90_E91_E92_E93/10_2010/index.htm",
+      "kind": "manufacturer",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "adac-petrol",
+      "title": "ADAC: begagnatunderlag BMW 3-serie 2005–2013, bensin",
+      "url": "https://assets.adac.de/image/upload/Autodatenbank/GWInfo/gw0079-bmw-3er-reihe-2005-2013-benziner-bericht.pdf",
+      "kind": "independent-test",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "adac-diesel",
+      "title": "ADAC: modellhistorik och dieselvarianter BMW 3-serie 2005–2013",
+      "url": "https://assets.adac.de/image/upload/Autodatenbank/GWInfo/gw0007-bmw-3er-reihe-2005-2013-diesel-bericht.pdf",
+      "kind": "independent-test",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "n47-chain",
+      "title": "Element Performance: egna verkstadserfarenheter av N47-kedjor",
+      "url": "https://www.elementperformance.co.uk/n47-timing-chain",
+      "kind": "other",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "n43-chain",
+      "title": "Element Performance: egna verkstadserfarenheter av N43-kedjor",
+      "url": "https://www.elementperformance.co.uk/bmw-n43-engine",
+      "kind": "other",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "chain-symptoms",
+      "title": "Element Performance: kedjesymptom och fel utan hörbart rassel",
+      "url": "https://www.elementperformance.co.uk/bmw-timing-chain-problems-a-specialists-guide",
+      "kind": "other",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "n43-running",
+      "title": "Bimmerprofs: egen felsökning av ojämn gång hos N43/N53",
+      "url": "https://bimmerprofs.com/rough-run-summary/",
+      "kind": "other",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "dpf-usage",
+      "title": "M Sverige: partikelfilter och kortkörning, generell information",
+      "url": "https://www.msverige.se/allt-om-bilen/varningssymboler/",
+      "kind": "other",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "price-320i",
+      "title": "Bilweb: 320i E90 automat, årsmodell 2010",
+      "url": "https://bilweb.se/vastra-gotalands-lan/bmw-320-i-sedan-comfort-dynamic-automat-2010-sedan-51463",
+      "kind": "market-listings",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "price-320d",
+      "title": "Bilweb: 320d E90 automat, årsmodell 2010",
+      "url": "https://bilweb.se/dalarnas-lan/bmw-320-d-sedan-aut-2010-sedan-260832",
+      "kind": "market-listings",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "price-touring",
+      "title": "Bilweb: 320d xDrive E91 manuell, årsmodell 2010",
+      "url": "https://bilweb.se/uppsala-lan/bmw-320-d-xdrive-touring-comfort-dynamic-pdc-m-varmare-dragkrok-2010-kombi-244375",
+      "kind": "market-listings",
+      "accessedAt": "2026-11-09"
+    }
+  ],
   "provenance": {
     "method": "ai-assisted",
     "provider": "OpenAI",
     "model": null,
-    "generatedAt": "2026-11-05",
+    "generatedAt": "2026-11-09",
     "reviewedBy": null,
     "reviewedAt": null
   },
-  "focusYears": null,
-  "priceObservations": [],
-  "viewingChecklist": []
+  "focusYears": {
+    "from": 2010,
+    "to": 2010
+  },
+  "priceObservations": [
+    {
+      "label": "320i E90 sedan, automat. Detaljannonsens miltal; söklistan kan visa äldre uppgifter. Något över målbudgeten.",
+      "year": 2010,
+      "mileageMil": 13142,
+      "priceSek": 105900,
+      "observedAt": "2026-11-09",
+      "sourceIds": [
+        "price-320i"
+      ]
+    },
+    {
+      "label": "320d E90 sedan, automat. Annonspris, inte verifierat försäljningspris.",
+      "year": 2010,
+      "mileageMil": 18400,
+      "priceSek": 79900,
+      "observedAt": "2026-11-09",
+      "sourceIds": [
+        "price-320d"
+      ]
+    },
+    {
+      "label": "320d xDrive E91 Touring, manuell. Detaljannonsens pris; ingen bedömning av xDrive-systemets skick.",
+      "year": 2010,
+      "mileageMil": 19951,
+      "priceSek": 69700,
+      "observedAt": "2026-11-09",
+      "sourceIds": [
+        "price-touring"
+      ]
+    }
+  ],
+  "viewingChecklist": [
+    "Kontrollera att bilen är E90 sedan eller E91 Touring, samt modellår, motorfamilj och servicekvitton. Registreringsår och 318/320-märket räcker inte. Be BMW kontrollera öppna återkallelser för bilen.",
+    "Be att få starta motorn kall. Lyssna efter rassel, kontrollera varningslampor och provkör tills motorn är varm. En tyst, jämn provtur bevisar inte att motorn är felfri.",
+    "Prova växellådan vid start, backning och vanlig körning. Automat: utred tydliga slag eller dröjsmål. Manuell: utred svårväxlat eller koppling som slirar. Detta är allmänna kontroller, inte belagda vanliga modellfel.",
+    "Titta efter lackblåsor och synlig rost vid dörrkanter, trösklar, skärmkanter och baklucka. Vi saknar tillräckligt E90/E91-specifikt rostunderlag; punkterna är allmänna kontroller. Be verkstad kontrollera undersidan vid tveksamheter.",
+    "Prova AC, fönster, lås och bagagelucka; på Touring även bakrutans öppning och torkare. Titta efter fukt i bagageutrymmet. Det är allmänna kontroller, inte ett påstående om att dessa fel är vanliga."
+  ]
 }
