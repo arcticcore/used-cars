@@ -1,0 +1,33 @@
+---
+import IssueCard from './IssueCard.astro';
+import type {Issue} from '../lib/cars';
+interface Props {
+  number: number;
+  category: Issue['category'];
+  title: string;
+  description: string;
+  issues: Issue[];
+  empty: string;
+}
+const {number,category,title,description,issues,empty}=Astro.props;
+const paths={
+  engine:'M3 10h3l3-4h8v4h4v8h-4v2H7v-3H3z M10 3h6 M13 3v3',
+  transmission:'M7 4v16 M17 4v8H7 M12 12v8 M4 4h6 M14 4h6 M4 20h6 M9 20h6',
+  rust:'M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7z M12 7v6 M12 16v1',
+  other:'M9 5h10v16H5V5h4 M9 3h6v4H9z M8 12h8 M8 16h6',
+};
+---
+<section class="guide-step" id={`step-${category}`} data-issue-section={category} aria-labelledby={`heading-${category}`}>
+  <header class="step-header">
+    <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d={paths[category]}/></svg></span>
+    <div><p class="step-label">Steg {number}</p><h2 id={`heading-${category}`}>{title}</h2><p class="step-description">{description}</p></div>
+  </header>
+  <div class="step-body">
+    <slot />
+    <div class="step-issues">
+      {issues.map(issue=><IssueCard issue={issue}/>)}
+      <p data-empty class="empty-state" hidden={issues.length>0}><span aria-hidden="true">ⓘ</span> {empty}</p>
+    </div>
+    <slot name="after" />
+  </div>
+</section>

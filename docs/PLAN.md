@@ -21,3 +21,14 @@ Golf VII har ett källbelagt innehållsexempel för 1.2/1.4 TSI och 1.6/2.0 TDI,
 Utkast ligger under /forhandsvisning/ med noindex, inte bland granskade guider eller i sitemap. En sökträff på ett utkast är uttryckligen märkt. Granskade poster ligger under /modeller/. Push till main bygger och testar innan GitHub Pages publicerar.
 
 Verifiera schema, referenser, datum, typkontroll, bygge, interna länkar och filtreringslogik. Kontrollera också mobil, sökning, okänd motor och att källänkar öppnar detaljavsnittet. En ny modell ska kräva en ny datafil, inte en sidkomponent. Sakuppgifter uppdateras med källor och proveniens; mänsklig granskningsstatus nollställs vid sakändring.
+
+
+## Gemensamma steg i modellguiden
+
+Alla modeller använder `GuideStep.astro`: 1. Motor, 2. Växellåda och 3. Rost.
+Problem grupperas med datafältet `category`; `other` ger automatiskt steg 4, Övrigt.
+Samma box, ikon, rubrik och problemkort används överallt. Motorvalet filtrerar även
+växellåda och gemensamma problem enligt befintliga variantavgränsningar.
+Tomma steg visar att underlag saknas, aldrig att bilen är problemfri.
+Vid visningen och källorna ligger efter stegen. Nya bilmodeller kräver bara data,
+inte nya komponenter eller särskild sidkod.

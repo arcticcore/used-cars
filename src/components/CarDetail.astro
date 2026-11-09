@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import IssueCard from './IssueCard.astro';
+import GuideStep from './GuideStep.astro';
 import {url,repo,fuelNames,timingNames,stale,type Car} from '../lib/cars';
 const {car,preview=false}=Astro.props as {car:Car;preview?:boolean};
 const issues=[...car.issues].sort((a,b)=>a.priority-b.priority);
@@ -16,26 +16,27 @@ const options=(key:'bodyStyles'|'transmissions'|'equipment')=>[...new Set(issues
     <p>{car.focusYears&&<>Fokus: <strong>{car.focusYears.from}–{car.focusYears.to}</strong> (inte generationens hela tillverkningsperiod). </>}Målbudget: cirka {car.budgetTargetSek.toLocaleString('sv-SE')} kr.</p>
     {car.priceObservations.length>0 ? <><p class="small">Prisankare från annonser, inte en marknadsvärdering eller garanti om tillgänglighet:</p><ul class="prices">{car.priceObservations.map(p=><li><strong>{p.priceSek.toLocaleString('sv-SE')} kr</strong> · {p.year} · {p.mileageMil.toLocaleString('sv-SE')} mil<br/>{p.label}<br/><span class="small">Observerat {p.observedAt} · {p.sourceIds.map(id=><a href={`#source-${id}`}>Källa</a>)}</span></li>)}</ul></>:<p class="muted">Prisunderlag saknas ännu.</p>}
   </section>
-  <section>
-    <h2>Vilken motor ska jag välja?</h2>
+  <nav class="step-nav" aria-label="Guidens steg">
+    <a href="#step-engine">1. Motor</a><a href="#step-transmission">2. Växellåda</a><a href="#step-rust">3. Rost</a>
+    {issues.some(i=>i.category==='other')&&<a href="#step-other">4. Övrigt</a>}
+  </nav>
+  <GuideStep number={1} category="engine" title="Motor" description="Hitta motorn i annonsen och läs vad som gäller för just den." issues={issues.filter(i=>i.category==='engine')} empty="Inga dokumenterade motorproblem matchar detta val i underlaget. Det betyder inte att varianten är problemfri.">
     {car.variants.length>0 ? <>
       <p class="small">Välj motorbeteckningen från annonsen. Listan är ett avgränsat urval, inte alla motorer. Exakt motorkod måste stämma innan ett råd kan tillämpas på bilen.</p>
       <div class="filters"><label>Motor<select id="engine"><option value="">Jag vet inte / visa alla</option>{car.variants.map(v=><option value={v.id}>{v.label} · {fuelNames[v.fuel]}</option>)}</select></label>
-        {options('transmissions').length>0&&<label>Växellåda<select id="transmission"><option value="">Vet inte / visa alla</option>{[...new Set(['Manuell',...options('transmissions')])].map(t=><option>{t}</option>)}</select></label>}
-        {options('bodyStyles').length>0&&<label>Kaross<select id="body"><option value="">Vet inte / visa alla</option>{[...new Set(['Halvkombi','Kombi',...options('bodyStyles')])].map(b=><option>{b}</option>)}</select></label>}
       </div>
       <p id="selection-note" class="notice small" role="status">Motorvariant okänd: alla möjliga varningar visas. Det betyder inte att alla gäller din bil.</p>
       <div class="engine-list">{car.variants.map(v=><article data-engine={v.id}><h3>{v.label} <span class="muted">· {fuelNames[v.fuel]}</span></h3><p>{v.buyerSummary}</p></article>)}</div>
     </>:<p>Motorerna är ännu inte kartlagda. Det går inte att bedöma vilken variant du bör välja utifrån detta utkast.</p>}
-  </section>
-  <section data-issue-section="other"><h2>Det här bör du se upp med</h2>
-    {issues.filter(i=>i.category!=='rust').map(issue=><IssueCard issue={issue}/>)}
-    <p data-empty class="muted" hidden={issues.some(i=>i.category!=='rust')}>Inga dokumenterade problem matchar detta val i underlaget. Det betyder inte att varianten är problemfri.</p>
-  </section>
-  <section data-issue-section="rust"><h2>Rost – titta här</h2>
-    {issues.filter(i=>i.category==='rust').map(issue=><IssueCard issue={issue}/>)}
-    <p data-empty class="muted" hidden={issues.some(i=>i.category==='rust')}>Vi saknar specifikt rostunderlag för detta val. Kontrollera synlig rost; avsaknad av uppgifter betyder inte att bilen är rostfri.</p>
-  </section>
+  </GuideStep>
+  <GuideStep number={2} category="transmission" title="Växellåda" description="Kontrollera vilken låda bilen har. Prova den vid start och under körning." issues={issues.filter(i=>i.category==='transmission')} empty="Inga dokumenterade växellådsproblem matchar detta val i underlaget. Det betyder inte att växellådan är problemfri.">
+    {options('transmissions').length>0&&<div class="filters"><label>Växellåda i annonsen<select id="transmission"><option value="">Vet inte / visa alla</option>{[...new Set(['Manuell',...options('transmissions')])].map(t=><option>{t}</option>)}</select></label></div>}
+    {car.variants.length>0&&<div class="engine-list">{car.variants.map(v=><article data-engine={v.id}><h3>{v.label}</h3><p>{v.transmission}</p></article>)}</div>}
+  </GuideStep>
+  <GuideStep number={3} category="rust" title="Rost" description="Leta efter synliga tecken och läs vilka områden underlaget pekar ut." issues={issues.filter(i=>i.category==='rust')} empty="Vi saknar specifikt rostunderlag för detta val. Kontrollera synlig rost; avsaknad av uppgifter betyder inte att bilen är rostfri.">
+    {options('bodyStyles').length>0&&<div class="filters"><label>Kaross i annonsen<select id="body"><option value="">Vet inte / visa alla</option>{[...new Set(['Halvkombi','Kombi',...options('bodyStyles')])].map(b=><option>{b}</option>)}</select></label></div>}
+  </GuideStep>
+  {issues.some(i=>i.category==='other')&&<GuideStep number={4} category="other" title="Övrigt" description="Andra dokumenterade problem som är viktiga inför köpet." issues={issues.filter(i=>i.category==='other')} empty="Inga övriga dokumenterade problem matchar detta val. Saknade uppgifter betyder inte att bilen är felfri."/>}
   <section><h2>Vid visningen</h2><p class="small">Allmänna kontrollfrågor, inte en lista över konstaterade modellfel.</p>
     {car.viewingChecklist.length ? <ol class="checklist">{car.viewingChecklist.map(item=><li>{item}</li>)}</ol>:<p class="muted">En modellanpassad checklista återstår.</p>}
   </section>

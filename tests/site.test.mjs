@@ -54,7 +54,7 @@ test('Golf VII example renders motor choices and does not inherit a Golf VI chai
  assert.match(html,/Inte mänskligt granskat/);
  assert.match(html,/inte att varianten är problemfri/);
  assert.ok(!golf.issues.some(i=>/kedj/i.test(i.title)));
- assert.ok(!html.includes('<svg'));
+ assert.ok(html.includes('class="step-icon"'));
 });
 
 test('Range Rover 2012 keeps petrol chain warnings off diesel and retains shared issues',()=>{
@@ -67,4 +67,25 @@ test('Range Rover 2012 keeps petrol chain warnings off diesel and retains shared
  assert.ok(html.includes('259'));
  assert.ok(html.includes('över projektets målbudget'));
  assert.ok(html.includes('Inte mänskligt granskat'));
+});
+
+
+test('every model groups each warning exactly once in consistent category steps',()=>{
+ for(const car of cars){
+  const route=car.status==='draft'?'forhandsvisning':'modeller';
+  const html=read(`dist/${route}/${car.id}/index.html`);
+  for(const [index,category] of ['engine','transmission','rust','other'].entries()){
+   const match=html.match(new RegExp(`<section[^>]*data-issue-section="${category}"[\\s\\S]*?</section>`));
+   const expected=car.issues.filter(issue=>issue.category===category);
+   if(category==='other'&&!expected.length){assert.equal(match,null);continue;}
+   assert.ok(match,`${car.id}: missing ${category} step`);
+   assert.ok(match[0].includes(`Steg ${index+1}`));
+   assert.ok(match[0].includes('data-empty'));
+   assert.equal((match[0].match(/data-issue data-scope/g)||[]).length,expected.length);
+   for(const issue of expected)assert.ok(match[0].includes(issue.title));
+   for(const other of ['engine','transmission','rust','other'].filter(c=>c!==category)){
+    assert.ok(!match[0].includes(`data-category="${other}"`));
+   }
+  }
+ }
 });
