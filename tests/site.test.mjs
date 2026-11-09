@@ -89,3 +89,14 @@ test('every model groups each warning exactly once in consistent category steps'
   }
  }
 });
+
+test('XC90 uses its own budget and keeps diesel-only risks off T5',()=>{
+ const car=cars.find(c=>c.id==='volvo-xc90-ii');
+ const selected=id=>car.issues.filter(i=>matchesScope(i.appliesTo,{variantIds:id})).map(i=>i.id);
+ assert.deepEqual(selected('t5-awd-250'),['rust-inspection','ac-cooling']);
+ assert.deepEqual(selected('d5-awd-235'),car.issues.map(i=>i.id));
+ const html=read('dist/forhandsvisning/volvo-xc90-ii/index.html');
+ assert.ok(html.includes(`Målbudget: cirka ${car.budgetTargetSek.toLocaleString('sv-SE')} kr`));
+ assert.equal(car.budgetTargetSek,350000);
+ assert.ok(html.includes('Inte mänskligt granskat'));
+});

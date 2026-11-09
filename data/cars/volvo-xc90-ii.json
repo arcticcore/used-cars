@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 2,
+  "id": "volvo-xc90-ii",
+  "brand": "Volvo",
+  "model": "XC90",
+  "generation": "II",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 350000,
+  "summary": "Börja sökningen med XC90 II årsmodell 2018 kring 350 000 kr. Två svenska annonsobservationer visar T5 AWD för 339 800 kr och D5 AWD för 349 900 kr. Det motiverar årsurvalet, inte att 2018 är bevisat mer driftsäker än andra år. Vårt preliminära råd: jämför T5 bensin vid mycket kortkörning och D5 diesel om bilen regelbundet körs längre sträckor. Prioritera dokumenterad service och utredda varningar framför utrustningsnivå. Utkastet omfattar dessa två motoralternativ; T8 laddhybrid och övriga motorer är inte bedömda.",
+  "researchTasks": [
+    "Verifiera kamdrivning, bytesintervall och växellådsvariant i Volvos serviceunderlag för respektive svensk motor och bil; ange inte ett generellt intervall från en annons.",
+    "Bekräfta svensk återkallelseavgränsning och genomförda åtgärder för dieselns insug/EGR via Volvo. Det polska myndighetsunderlaget identifierar en risk men fastställer inte vilka svenska bilar som omfattas.",
+    "Komplettera rostunderlag för modellår 2018; testet från 2015 beskriver en tidigare bil i samma generation.",
+    "Verifiera svensk tillämplighet för AC-bulletinen och belägg för eventuella vanliga växellåds-, luftfjädrings- och vattenläckageproblem. Ingen felfrekvens är fastställd här.",
+    "Utöka separat med T8 och andra motoralternativ först när laddning, batteri och variantspecifika problem har undersökts."
+  ],
+  "variants": [
+    {
+      "id": "t5-awd-250",
+      "label": "T5 AWD 250 hk",
+      "engineCodes": [
+        "B4204T26"
+      ],
+      "fuel": "petrol",
+      "yearFrom": 2018,
+      "yearTo": 2018,
+      "transmission": "Automat; exakt lådvariant kontrolleras mot bilens specifikation",
+      "timingDrive": "unknown",
+      "sourceIds": [
+        "volvo-engines",
+        "listing-t5"
+      ],
+      "buyerSummary": "Bensin. Vårt första jämförelsealternativ om du ofta kör korta sträckor. Denna post gäller 250 hk/B4204T26; andra T5-effekter finns och ska inte likställas automatiskt. Serviceuppgifter och kamdrivning återstår att verifiera i detta utkast."
+    },
+    {
+      "id": "d5-awd-235",
+      "label": "D5 AWD 235 hk",
+      "engineCodes": [
+        "D4204T23"
+      ],
+      "fuel": "diesel",
+      "yearFrom": 2018,
+      "yearTo": 2018,
+      "transmission": "Automat; exakt lådvariant kontrolleras mot bilens specifikation",
+      "timingDrive": "unknown",
+      "sourceIds": [
+        "volvo-engines",
+        "volvo-dpf",
+        "listing-d5"
+      ],
+      "buyerSummary": "Fyrcylindrig 2,0-liters diesel, inte den äldre generationens femcylindriga D5. Ett alternativ när bilen regelbundet körs längre sträckor. Kontrollera dieselåterkallelser med Volvo och läs rådet om kortkörning. Serviceuppgifter och kamdrivning återstår att verifiera."
+    }
+  ],
+  "issues": [
+    {
+      "id": "diesel-intake-recall",
+      "title": "Kontrollera dieselns återkallelser före köp",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {
+        "variantIds": [
+          "d5-awd-235"
+        ],
+        "bodyStyles": [],
+        "transmissions": [],
+        "equipment": [],
+        "label": "Fyrcylindrig diesel; polskt myndighetsunderlag omfattar XC90 modellår 2016–2019. Svensk tillämplighet måste kontrolleras för bilen. Inte T5 bensin."
+      },
+      "description": "Volvo har i Polen anmält att insugets plast kan deformeras med brandrisk. Åtgärder omfattade programvara och ändringar i EGR-kylningen. Det är en dokumenterad återkallelserisk, inte statistik över hur vanligt felet är.",
+      "symptoms": [
+        "Du kan inte avgöra om bilen omfattas genom att lyssna på motorn eller titta efter en varningslampa."
+      ],
+      "advice": "Be en Volvoverkstad kontrollera vilka kampanjer som gäller bilen och bekräfta utförda åtgärder. Volvos svenska webbsök gäller 2020 och senare, så ett tomt webbsvar räcker inte för en 2018. Avstå tills en eventuell öppen säkerhetsåterkallelse är utredd.",
+      "action": "resolve-before-buying",
+      "sourceIds": [
+        "diesel-recall",
+        "volvo-recalls"
+      ]
+    },
+    {
+      "id": "diesel-short-trips",
+      "title": "Nästan bara kortkörning passar sämre för D5",
+      "category": "engine",
+      "kind": "usage-risk",
+      "priority": 2,
+      "appliesTo": {
+        "variantIds": [
+          "d5-awd-235"
+        ],
+        "bodyStyles": [],
+        "transmissions": [],
+        "equipment": [],
+        "label": "Diesel med partikelfilter, här D5 AWD 2018. Generell användningsrisk, inte ett belägg för ovanligt hög felfrekvens."
+      },
+      "description": "Partikelfiltret behöver rätt temperatur för att rengöra sig. Upprepade korta resor kan hindra detta; ett helt fullt filter kan behöva bytas.",
+      "symptoms": [
+        "Meddelanden om avgasreningen eller startsvårigheter behöver undersökas; de bevisar inte att just filtret är orsaken."
+      ],
+      "advice": "Välj inte D5 utan att tänka igenom körmönstret. Fråga hur bilen har använts och låt verkstad utreda återkommande varningar före köp. En kort provtur utan varningar bevisar inte att filtret är friskt.",
+      "action": "check",
+      "sourceIds": [
+        "volvo-dpf"
+      ]
+    },
+    {
+      "id": "rust-inspection",
+      "title": "Titta på baklucka och trösklar",
+      "category": "rust",
+      "kind": "general-check",
+      "priority": 3,
+      "appliesTo": {
+        "variantIds": [],
+        "bodyStyles": [],
+        "transmissions": [],
+        "equipment": [],
+        "label": "Allmän kontroll för XC90 II. Konstruktionsunderlaget är ett nybilstest från 2015; det fastställer inte rostfrekvens eller oförändrat skydd för 2018."
+      },
+      "description": "Vi Bilägare noterade saknad invändig behandling i baklucka och trösklar på testbilen från 2015. Det är skäl att kontrollera skicket, inte bevis för att alla senare bilar rostar.",
+      "symptoms": [
+        "Synliga lackblåsor, rost vid kanter eller tidigare lagningar."
+      ],
+      "advice": "Titta på bakluckans kanter och synliga tröskelytor. Be om en oberoende kontroll under bilen vid misstänkta spår; dold rost kan inte uteslutas från utsidan.",
+      "action": "check",
+      "sourceIds": [
+        "rust-test"
+      ]
+    },
+    {
+      "id": "ac-cooling",
+      "title": "Prova att AC:n verkligen kyler",
+      "category": "other",
+      "kind": "general-check",
+      "priority": 4,
+      "appliesTo": {
+        "variantIds": [],
+        "bodyStyles": [],
+        "transmissions": [],
+        "equipment": [],
+        "label": "Allmän kontroll för de två motoralternativen i guiden. Volvo-bulletinen gäller USA/Kanada; svensk tillämplighet är inte fastställd."
+      },
+      "description": "Volvo har en reparationsanvisning för AC-förångare med symptom som utebliven eller svag kyla. Den visar inte hur vanligt felet är i Sverige och innebär inte att förångaren är orsaken i varje bil.",
+      "symptoms": [
+        "Luften blir inte kall eller kylan försvinner under provkörningen."
+      ],
+      "advice": "Prova klimatanläggningen och fråga om tidigare AC-reparationer. Vid dålig kyla: begär felsökning och kostnadsförslag före köp, inte bara ett löfte om påfyllning. Kallt väder kan göra kontrollen otillräcklig.",
+      "action": "check",
+      "sourceIds": [
+        "volvo-ac"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "volvo-engines",
+      "title": "Volvo: motorspecifikationer XC90 2018 (marknadsvariationer förekommer)",
+      "url": "https://www.volvocars.com/se/support/car/xc90/2018/article/b0804d54c7fc096bc0a81f6f065ad63e/8899be1dc7fc78b1c0a81f6f5a01b4ab/85d54b907fe68317c0a801517c905e27/",
+      "kind": "manufacturer",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "volvo-dpf",
+      "title": "Volvo: dieselpartikelfilter XC90 2018, tysk handbok",
+      "url": "https://www.volvocars.com/de-ch/support/car/xc90/2018/article/f1df148bc7f01a62c0a81f6f0b6b960e/fa6bea20c7f401b7c0a81f6f39b9b48e/53855baa89393433c0a8015137ed3613/",
+      "kind": "manufacturer",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "diesel-recall",
+      "title": "UOKiK: Volvos polska återkallelse, fyrcylindrig diesel modellår 2016–2019",
+      "url": "https://archiwum.uokik.gov.pl/powiadomienia.php?news_id=15883",
+      "kind": "recall",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "volvo-recalls",
+      "title": "Volvo Sverige: kontroll av återkallelser (webbsök gäller 2020 och senare)",
+      "url": "https://www.volvocars.com/se/l/aterkallelse/",
+      "kind": "manufacturer",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "rust-test",
+      "title": "Vi Bilägare: rosttest XC90 D5 AWD 2015, inte ett långtidstest av 2018",
+      "url": "https://www.vibilagare.se/test/rost/rosttest-volvo-xc90-d5-awd-inscription-2015",
+      "kind": "independent-test",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "volvo-ac",
+      "title": "Volvo TJ 35912.1.0: AC-reparation, USA/Kanada",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2021/MC-10190813-9999.pdf",
+      "kind": "manufacturer",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "listing-t5",
+      "title": "Bilweb: XC90 T5 AWD 250 hk, årsmodell 2018",
+      "url": "https://bilweb.se/stockholms-lan/volvo-xc90-t5-awd-250hk-2018-suv-361000",
+      "kind": "market-listings",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "listing-d5",
+      "title": "Bilweb: XC90 D5 AWD 235 hk, årsmodell 2018",
+      "url": "https://bilweb.se/uppsala-lan/volvo-xc90-7-sits-d5-awd-235hk-inscription-kamera-drag-2018-suv-255732",
+      "kind": "market-listings",
+      "accessedAt": "2026-11-09"
+    }
+  ],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": "OpenAI",
+    "model": null,
+    "generatedAt": "2026-11-09",
+    "reviewedBy": null,
+    "reviewedAt": null
+  },
+  "focusYears": {
+    "from": 2018,
+    "to": 2018
+  },
+  "priceObservations": [
+    {
+      "label": "T5 AWD 250 hk automat. Detaljannonsens pris; söklistans pris kan avvika. Annonsobservation, inte verifierat försäljningspris.",
+      "year": 2018,
+      "mileageMil": 13607,
+      "priceSek": 339800,
+      "observedAt": "2026-11-09",
+      "sourceIds": [
+        "listing-t5"
+      ]
+    },
+    {
+      "label": "D5 AWD 235 hk automat. Annonsobservation, inte verifierat försäljningspris eller garanti om tillgänglighet.",
+      "year": 2018,
+      "mileageMil": 16875,
+      "priceSek": 349900,
+      "observedAt": "2026-11-09",
+      "sourceIds": [
+        "listing-d5"
+      ]
+    }
+  ],
+  "viewingChecklist": [
+    "Bekräfta modellår, motorkod och full servicehistorik. Be Volvo ange aktuella service- och kamdrivningsåtgärder för just bilen, med pris på det som snart förfaller.",
+    "Be Volvo kontrollera återkallelser och visa dokumenterade åtgärder. Ett normalt motorljud ersätter inte detta.",
+    "Prova automatlådan vid start, backning och normal körning, både kall och varm om möjligt. Begär felsökning av tydliga ryck, dröjsmål eller varningar; detta är en allmän kontroll, inte ett belagt vanligt modellfel.",
+    "Titta efter synlig rost och fukt i kupé och bagageutrymme. Prova AC, skärm, kamera och elbaklucka. Fukt är här en allmän kontroll, inte ett fastställt modellfel.",
+    "Om bilen har luftfjädring: be säljaren demonstrera funktionen enligt handboken. Utred sned höjd eller varningar före köp. Be gärna en oberoende verkstad kontrollera bilen."
+  ]
+}
