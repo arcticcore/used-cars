@@ -29,3 +29,9 @@ Filtrering använder AND mellan dimensioner och OR inom en array. Okänt val beh
 Vid sakändring: sätt `draft`, uppdatera proveniens och nollställ granskare/datum. Teknisk migration utan faktabyte ändrar inte ursprungsdatum. Märk inte `reviewed` utan faktisk granskning; Git-historiken bevarar tidigare versioner.
 
 Kör datavalidering och tester enligt README. Kontrollerna bevisar inte att källan stöder en uppgift. Granskaren måste kontrollera sakunderlag, årsintervall, motorkoder och tillämplighet manuellt. Inga privata personuppgifter, VIN eller registreringsnummer ska lagras.
+
+## Modell-PR och verktyg
+
+`python -m scripts.new_car --help` skapar en fil från mallen med dagens datum och utan att skriva över befintlig data. Välj mänskligt eller AI-assisterat ursprung korrekt. Sök först efter samma modell/generation; samma fil kan utökas till fler modellår. `python scripts/validate_data.py data/cars/<id>.json` kontrollerar en enskild fil, och kommandot utan argument kontrollerar alla.
+
+Utkast får inte innehålla en mänsklig granskningssignatur. Mänskligt skrivna poster har null i AI-fälten. Skillnaden mellan modellår, tillverkningsår och registreringsår ska framgå där den påverkar urvalet. Ett nordamerikanskt tekniskt meddelande är inte automatiskt tillämpligt på svensk bil eller en återkallelse. Om en efterfrågad modell kostar mer än målbudgeten, redovisa det i sammanfattning och faktiska prisobservationer i stället för att anpassa priserna.

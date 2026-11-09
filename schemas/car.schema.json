@@ -13,15 +13,18 @@
     },
     "brand": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "\\S"
     },
     "model": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "\\S"
     },
     "generation": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "\\S"
     },
     "status": {
       "enum": [
@@ -37,13 +40,15 @@
     },
     "summary": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "\\S"
     },
     "researchTasks": {
       "type": "array",
       "items": {
         "type": "string",
-        "minLength": 1
+        "minLength": 1,
+        "pattern": "\\S"
       }
     },
     "variants": {
@@ -58,13 +63,15 @@
           },
           "label": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "pattern": "\\S"
           },
           "engineCodes": {
             "type": "array",
             "items": {
               "type": "string",
-              "minLength": 1
+              "minLength": 1,
+              "pattern": "\\S"
             },
             "minItems": 0,
             "uniqueItems": true
@@ -89,7 +96,8 @@
           },
           "transmission": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "pattern": "\\S"
           },
           "timingDrive": {
             "enum": [
@@ -103,14 +111,16 @@
             "type": "array",
             "items": {
               "type": "string",
-              "minLength": 1
+              "minLength": 1,
+              "pattern": "\\S"
             },
             "minItems": 1,
             "uniqueItems": true
           },
           "buyerSummary": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "pattern": "\\S"
           }
         },
         "required": [
@@ -139,17 +149,20 @@
           },
           "title": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "pattern": "\\S"
           },
           "description": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "pattern": "\\S"
           },
           "symptoms": {
             "type": "array",
             "items": {
               "type": "string",
-              "minLength": 1
+              "minLength": 1,
+              "pattern": "\\S"
             },
             "minItems": 1,
             "uniqueItems": true
@@ -158,7 +171,8 @@
             "type": "array",
             "items": {
               "type": "string",
-              "minLength": 1
+              "minLength": 1,
+              "pattern": "\\S"
             },
             "minItems": 1,
             "uniqueItems": true
@@ -191,7 +205,8 @@
                 "type": "array",
                 "items": {
                   "type": "string",
-                  "minLength": 1
+                  "minLength": 1,
+                  "pattern": "\\S"
                 },
                 "uniqueItems": true
               },
@@ -199,7 +214,8 @@
                 "type": "array",
                 "items": {
                   "type": "string",
-                  "minLength": 1
+                  "minLength": 1,
+                  "pattern": "\\S"
                 },
                 "uniqueItems": true
               },
@@ -207,7 +223,8 @@
                 "type": "array",
                 "items": {
                   "type": "string",
-                  "minLength": 1
+                  "minLength": 1,
+                  "pattern": "\\S"
                 },
                 "uniqueItems": true
               },
@@ -215,13 +232,15 @@
                 "type": "array",
                 "items": {
                   "type": "string",
-                  "minLength": 1
+                  "minLength": 1,
+                  "pattern": "\\S"
                 },
                 "uniqueItems": true
               },
               "label": {
                 "type": "string",
-                "minLength": 1
+                "minLength": 1,
+                "pattern": "\\S"
               }
             },
             "required": [
@@ -234,7 +253,8 @@
           },
           "advice": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "pattern": "\\S"
           },
           "action": {
             "enum": [
@@ -271,7 +291,8 @@
           },
           "title": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "pattern": "\\S"
           },
           "url": {
             "type": "string",
@@ -363,11 +384,13 @@
           "properties": {
             "from": {
               "type": "integer",
-              "minimum": 1900
+              "minimum": 1900,
+              "maximum": 2100
             },
             "to": {
               "type": "integer",
-              "maximum": 2100
+              "maximum": 2100,
+              "minimum": 1900
             }
           },
           "required": [
@@ -388,7 +411,8 @@
         "properties": {
           "label": {
             "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "pattern": "\\S"
           },
           "year": {
             "type": "integer",
@@ -411,7 +435,8 @@
             "type": "array",
             "items": {
               "type": "string",
-              "minLength": 1
+              "minLength": 1,
+              "pattern": "\\S"
             },
             "uniqueItems": true,
             "minItems": 1
@@ -432,7 +457,8 @@
       "maxItems": 5,
       "items": {
         "type": "string",
-        "minLength": 1
+        "minLength": 1,
+        "pattern": "\\S"
       }
     }
   },
@@ -483,7 +509,8 @@
             "properties": {
               "reviewedBy": {
                 "type": "string",
-                "minLength": 1
+                "minLength": 1,
+                "pattern": "\\S"
               },
               "reviewedAt": {
                 "type": "string",

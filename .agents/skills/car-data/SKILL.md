@@ -1,38 +1,34 @@
 ---
 name: car-data
-description: Research, add, correct or refresh Swedish used-car model and engine data in this repository, with variant-scoped evidence and AI provenance. Use for car-content contributions, not general website styling or development.
+description: Research, add or update Swedish used-car data in this repository. Use for a model contribution or factual correction; use car-review for independent review and car-pr for preparing a pull request.
 ---
 
-# Bildata för svenska begagnatmarknaden
+# Skapa eller uppdatera bildata
 
-Läs `docs/DATA.md`, `schemas/car.schema.json` och den datapost som ska ändras från repots rot. Följ `CONTRIBUTING.md` för bidragsflödet. Ny post utgår från `data/templates/car.json` och får unikt ID/filnamn.
+Läs `docs/DATA.md` och den relevanta modellfilen från repots rot. Format och publiceringsregler har sin källa där; `CONTRIBUTING.md` beskriver bidragsflödet.
 
-## Research och avgränsning
+## Avgränsa först
 
-- Utgå från svensk marknad och målbudget omkring 100 000 kr. Målbudgeten är inte ett verifierat pris. Vid prisresearch, dokumentera datum, urval, miltal och årsmodeller i PR:n; annonspriser är inte slutpriser.
-- Avgränsa generation, motorkod, årsintervall och växellåda innan fel kopplas till en variant. Samma marknadsförda motorstorlek kan omfatta olika konstruktioner. Generalisera inte kedjeproblem till alla motorer med kamkedja.
-- Läs källorna. Prioritera tillverkardokumentation, återkallelser, besiktningsunderlag och väl underbyggda oberoende tester. Forumsvar ger researchspår, inte ensamma belägg för vanliga fel. Ange osäkerhet och motstridiga uppgifter.
-- Lägg varje källa i `sources`, och knyt varje variant och brist till relevanta `sourceIds`. Ange endast åtkomstdatum för material som faktiskt lästs. Begränsa påståendet till vad källan stödjer; hitta inte på felfrekvens eller reparationskostnad.
-- Skriv på svenska med egna ord. Skilj tekniskt belagt fel från symptom och kontrollfråga. En tom problemlista betyder att underlag saknas, inte att bilen är felfri.
+Identifiera modell, generation, modellår, kaross och marknad. Registreringsår kan skilja sig från modellår. Exempelvis är Range Rover, Range Rover Sport och Range Rover Evoque olika modeller. Förväxla inte generationer som såldes nära samma år. Sök efter befintlig modellfil innan en ny skapas; utöka samma generations fil i stället för att skapa dubbletter per år.
 
-## Proveniens och granskning
+Skapa ett nytt utkast med `python -m scripts.new_car --help`. Använd `--method ai-assisted --provider <verklig leverantör>` och `--model-id` endast om den faktiska identiteten är känd. Hjälparen skapar datum och ID men inga fakta. Ändra endast modellfilen vid en vanlig bil-PR; schema/UI-förändringar är en separat uppgift om de inte uttryckligen behövs.
 
-Ange faktisk AI-leverantör och modell-ID när dessa är tillgängliga, annars `null` i ett utkast. Produktnamnet är inte ett säkert modell-ID. Märk AI-assisterad text korrekt även efter mänsklig korrekturläsning.
+## Samla belägg
 
-Sätt nya och sakligt ändrade poster till `draft`; nollställ mänsklig granskningsinformation och uppdatera genereringsdatum. Fyll inte i en mänsklig granskare eller `reviewed` utan att faktisk granskning har skett. Behåll äldre spårbarhet via Git och beskriv blandade källor/genereringar i PR:n.
+Läs primärkällor: tillverkardokument, återkallelser, besiktningstester och originaltester. Specialistverkstäders egna observationer kan användas med tydlig begränsning; de är inte representativ felfrekvens. Forum är researchspår. Återge med egna ord, länka till dokumentet, ange faktiskt åtkomstdatum. En källa som inte går att läsa får inte beskrivas som verifierad.
 
-## Kontroll och leverans
+Avgränsa varje tekniskt påstående till rätt motor/årsmodell/marknad. En amerikansk servicebulletin är inte automatiskt en svensk återkallelse. Tillämplighet för en specifik bil kan behöva kontrolleras av verkstad. För inte över problem från äldre motorer eller liknande modellnamn. Kopiera inte VIN, registreringsnummer, säljares namn eller kontaktuppgifter från annonser.
 
-Kör `python scripts/validate_data.py` och `python -m unittest discover -s tests`. Åtgärda struktur- och referensfel. Kontrollera sedan manuellt att länkarna stödjer respektive påstående och rätt motorvariant; CI kan inte avgöra detta.
+Prisobservationer ska ha datum, miltal och källa. Utgå inte från att en efterfrågad modell ryms inom 100 000 kr. Om den ligger över målbudgeten, skriv det tydligt; hitta inte på billigare exempel för att passa projektet.
 
-Redovisa ändrade filer, källor, kontroller och återstående kunskapsluckor. En färdig dataändring kräver ingen ny sidkomponent. Följ användarens uppdrag för commit eller PR; skillen ger inte själv tillstånd att publicera eller kontakta andra.
+## Skriv för en ovan köpare
 
-## Köparguide i format v2
+Annonsnamn och kort köparsammanfattning först, motorkoder i detaljer. Högst fem prioriterade problem inklusive rost och fem enkla visningsfrågor. Skilj dokumenterade problem, användningsrisker och allmänna kontroller. Skriv problem → gäller → symptom → råd. Lägg inte till slitagedelar för att fylla listan.
 
-Följ `docs/DATA.md`. Använd högst fem prioriterade problem inklusive rost och högst fem enkla visningsfrågor. Prioritera motorval, kostsamma risker och begripliga symptom; utelämna hjullager, krängningshämmare och långa slitagedelslistor.
+Avgränsa med `appliesTo`; tom lista betyder alla i den dimensionen. Utrustnings-/karossfel behöver ingen motorkoppling. Förklara års- och marknadsbegränsningar i `label`. Saknat underlag eller tyst motor betyder aldrig felfri bil. Vid otillräckliga belägg: utelämna sakpåståendet och lägg frågan i `researchTasks`.
 
-Beskriv problem → gäller → du kan märka → vårt råd. Skilj `known-problem`, `usage-risk` och `general-check`. En känd konstruktionsrisk bevisar inte hur vanligt ett fel är. Formulera villkorade råd utan generella ”säker bil”-betyg. Tyst motor eller saknade feluppgifter bevisar inte felfrihet.
+## Kontrollera och lämna vidare
 
-Skriv annonsnamn och en kort köparsammanfattning per motor. Lägg motorkoder i detaljerna. Begränsa `appliesTo` efter motor, kaross, växellåda och utrustning; för inte över Golf VI:s kedjevarning till Golf VII. Beskriv eventuella årsbegränsningar i läsbar tillämplighet. Rost ska inte artificiellt kopplas till en motor.
+Nya/sakligt ändrade poster är `draft`; nollställ granskare/datum, uppdatera ursprunget ärligt. Gissa inte AI-modell och kalla inte AI-granskning mänsklig. Automatisk validering är inte faktagranskning.
 
-Lagra lästa annonspriser som daterade observationer med miltal och källa, inte som garanti om marknadsvärde. Lägg inte in gissade motorkoder: utkast tillåter tom lista och ska tydligt ange kvarstående avgränsning.
+Kör `python scripts/validate_data.py data/cars/<id>.json`, sedan hela valideringen och testerna enligt `CONTRIBUTING.md`. Kontrollera att källor stöder rätt påstående. Redovisa vilka fakta som tillkommit och kvarstående luckor. PR-hantering sker enligt användarens uppdrag; denna skill ger inte själv tillstånd att pusha, öppna PR eller publicera.

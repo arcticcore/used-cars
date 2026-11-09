@@ -1,20 +1,22 @@
-## Ändring
+## Modell och ändring
 
-Beskriv modell/generation/motor och vad som har lagts till eller rättats.
+Märke, modell, generation, modellår/årsintervall, marknad. Vad ändras för köparen?
 
-## Underlag
+## Källor och begränsningar
 
-Länka relevanta källor och förklara vad de styrker. Ange begränsningar och eventuell prisresearch.
+Länkar och vilket påstående respektive källa stöder. Skilj registreringsår från modellår och servicebulletin från återkallelse. Ange kvarstående frågor; utkast är välkomna.
 
-## AI och granskning
+## Ursprung och granskning
 
-Ange om AI användes, leverantör och verkligt modell-ID (eller att det saknas).
+Mänskligt skrivet eller AI-assisterat? Ange verklig leverantör/modell om känd. Vid okänd modellidentitet: ange det. Har mänsklig granskning faktiskt skett, och av vem?
 
-- [ ] Nya/sakligt ändrade uppgifter är utkast tills faktisk granskning skett.
-- [ ] Källor och berörda motorvarianter är angivna.
-- [ ] Inga privata uppgifter eller otillåtet kopierat material ingår.
-- [ ] Datavalidering och tester är godkända, lokalt eller i CI.
+## Kontroller
 
-- [ ] Problemtyp och tillämplighet är angivna, även kaross/utrustning där det behövs.
+- [ ] Datafilen följer schemat och filnamnet matchar ID.
+- [ ] Problem gäller rätt motor/kaross/utrustning/marknad.
 - [ ] Högst fem prioriterade problem och fem enkla visningsfrågor.
-- [ ] Prisankare har datum, miltal och källor och beskrivs inte som marknadsvärde.
+- [ ] Inga kopierade artiklar eller privata fordons-/personuppgifter.
+- [ ] Sakligt ändrad data är utkast tills mänsklig granskning har skett.
+- [ ] Datavalidering, Python-tester, typkontroll, bygge och sidtester passerar.
+
+Visuell kontroll (eller varför den inte kunnat göras):

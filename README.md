@@ -2,7 +2,7 @@
 
 Ett öppet kunskapsprojekt för svenska begagnatmarknaden: motorvarianter, dokumenterade brister och kontrollpunkter inför köp. Målbudgeten är cirka 100 000 kronor, inte ett verifierat marknadspris eller en köprekommendation.
 
-**Webbplats:** [Begagnat / 100](https://arcticcore.github.io/used-cars/), byggd med Astro och TypeScript, automatiskt publicerad via GitHub Pages. Golf VII med motoröversikt samt Golf VI, BMW 3-serie E90/E91 och Toyota Yaris XP130 visas i en separat förhandsvisning som researchutkast. Inga tekniska biluppgifter är ännu granskade.
+**Webbplats:** [Begagnat / 100](https://arcticcore.github.io/used-cars/), byggd med Astro och TypeScript, automatiskt publicerad via GitHub Pages. Range Rover L322 (2012) och Golf VII med motoröversikt samt Golf VI, BMW 3-serie E90/E91 och Toyota Yaris XP130 visas i en separat förhandsvisning som researchutkast. Inga tekniska biluppgifter är ännu granskade.
 
 - [Plan för webbplatsen](docs/PLAN.md)
 - [Bidra med en bilmodell eller rättelse](CONTRIBUTING.md)
@@ -51,3 +51,11 @@ Alla granskade JSON-poster blir automatiskt guider under `/modeller/`. Utkast vi
 GitHub Actions bygger och testar på pull requests. Push till `main` publicerar efter godkända kontroller. GitHub Pages använder Actions som källa; webbplatsens basväg är `/used-cars/`. Designen är ljus och avskalad med systemtypsnitt, utan externa typsnitt eller dekorativa bilillustrationer.
 
 Dataformatet är version 2. Kopiera `data/templates/car.json` för en ny generation och följ `docs/DATA.md`. Golf VII är ett källbelagt innehållsexempel med ofullständig variantidentifiering och utan mänsklig granskning.
+
+## Open source och modell-PR:er
+
+Projektet är publikt och MIT-licensierat. Läs [bidragsguiden](CONTRIBUTING.md) för ett komplett exempel från fork till pull request. En modell/generation behöver normalt bara en JSON-fil; inga AI-nycklar krävs. Skapa utkast med `python -m scripts.new_car --help` och validera en fil med `python scripts/validate_data.py data/cars/<id>.json`.
+
+Repo-skills: [research](.agents/skills/car-data/SKILL.md), [granskning](.agents/skills/car-review/SKILL.md) och [modell-PR](.agents/skills/car-pr/SKILL.md). Se även [underhållare](MAINTAINERS.md) och [uppförandekod](CODE_OF_CONDUCT.md). Automatisk CI är inte mänsklig faktagranskning.
+
+Range Rover-exemplet gäller L322 modellår 2012, inte Sport eller L405. Det lästa svenska annonspriset ligger över projektets målbudget; motor- och marknadsavgränsningar är fortfarande ett utkast.

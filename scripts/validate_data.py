@@ -1,4 +1,5 @@
 """Validate car data shape, relationships and editorial invariants."""
+import argparse
 import json
 import sys
 from datetime import date
@@ -37,6 +38,10 @@ def validate(record):
     if len(priorities) != len(set(priorities)):
         errors.append('duplicate issue priorities')
     provenance = record['provenance']
+    if record['status'] == 'draft' and (provenance['reviewedBy'] is not None or provenance['reviewedAt'] is not None):
+        errors.append('draft must not claim human review')
+    if provenance['method'] == 'human' and (provenance['provider'] is not None or provenance['model'] is not None):
+        errors.append('human content must not contain AI metadata')
     dates = [p['observedAt'] for p in record['priceObservations']] + [provenance['generatedAt']] + [s['accessedAt'] for s in record['sources']]
     if provenance['reviewedAt']:
         dates.append(provenance['reviewedAt'])
@@ -51,7 +56,10 @@ def validate(record):
 
 
 def main():
-    paths = sorted((ROOT / 'data/cars').glob('*.json'))
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('files', nargs='*', type=Path, help='Optional model JSON files; default: all models')
+    args = parser.parse_args()
+    paths = args.files or sorted((ROOT / 'data/cars').glob('*.json'))
     failures = []
     if not paths:
         failures.append('No car data files found')

@@ -23,3 +23,13 @@ body:
       description: Länkar och vad de stöder. Skriv om underlag saknas.
     validations:
       required: true
+  - type: input
+    id: model_year
+    attributes:
+      label: Modellår och marknad
+      description: Ange modellår om känt, inte bara första registreringsår. Svensksåld eller importerad?
+  - type: textarea
+    id: scope
+    attributes:
+      label: Vilka exemplar gäller uppgiften?
+      description: Motor, växellåda, kaross eller utrustning. Skriv vad som är okänt. Lägg inte in VIN, registreringsnummer eller personuppgifter.

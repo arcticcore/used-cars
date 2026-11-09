@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 2,
+  "id": "land-rover-range-rover-l322",
+  "brand": "Land Rover",
+  "model": "Range Rover",
+  "generation": "L322",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Range Rover L322, modellår 2012. Inte Range Rover Sport eller L405: registreringsår räcker inte för att identifiera generationen. Det svenska prisexemplet ligger klart över projektets målbudget 100 000 kr; underlaget visar inte att modellen normalt går att köpa för den summan. Detta är ett researchutkast.",
+  "researchTasks": [
+    "Verifiera svensk motorspecifikation och motorkoder för modellår 2012; skilj modellår från första registrering.",
+    "Kontrollera om den nordamerikanska servicebulletinen gäller det aktuella svenska eller importerade exemplaret.",
+    "Komplettera svensk prisbild och belägg för rostområden; ett annonspris är inte en marknadsvärdering."
+  ],
+  "variants": [
+    {
+      "id": "44-tdv8",
+      "label": "4.4 TDV8",
+      "fuel": "diesel",
+      "yearFrom": 2012,
+      "yearTo": 2012,
+      "transmission": "8-stegad automat",
+      "engineCodes": [],
+      "timingDrive": "unknown",
+      "sourceIds": [
+        "jlr-2012"
+      ],
+      "buyerSummary": "JLR anger 4.4 TDV8 med åttastegad automat för 2012 års brittiska versioner. Svensk specifikation och motorkod återstår att verifiera. Bensinmotorns kedjevarning nedan gäller inte denna diesel."
+    },
+    {
+      "id": "50-supercharged",
+      "label": "5.0 V8 Supercharged",
+      "fuel": "petrol",
+      "yearFrom": 2012,
+      "yearTo": 2012,
+      "transmission": "6-stegad automat",
+      "engineCodes": [],
+      "timingDrive": "chain",
+      "sourceIds": [
+        "jlr-2012",
+        "jlr-chain"
+      ],
+      "buyerSummary": "Kompressormatad bensin-V8. Kontrollera motorljud och dokumenterade reparationer. Kedjeunderlaget gäller avgränsade nordamerikanska fordon; verkstad behöver kontrollera tillämpligheten."
+    },
+    {
+      "id": "50-v8-na",
+      "label": "5.0 V8 utan kompressor (import)",
+      "fuel": "petrol",
+      "yearFrom": 2012,
+      "yearTo": 2012,
+      "transmission": "Automat – svensk specifikation ej verifierad",
+      "engineCodes": [],
+      "timingDrive": "chain",
+      "sourceIds": [
+        "jlr-chain"
+      ],
+      "buyerSummary": "Den sugmatade 5.0 V8 finns i JLR:s nordamerikanska underlag. Här tas den med för möjliga importbilar, inte som verifierat svenskt motorutbud. Kontrollera ursprungsmarknad."
+    }
+  ],
+  "issues": [
+    {
+      "id": "v8-chain-noise",
+      "title": "Rassel eller klickljud från bensinmotorn",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {
+        "variantIds": [
+          "50-supercharged",
+          "50-v8-na"
+        ],
+        "bodyStyles": [],
+        "transmissions": [],
+        "equipment": [],
+        "label": "5.0 V8 i avgränsat nordamerikanskt JLR-underlag för 2010–2012; tillämplighet på svenskt exemplar ej fastställd. Inte 4.4 TDV8."
+      },
+      "description": "JLR beskriver slitage i kedjemekanismen som kan minska kedjespänningen. Bulletinen är en reparationsanvisning, inte en återkallelse eller statistik över hur vanligt felet är.",
+      "symptoms": [
+        "Rasslande eller klickande ljud framifrån motorn, särskilt på tomgång."
+      ],
+      "advice": "Be om dokumentation av eventuellt kedjearbete. Låt en kunnig verkstad bedöma ljud och kontrollera om bulletinen gäller bilen innan köp. Tyst motor utesluter inte problem.",
+      "action": "resolve-before-buying",
+      "sourceIds": [
+        "jlr-chain"
+      ]
+    },
+    {
+      "id": "air-suspension",
+      "title": "Bilen höjer sig inte eller står snett",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {
+        "variantIds": [],
+        "bodyStyles": [],
+        "transmissions": [],
+        "equipment": [],
+        "label": "L322 med luftfjädring; verkstadskällan behandlar generationen, inte specifik svensk felfrekvens för 2012."
+      },
+      "description": "K Motors beskriver problem med luftfjädringen. Flera olika fel kan ge samma symptom.",
+      "symptoms": [
+        "Fjädringsvarning, långsam höjning eller ett hörn som inte höjs."
+      ],
+      "advice": "Be säljaren demonstrera höjdregleringen enligt bilens handbok. Köp inte med oförklarad varning eller sned höjd innan felet har diagnostiserats. Kryp inte under bilen för att undersöka.",
+      "action": "resolve-before-buying",
+      "sourceIds": [
+        "kmotors"
+      ]
+    },
+    {
+      "id": "fuel-gauge",
+      "title": "Bränslemätaren visar orimligt eller varierar",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {
+        "variantIds": [],
+        "bodyStyles": [],
+        "transmissions": [],
+        "equipment": [],
+        "label": "Senare L322 enligt verkstadskällan; exakt års- och motoravgränsning återstår."
+      },
+      "description": "K Motors rapporterar felvisande bränslemätare på senare L322. Orsaken måste undersökas.",
+      "symptoms": [
+        "Orimlig bränslenivå eller återkommande felvisning som säljaren berättar om."
+      ],
+      "advice": "Fråga om mätaren fungerar och om fel har reparerats. Låt verkstad utreda felvisning före köp. En normal visning vid ett tillfälle utesluter inte ett intermittent fel.",
+      "action": "resolve-before-buying",
+      "sourceIds": [
+        "kmotors"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "jlr-2012",
+      "title": "JLR: Range Rover 2012, brittiska specialversioner",
+      "url": "https://media.jlr.com/classic/news/2012/02/range-rover-celebrates-10th-anniversary-special-editions-uk-market",
+      "kind": "manufacturer",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "jlr-chain",
+      "title": "JLR LTB00474NAS2: kedjeljud, nordamerikanska 5.0 V8",
+      "url": "https://static.nhtsa.gov/odi/tsbs/2014/SB-10068287-2280.pdf",
+      "kind": "manufacturer",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "kmotors",
+      "title": "K Motors: egna verkstadserfarenheter av L322",
+      "url": "https://www.kmotors.co.uk/common-faults/range-rover-l322/",
+      "kind": "other",
+      "accessedAt": "2026-11-09"
+    },
+    {
+      "id": "se-listing",
+      "title": "Blocket: Range Rover 4.4 TDV8 2012, annonspris",
+      "url": "https://www.blocket.se/mobility/item/24769169",
+      "kind": "market-listings",
+      "accessedAt": "2026-11-09"
+    }
+  ],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": "OpenAI",
+    "model": null,
+    "generatedAt": "2026-11-09",
+    "reviewedBy": null,
+    "reviewedAt": null
+  },
+  "focusYears": {
+    "from": 2012,
+    "to": 2012
+  },
+  "priceObservations": [
+    {
+      "label": "Range Rover 4.4 TDV8 automat, privat annons. Ligger över målbudgeten; inget representativt marknadsurval.",
+      "year": 2012,
+      "mileageMil": 21500,
+      "priceSek": 259000,
+      "observedAt": "2026-11-09",
+      "sourceIds": [
+        "se-listing"
+      ]
+    }
+  ],
+  "viewingChecklist": [
+    "Kontrollera modellår och att bilen verkligen är en Range Rover L322, inte Sport eller L405.",
+    "Be om servicehistorik och kvitton på motor- och luftfjädringsarbeten.",
+    "Lyssna efter oförklarade motorljud och notera varningsmeddelanden.",
+    "Titta efter synlig rost på kaross och baklucka. Det är en allmän kontroll; specifikt rostunderlag för 2012 saknas här.",
+    "Prova klimatanläggning, fönster, lås och höjdreglering. Detta ersätter inte en oberoende kontroll."
+  ]
+}

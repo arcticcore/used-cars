@@ -56,3 +56,15 @@ test('Golf VII example renders motor choices and does not inherit a Golf VI chai
  assert.ok(!golf.issues.some(i=>/kedj/i.test(i.title)));
  assert.ok(!html.includes('<svg'));
 });
+
+test('Range Rover 2012 keeps petrol chain warnings off diesel and retains shared issues',()=>{
+ const range=cars.find(c=>c.id==='land-rover-range-rover-l322');
+ const diesel=range.issues.filter(i=>matchesScope(i.appliesTo,{variantIds:'44-tdv8'}));
+ assert.ok(!diesel.some(i=>i.id==='v8-chain-noise'));
+ assert.ok(diesel.some(i=>i.id==='air-suspension'));
+ assert.ok(range.issues.filter(i=>matchesScope(i.appliesTo,{variantIds:'50-supercharged'})).some(i=>i.id==='v8-chain-noise'));
+ const html=read('dist/forhandsvisning/land-rover-range-rover-l322/index.html');
+ assert.ok(html.includes('259'));
+ assert.ok(html.includes('över projektets målbudget'));
+ assert.ok(html.includes('Inte mänskligt granskat'));
+});
