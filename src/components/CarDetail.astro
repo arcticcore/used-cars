@@ -16,7 +16,7 @@ const options=(key:'bodyStyles'|'transmissions'|'equipment')=>[...new Set(issues
     <p>{car.focusYears&&<>Fokus: <strong>{car.focusYears.from}–{car.focusYears.to}</strong> (inte generationens hela tillverkningsperiod). </>}Målbudget: cirka {car.budgetTargetSek.toLocaleString('sv-SE')} kr.</p>
     {car.priceObservations.length>0 ? <><p class="small">Prisankare från annonser, inte en marknadsvärdering eller garanti om tillgänglighet:</p><ul class="prices">{car.priceObservations.map(p=><li><strong>{p.priceSek.toLocaleString('sv-SE')} kr</strong> · {p.year} · {p.mileageMil.toLocaleString('sv-SE')} mil<br/>{p.label}<br/><span class="small">Observerat {p.observedAt} · {p.sourceIds.map(id=><a href={`#source-${id}`}>Källa</a>)}</span></li>)}</ul></>:<p class="muted">Prisunderlag saknas ännu.</p>}
   </section>
-  <nav class="step-nav" aria-label="Guidens steg">
+  <nav class="step-nav" aria-label="Guidens områden">
     <a href="#step-engine">1. Motor</a><a href="#step-transmission">2. Växellåda</a><a href="#step-rust">3. Rost</a>
     {issues.some(i=>i.category==='other')&&<a href="#step-other">4. Övrigt</a>}
   </nav>

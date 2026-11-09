@@ -20,7 +20,7 @@ const paths={
 <section class="guide-step" id={`step-${category}`} data-issue-section={category} aria-labelledby={`heading-${category}`}>
   <header class="step-header">
     <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d={paths[category]}/></svg></span>
-    <div><p class="step-label">Steg {number}</p><h2 id={`heading-${category}`}>{title}</h2><p class="step-description">{description}</p></div>
+    <div><h2 id={`heading-${category}`}>{number}. {title}</h2><p class="step-description">{description}</p></div>
   </header>
   <div class="step-body">
     <slot />

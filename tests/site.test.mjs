@@ -79,7 +79,7 @@ test('every model groups each warning exactly once in consistent category steps'
    const expected=car.issues.filter(issue=>issue.category===category);
    if(category==='other'&&!expected.length){assert.equal(match,null);continue;}
    assert.ok(match,`${car.id}: missing ${category} step`);
-   assert.ok(match[0].includes(`Steg ${index+1}`));
+   assert.ok(match[0].includes(`id="heading-${category}">${index+1}. `));
    assert.ok(match[0].includes('data-empty'));
    assert.equal((match[0].match(/data-issue data-scope/g)||[]).length,expected.length);
    for(const issue of expected)assert.ok(match[0].includes(issue.title));
