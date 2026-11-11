@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "id": "toyota-auris-e180",
+  "brand": "Toyota",
+  "model": "Auris",
+  "generation": "E180",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Toyota Auris E180 är ett sakligt val kring 100 000 kr, särskilt som 1.6 bensin eller 1.8 Hybrid. ADAC beskriver modellen som välbyggd med pålitlig teknik och lyfter den snåla, långlivade hybriden; Touring Sports ger dessutom ett stort och plant lastutrymme. Kompromisserna är begränsad runtomsikt, ganska okänslig styrning och motorer som inte känns särskilt starka. För 100 000 kr visar aktuella svenska annonser främst 2013-bilar med ungefär 11 000–25 000 mil; jämför skick, service och drivlina före miltal ensamt.",
+  "researchTasks": [
+    "Verifiera motorkoder och svensk specifikation för varje enskild annons; denna guide använder motorernas annonsnamn och inte motorkoder.",
+    "Kontrollera med VIN hos Toyota att alla öppna återkallelser och kundkampanjer är utförda; europeiska kampanjintervall avgör inte ensamma om en svensk bil berörs.",
+    "Komplettera med svensk besiktningshistorik och fler prisobservationer för Touring Sports respektive halvkombi."
+  ],
+  "variants": [
+    {
+      "id": "16-valvematic",
+      "label": "1.6 Valvematic 132 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell eller Multidrive S – kontrollera annons och provkörning",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-auris-e180", "price-market"],
+      "buyerSummary": "Det starkare sugmotoralternativet är mer passande än 1.33 för den som vill ha bensin utan hybrid. ADAC kallar den bättre än 1.33, men inte särskilt vridstark. Välj bara Multidrive S efter en lugn provkörning och med dokumenterad service."
+    },
+    {
+      "id": "18-hybrid",
+      "label": "1.8 Hybrid 136 hk",
+      "engineCodes": [],
+      "fuel": "hybrid",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "e-CVT",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-auris-e180", "hybrid-ecu-campaign", "price-market"],
+      "buyerSummary": "ADAC rekommenderar hybriden för låg förbrukning och hållbarhet. Den steglösa drivlinan passar lugn vardagskörning bättre än den som vill ha sportig respons. Se till att det aktuella exemplaret får kontroll av återkallelser via VIN."
+    },
+    {
+      "id": "14-d4d",
+      "label": "1.4 D-4D 90 hk",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-auris-e180", "price-market"],
+      "buyerSummary": "Dieseln kan vara ett sparsamt val för längre körning, men ADAC bedömer 90 hk som tillräckligt snarare än starkt när bilen är lastad eller på motorväg. Välj inte enbart efter lågt inköpspris; körmönster och emissionssystem behöver bedömas för varje bil."
+    }
+  ],
+  "issues": [
+    {
+      "id": "starter-battery-breakdown",
+      "title": "Startbatteriet är en dokumenterad bärgningsorsak",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Auris E180, fokus på modellår 2013–2016; underlaget anger inte exakta motor- eller karossavgränsningar"},
+      "description": "ADAC:s begagnatrapport pekar ut startbatteriet som en vanlig orsak till driftstopp för Auris. Det säger inte att varje svårstartad bil har ett dåligt batteri eller att batteriet ensamt är orsaken.",
+      "symptoms": ["Trög start, varningsmeddelanden eller dokumenterade startproblem.", "Ett gammalt 12-voltsbatteri utan uppgift om byte."],
+      "advice": "Fråga när 12-voltsbatteriet byttes och om bilen haft bärgningsärenden. Be om batteritest om starten känns tveksam; på hybrid avser detta 12-voltsbatteriet, inte ett påstående om högvoltsbatteriets skick.",
+      "sourceIds": ["adac-auris-e180"],
+      "action": "check"
+    },
+    {
+      "id": "brake-discs-and-parking-brake",
+      "title": "Kontrollera bromsskivor och parkeringsbroms",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Auris E180; TÜV-underlag för generationen, utan svensk motor- eller årsmodellsuppdelning"},
+      "description": "TÜV-baserad begagnatrapportering lyfter bromsskivslitage och anmärkningar på fot-/parkeringsbroms som modellens svagare kontrollpunkter. Det är inte bevis för att varje sliten skiva är ett konstruktionsfel.",
+      "symptoms": ["Kantiga eller kraftigt rostiga bromsskivor.", "Parkeringsbroms som tar ojämnt eller dåligt."],
+      "advice": "Granska senaste besiktningsprotokoll och provbromsa försiktigt på säker plats. Låt en verkstad bedöma ojämn bromsverkan, missljud eller korrosion innan köp.",
+      "sourceIds": ["tuv-auris-e180"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "lighting-inspection",
+      "title": "Gå igenom all belysning före köp",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Auris E180; TÜV-underlag för generationen, utan specificerad svensk utrustningsnivå"},
+      "description": "TÜV-baserad rapportering beskriver fler anmärkningar än väntat för belysning. Underlaget anger inte en enskild gemensam rotorsak, så ett funktionsfel måste felsökas på just bilen.",
+      "symptoms": ["Varningslampa, fukt i lykta eller lampa som inte fungerar.", "Anmärkning om ljus i senaste besiktningsprotokollet."],
+      "advice": "Kontrollera halvljus, helljus, blinkers, bromsljus, backljus och skyltbelysning tillsammans med säljaren. Fråga vad som åtgärdats om besiktningen haft ljusanmärkning.",
+      "sourceIds": ["tuv-auris-e180"],
+      "action": "check"
+    },
+    {
+      "id": "hybrid-ecu-campaign",
+      "title": "Hybrid: kontrollera kampanj för styrprogram",
+      "category": "other",
+      "kind": "general-check",
+      "priority": 4,
+      "appliesTo": {"variantIds": ["18-hybrid"], "bodyStyles": [], "transmissions": ["e-CVT"], "equipment": [], "label": "Auris Hybrid byggd 2012-10-11–2014-05-09 enligt europeiskt kampanjdokument; VIN och svensk tillämplighet måste kontrolleras"},
+      "description": "Toyota Motor Europe publicerade en kampanj för omprogrammering av motor/generator- och hybridstyrdon för vissa Auris Hybrid. Dokumentet säger uttryckligen att inte alla bilar i produktionsintervallet eller alla länder berörs.",
+      "symptoms": ["Saknad dokumentation om utförd återkallelse eller kampanj."],
+      "advice": "Kontrollera VIN i Toyotas svenska återkallelsetjänst och be en auktoriserad verkstad bekräfta utförd åtgärd. Detta är en kontroll av kampanjstatus, inte en diagnos av hybridbatteri eller drivlina.",
+      "sourceIds": ["hybrid-ecu-campaign", "toyota-recall-se"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "takata-recall-status",
+      "title": "Kontrollera VIN för säkerhetsåterkallelser",
+      "category": "other",
+      "kind": "general-check",
+      "priority": 5,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Auris som omfattas av Toyotas VIN-baserade återkallelsekontroll; modell- och produktionsår räcker inte för att avgöra om en bil berörs"},
+      "description": "Toyota Sverige listar Auris bland de europeiska modeller som kan omfattas av Takata-återkallelsen och betonar att inte alla chassinummer i de angivna produktionsperioderna berörs.",
+      "symptoms": ["Ingen dokumentation om kontrollerade återkallelser."],
+      "advice": "Sök på bilens VIN i Toyotas svenska tjänst före köp och boka åtgärd om den är öppen. Lita inte på modellår eller säljarens muntliga besked som ersättning för VIN-kontroll.",
+      "sourceIds": ["toyota-recall-se"],
+      "action": "resolve-before-buying"
+    }
+  ],
+  "sources": [
+    {"id": "adac-auris-e180", "title": "ADAC: Gebrauchtwageninformation Toyota Auris (2013–2019)", "url": "https://assets.adac.de/Autodatenbank/GWInfo/gw0232-toyota-auris-2013-2019-bericht.pdf", "kind": "independent-test", "accessedAt": "2026-11-11"},
+    {"id": "tuv-auris-e180", "title": "Handelsblatt: Gebrauchtwagen-Check, Toyota Auris enligt TÜV", "url": "https://www.handelsblatt.com/mobilitaet/motor/gebrauchtwagen-check-so-bewertet-der-tuev-den-toyota-auris-01/100176088.html", "kind": "independent-test", "accessedAt": "2026-11-11"},
+    {"id": "hybrid-ecu-campaign", "title": "Toyota Motor Europe: kampanj 15OSD-001 för Auris Hybrid", "url": "https://www.toyota-tech.eu/toms_cabs/EN/15OSD-001.pdf", "kind": "manufacturer", "accessedAt": "2026-11-11"},
+    {"id": "toyota-recall-se", "title": "Toyota Sverige: information om återkallelser", "url": "https://www.toyota.se/aterkallelser", "kind": "manufacturer", "accessedAt": "2026-11-11"},
+    {"id": "price-market", "title": "AutoUncle: Toyota Auris årsmodell 2013, svenska marknadsannonser", "url": "https://www.autouncle.se/se/begagnade-bilar/Toyota/Auris/y-2013", "kind": "market-listings", "accessedAt": "2026-11-11"}
+  ],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": "OpenAI",
+    "model": null,
+    "generatedAt": "2026-11-11",
+    "reviewedBy": null,
+    "reviewedAt": null
+  },
+  "focusYears": {
+    "from": 2013,
+    "to": 2016
+  },
+  "priceObservations": [
+    {"label": "Auris 1.6 132 hk, manuell; marknadsannons via Bytbil.", "year": 2013, "mileageMil": 12743, "priceSek": 99900, "observedAt": "2026-11-11", "sourceIds": ["price-market"]},
+    {"label": "Auris Hybrid e-CVT Executive; marknadsannons via Bytbil.", "year": 2013, "mileageMil": 18727, "priceSek": 99900, "observedAt": "2026-11-11", "sourceIds": ["price-market"]},
+    {"label": "Auris 1.6 Valvematic Multidrive S; marknadsannons via Blocket.", "year": 2013, "mileageMil": 24700, "priceSek": 75000, "observedAt": "2026-11-11", "sourceIds": ["price-market"]}
+  ],
+  "viewingChecklist": [
+    "Matcha annonsens drivlina mot registreringsuppgifter och be om servicehistorik; modellnamnet Auris räcker inte för att identifiera motor och växellåda.",
+    "Kontrollera senaste besiktningsprotokollet och provbromsa; undersök bromsskivor och parkeringsbroms.",
+    "Prova samtliga lampor och kontrollera eventuella ljusanmärkningar i historiken.",
+    "Fråga när 12-voltsbatteriet byttes och om bilen haft startproblem eller bärgning.",
+    "Kontrollera VIN hos Toyota för öppna återkallelser och be om bekräftelse för hybridkampanj på berörd Hybrid."
+  ]
+}
