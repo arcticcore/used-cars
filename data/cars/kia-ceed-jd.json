@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 2,
+  "id": "kia-ceed-jd",
+  "brand": "Kia",
+  "model": "Cee'd",
+  "generation": "JD",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Kia Cee'd JD är ett pragmatiskt kompaktbilsköp kring 100 000 kr: den har enkel användning, gott om plats och Sportswagon har ett större bagageutrymme. ADAC placerar modellen i övre mittfältet i sin bärgningsstatistik, men TÜV-underlaget är svagare för belysning, bromsar och hjulupphängning. Välj motor efter körning: 1.4 bensin är lugn, 1.6 GDI starkare men behöver varv, och 1.6 CRDi passar längre sträckor bättre än korta vardagsresor. Svenska marknadsannonser visar att flera 2013-bilar ryms inom budget, men skick och dokumenterad service väger tyngre än ett lågt annonspris.",
+  "researchTasks": [
+    "Verifiera motorkod, kamdrivning och exakt svensk specifikation på varje exemplar; de anges inte som fastställda i detta utkast.",
+    "Kontrollera om automatversionen är DCT eller momentomvandlarautomat innan köp; växellådsuppgiften varierar mellan motorerna.",
+    "Be om svensk besiktningshistorik och komplettera med fler prisobservationer för respektive kaross och drivlina."
+  ],
+  "variants": [
+    {
+      "id": "14-cvvt",
+      "label": "1.4 CVVT 100 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell – kontrollera den individuella bilens uppgift",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-ceed-jd", "price-market"],
+      "buyerSummary": "Ett enkelt bensinalternativ, men ADAC bedömer 1.4 som relativt kraftsvag och inte särskilt sparsam. Den passar bäst när lugn körning och servicehistorik är viktigare än last och omkörningsmarginal."
+    },
+    {
+      "id": "16-gdi",
+      "label": "1.6 GDI 135 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell eller DCT – kontrollera annons och provkörning",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-ceed-jd", "price-market"],
+      "buyerSummary": "ADAC beskriver 1.6 GDI som märkbart starkare än 1.4, men den behöver högre varv för bra fart. En DCT-bil ska provköras i låg fart och vid start; detta är ett allmänt köpråd, inte ett belagt modellfel."
+    },
+    {
+      "id": "16-crdi-128",
+      "label": "1.6 CRDi 128 hk",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell eller automat – kontrollera exakt växellåda",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-ceed-jd", "price-market"],
+      "buyerSummary": "Enligt ADAC är 1.6-dieseln både mer avslappnad än de svagare motorerna och snål. Den är mest rimlig för längre körning; fråga om bilens körmönster och emissionsrelaterade varningslampor."
+    }
+  ],
+  "issues": [
+    {
+      "id": "starter-battery",
+      "title": "Startbatteriet är en dokumenterad bärgningsorsak",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Cee'd JD, modellår 2013–2016; ADAC anger startbatteri för 2012–2017 utan närmare motoravgränsning"},
+      "description": "ADAC pekar ut startbatteriet som den vanligaste orsaken till bärgning för generationen och listar startbatteri som en återkommande komponent för 2012–2017. Det betyder inte att varje startproblem har samma orsak.",
+      "symptoms": ["Trög start eller återkommande varningsmeddelanden.", "Ett äldre 12-voltsbatteri utan dokumenterat byte."],
+      "advice": "Fråga när batteriet byttes och om bilen haft startproblem eller bärgning. Be om ett batteritest om starten är tveksam innan köp.",
+      "sourceIds": ["adac-ceed-jd"],
+      "action": "check"
+    },
+    {
+      "id": "lighting",
+      "title": "Kontrollera belysning och besiktningshistorik",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Cee'd JD, modellår 2013–2016; TÜV-underlag för generationen utan svensk utrustningsavgränsning"},
+      "description": "ADAC:s sammanställning säger att belysningen är den största källan till anmärkningar vid TÜV för generationen. Underlaget anger ingen gemensam komponentorsak för varje fel.",
+      "symptoms": ["Icke fungerande lampa, fukt i lykta eller felmeddelande.", "Tidigare anmärkning om belysning i besiktningsprotokoll."],
+      "advice": "Kontrollera halvljus, helljus, blinkers, bromsljus, backljus och skyltbelysning med säljaren. Låt ett kvarstående ljusfel utredas före köp.",
+      "sourceIds": ["adac-ceed-jd", "tuv-ceed-jd"],
+      "action": "check"
+    },
+    {
+      "id": "brakes",
+      "title": "Bromsar och parkeringsbroms kräver extra kontroll",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Cee'd JD, modellår 2013–2016; TÜV-underlag för generationen utan motoruppdelning"},
+      "description": "ADAC lyfter bromsar som en överrepresenterad TÜV-kontrollpunkt. En senare TÜV-genomgång anger särskilt fot- och parkeringsbroms som svagare för JD, men detta bevisar inte samma fel på alla exemplar.",
+      "symptoms": ["Kraftigt rostiga eller slitna bromsskivor.", "Parkeringsbroms som tar ojämnt eller bromsar dåligt."],
+      "advice": "Läs senaste besiktningsprotokoll, kontrollera skivornas skick och provbromsa säkert. Be en verkstad bedöma ojämn bromsverkan, missljud eller korrosion före köp.",
+      "sourceIds": ["adac-ceed-jd", "tuv-ceed-jd"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "suspension-and-steering-joints",
+      "title": "Kontrollera hjulupphängning och styrleder",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 4,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Cee'd JD, modellår 2013–2016; TÜV-underlag för JD, exakta komponenter måste fastställas på bilen"},
+      "description": "ADAC anger hjulupphängningen som en överrepresenterad kontrollpunkt vid TÜV. En nyare TÜV-genomgång pekar för JD särskilt ut styrleder och länkar i hjulupphängningen, utan att ange felfrekvens för svensk marknad.",
+      "symptoms": ["Klonk från framvagn eller anmärkning vid kontroll.", "Otydlig styrning eller onormalt däckslitage."],
+      "advice": "Provkör på ojämnt underlag och be om en oberoende kontroll av framvagn och styrning om bilen har missljud, styrglapp eller ojämnt slitna däck.",
+      "sourceIds": ["adac-ceed-jd", "tuv-ceed-jd"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "recall-status",
+      "title": "Kontrollera öppna återkallelser med VIN",
+      "category": "other",
+      "kind": "general-check",
+      "priority": 5,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Alla Cee'd JD; en VIN-kontroll krävs eftersom modellår och motor inte avgör återkallelsestatus"},
+      "description": "Kia Sverige erbjuder VIN-baserad kontroll av aktiva återkallelser och hänvisar även till Kia-verkstad för besked. Det går inte att avgöra öppna kampanjer för ett visst exemplar enbart från modellnamn eller årsmodell.",
+      "symptoms": ["Ingen dokumentation om utförd återkallelsekontroll."],
+      "advice": "Kontrollera bilens VIN i Kias svenska tjänst före köp och be verkstad bekräfta eventuella öppna åtgärder. Detta är en statuskontroll, inte ett påstående om ett specifikt JD-fel.",
+      "sourceIds": ["kia-recall-se"],
+      "action": "resolve-before-buying"
+    }
+  ],
+  "sources": [
+    {"id": "adac-ceed-jd", "title": "ADAC: Gebrauchtwageninformation KIA cee'd (2012–2018)", "url": "https://assets.adac.de/Autodatenbank/GWInfo/gw0335-kia-ceed-2012-2018-bericht.pdf", "kind": "independent-test", "accessedAt": "2026-11-12"},
+    {"id": "tuv-ceed-jd", "title": "AUTO BILD: Kia Ceed i TÜV-kontroll", "url": "https://www.autobild.de/artikel/kia-ceed-im-tuev-check-2026-schwachstellen-maengel-probleme-28259965.html", "kind": "independent-test", "accessedAt": "2026-11-12"},
+    {"id": "kia-recall-se", "title": "Kia Sverige: återkallelser", "url": "https://www.kia.com/se/aga/service-oversikt/aterkallelser/", "kind": "manufacturer", "accessedAt": "2026-11-12"},
+    {"id": "price-market", "title": "Wayke: Kia Cee'd årsmodell 2013, svenska annonser", "url": "https://www.wayke.se/sok/ceed/2013", "kind": "market-listings", "accessedAt": "2026-11-12"}
+  ],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": "OpenAI",
+    "model": null,
+    "generatedAt": "2026-11-12",
+    "reviewedBy": null,
+    "reviewedAt": null
+  },
+  "focusYears": {
+    "from": 2013,
+    "to": 2016
+  },
+  "priceObservations": [
+    {"label": "Cee'd 1.4 CVVT 99 hk, manuell.", "year": 2013, "mileageMil": 14800, "priceSek": 79800, "observedAt": "2026-11-12", "sourceIds": ["price-market"]},
+    {"label": "Cee'd SW 1.6 CRDi 128 hk, automat.", "year": 2013, "mileageMil": 15971, "priceSek": 90000, "observedAt": "2026-11-12", "sourceIds": ["price-market"]},
+    {"label": "Cee'd 1.6 GDI DCT, bensin.", "year": 2013, "mileageMil": 20450, "priceSek": 79995, "observedAt": "2026-11-12", "sourceIds": ["price-market"]}
+  ],
+  "viewingChecklist": [
+    "Matcha annonsens motor och växellåda mot registreringsuppgifter; Cee'd-namnet identifierar inte drivlinan.",
+    "Be om servicehistorik, uppgift om startbatteriets ålder och eventuella bärgningsärenden.",
+    "Kontrollera all belysning och läs senaste besiktningsprotokoll.",
+    "Inspektera bromsskivor och prova parkeringsbromsen på en säker plats.",
+    "Kontrollera öppna återkallelser med VIN hos Kia före köp."
+  ]
+}
