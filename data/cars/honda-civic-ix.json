@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 2,
+  "id": "honda-civic-ix",
+  "brand": "Honda",
+  "model": "Civic",
+  "generation": "IX",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Honda Civic IX är ett praktiskt och relativt driftsäkert val under eller omkring 100 000 kr. ADAC lyfter stort bagage, smart baksäteslösning, enkel användning och lätt över genomsnittlig bärgningsdriftsäkerhet. Nackdelarna är begränsad sikt bakåt, högre ljudnivå, begränsat platsutrymme i baksätet och bensinmotorer som behöver varvas för fart. Svenska annonser för 2013 visar både 1.8 bensin och 1.6 diesel mellan cirka 63 000 och 90 000 kr; priset är en observation, inte en värdering av ett enskilt exemplar.",
+  "researchTasks": [
+    "Verifiera motorkod, kamdrivning och svensk specifikation för den individuella bilen; de är inte fastställda i detta utkast.",
+    "Komplettera med separata prisobservationer för Civic Tourer och automat, eftersom underlaget här främst gäller halvkombi.",
+    "Kontrollera tillverkarens återkallelse- och uppdateringsstatus med VIN före köp, särskilt för privatimporter."
+  ],
+  "variants": [
+    {
+      "id": "18-ivtec",
+      "label": "1.8 i-VTEC 142 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell eller automat – kontrollera den individuella bilen",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-civic-ix", "price-market"],
+      "buyerSummary": "1.8 är den vanligaste starkare sugmotorn i det här urvalet. ADAC beskriver den som tillräckligt rapp vid högre varv, men med begränsat vridmoment på låga och mellanvarv. Provkör i den körning du faktiskt ska göra."
+    },
+    {
+      "id": "16-idtec",
+      "label": "1.6 i-DTEC 120 hk",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-civic-ix", "price-market"],
+      "buyerSummary": "ADAC beskriver dieselmotorerna som snåla. Bedöm dock alltid körmönster, service och avgasrelaterade varningar för det aktuella exemplaret; den här posten gör inget påstående om en specifik felorsak."
+    }
+  ],
+  "issues": [
+    {
+      "id": "starter-battery",
+      "title": "Kontrollera 12-voltsbatteriet",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Civic IX; ADAC listar startbatteri för modellår 2012–2013 och 2016–2017, utan motoravgränsning"},
+      "description": "ADAC listar startbatteriet som återkommande bärgningsrelaterad komponent för vissa år i generationen. Det betyder inte att varje startproblem har samma orsak eller att alla modellår omfattas.",
+      "symptoms": ["Trög start eller återkommande elektriska varningsmeddelanden.", "Ett gammalt batteri utan dokumenterat byte."],
+      "advice": "Fråga om batteriets ålder och eventuella startproblem. Be om ett batteritest om bilen startar tveksamt.",
+      "sourceIds": ["adac-civic-ix"],
+      "action": "check"
+    },
+    {
+      "id": "lighting",
+      "title": "Gå igenom all belysning",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Civic IX; TÜV-underlag för generationen utan svensk utrustnings- eller motoruppdelning"},
+      "description": "ADAC:s sammanställning anger belysning som den tydligaste återkommande anmärkningskategorin i TÜV-underlaget. Den anger ingen gemensam felorsak för varje bil.",
+      "symptoms": ["Lampa eller skyltbelysning som inte fungerar.", "Fukt i lykta eller tidigare ljusanmärkning i besiktningshistoriken."],
+      "advice": "Kontrollera halvljus, helljus, blinkers, bromsljus, backljus och skyltbelysning tillsammans med säljaren. Låt kvarstående fel undersökas före köp.",
+      "sourceIds": ["adac-civic-ix"],
+      "action": "check"
+    },
+    {
+      "id": "springs-and-dampers",
+      "title": "Lyssna efter missljud från fjädring och dämpare",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Civic IX; ADAC/TÜV-underlag för generationen, utan exakt kaross- eller motoravgränsning"},
+      "description": "ADAC beskriver fjäder-/dämparenheten som en av de få återkommande anmärkningsområdena i TÜV-underlaget. Det är inte ett belägg för att ett visst missljud alltid kommer från denna del.",
+      "symptoms": ["Klonk eller knack över ojämnheter.", "Onormalt däckslitage eller tidigare besiktningsanmärkning på fjädring/dämpning."],
+      "advice": "Provkör på ojämnt underlag och kontrollera senaste besiktningsprotokoll. Låt en verkstad bedöma tydliga missljud eller anmärkningar innan köp.",
+      "sourceIds": ["adac-civic-ix"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "recall-status",
+      "title": "Kontrollera öppna återkallelser och uppdateringar med VIN",
+      "category": "other",
+      "kind": "general-check",
+      "priority": 4,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Alla Civic IX; VIN krävs eftersom modellår och variant inte avgör återkallelse- eller uppdateringsstatus"},
+      "description": "Honda erbjuder en VIN-baserad kontroll av oåtgärdade återkallelser och produktuppdateringar. Honda anger att importerade bilar kan kräva kontakt med återförsäljare eftersom registret inte alltid visar allt.",
+      "symptoms": ["Saknad dokumentation om återkallelser eller produktuppdateringar."],
+      "advice": "Kontrollera VIN i Hondas tjänst och kontakta auktoriserad Honda-återförsäljare vid import eller oklar status. Boka kostnadsfri åtgärd om en kampanj är öppen.",
+      "sourceIds": ["honda-recall-se"],
+      "action": "resolve-before-buying"
+    }
+  ],
+  "sources": [
+    {"id": "adac-civic-ix", "title": "ADAC: Gebrauchtwageninformation Honda Civic (2012–2017)", "url": "https://assets.adac.de/Autodatenbank/GWInfo/gw0327-honda-civic-2012-2017-bericht.pdf", "kind": "independent-test", "accessedAt": "2026-11-13"},
+    {"id": "honda-recall-se", "title": "Honda Sverige: återkallelser och uppdateringar", "url": "https://www.honda.se/cars/owners/recalls-and-updates.html", "kind": "manufacturer", "accessedAt": "2026-11-13"},
+    {"id": "price-market", "title": "AutoUncle: Honda Civic årsmodell 2013, svenska marknadsannonser", "url": "https://www.autouncle.se/se/begagnade-bilar/Honda/Civic/y-2013", "kind": "market-listings", "accessedAt": "2026-11-13"}
+  ],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": "OpenAI",
+    "model": null,
+    "generatedAt": "2026-11-13",
+    "reviewedBy": null,
+    "reviewedAt": null
+  },
+  "focusYears": {
+    "from": 2013,
+    "to": 2016
+  },
+  "priceObservations": [
+    {"label": "Civic 1.8 i-VTEC, manuell.", "year": 2013, "mileageMil": 16800, "priceSek": 63000, "observedAt": "2026-11-13", "sourceIds": ["price-market"]},
+    {"label": "Civic 1.6 i-DTEC Elegance, manuell.", "year": 2013, "mileageMil": 12700, "priceSek": 89900, "observedAt": "2026-11-13", "sourceIds": ["price-market"]},
+    {"label": "Civic 1.6 i-DTEC Sport, manuell.", "year": 2013, "mileageMil": 15550, "priceSek": 84500, "observedAt": "2026-11-13", "sourceIds": ["price-market"]}
+  ],
+  "viewingChecklist": [
+    "Matcha annonsens motor och växellåda mot registreringsuppgifter; Civic-namnet identifierar inte drivlinan.",
+    "Be om servicehistorik och uppgift om när 12-voltsbatteriet byttes.",
+    "Prova samtliga lampor och kontrollera ljusanmärkningar i senaste besiktningsprotokoll.",
+    "Provkör på ojämnt underlag och be om kontroll av tydliga missljud från fjädring eller dämpare.",
+    "Kontrollera återkallelser och produktuppdateringar med VIN före köp, särskilt vid import."
+  ]
+}
