@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 2,
+  "id": "mazda-3-bm",
+  "brand": "Mazda",
+  "model": "Mazda3",
+  "generation": "BM",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Mazda3 BM är ett intressant val kring 100 000 kr för den som vill ha en nyare kompaktbil med bensin- eller dieselmotor. ADAC beskriver bärgningsdriftsäkerheten som lätt över genomsnittet, medan TÜV-underlaget pekar på fjädring, styrning och bromsar som viktigare kontrollpunkter. Svenska 2014-annonser visar stor prisspridning: en 2.0 bensin med högre miltal kan ligga långt under målet, medan lågmilade eller välutrustade bilar kostar mer. Jämför därför skick, drivlina och historik före annonspris.",
+  "researchTasks": [
+    "Verifiera motorkod, kamdrivning och exakt svensk specifikation för varje bil; de är inte fastställda i detta utkast.",
+    "Kontrollera med VIN om återkallelser och produktkampanjer är utförda. De europeiska kampanjuppgifterna avgör inte ensamma om ett svenskt exemplar omfattas.",
+    "Komplettera med mer separat prisunderlag för sedan, automat och diesel eftersom prisbilden varierar mycket med miltal och utrustning."
+  ],
+  "variants": [
+    {
+      "id": "20-skyactiv-g-120",
+      "label": "2.0 SKYACTIV-G 120 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell eller automat – kontrollera annonsen",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-mazda3-bm", "price-market"],
+      "buyerSummary": "Ett vanligt bensinalternativ i annonserna. Välj efter skick, servicehistorik och växellåda snarare än enbart effektangivelsen; motorkod och kamdrivning behöver verifieras för bilen."
+    },
+    {
+      "id": "20-skyactiv-g-165",
+      "label": "2.0 SKYACTIV-G 165 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell eller automat – kontrollera annonsen",
+      "timingDrive": "unknown",
+      "sourceIds": ["price-market"],
+      "buyerSummary": "Det starkare 2.0-bensinalternativet förekommer också på marknaden. Kontrollera exakt effekt i registreringsuppgifter och provkör bilen; den här guiden gör inget påstående om motorernas inbördes driftsäkerhet."
+    },
+    {
+      "id": "22-skyactiv-d-150",
+      "label": "2.2 SKYACTIV-D 150 hk",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell eller automat – kontrollera annonsen",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-mazda3-bm", "price-market"],
+      "buyerSummary": "Dieseln har särskilda återkallelseuppgifter i ADAC:s europeiska sammanställning. Kontrollera VIN, dokumenterad service och eventuella motor- eller varningslampor innan köp."
+    }
+  ],
+  "issues": [
+    {
+      "id": "starter-battery",
+      "title": "Tidiga bilar: kontrollera startbatteriet",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Mazda3 BM modellår 2013 enligt ADAC; tillämpning på senare årsmodeller är inte belagd här"},
+      "description": "ADAC pekar ut startbatteriet som en återkommande bärgningsrelaterad komponent för modellår 2013. Det betyder inte att senare modellår har samma risk eller att alla startproblem beror på batteriet.",
+      "symptoms": ["Trög start eller elektriska varningsmeddelanden.", "Äldre 12-voltsbatteri utan dokumenterat byte."],
+      "advice": "För en 2013-bil: fråga när batteriet byttes och om bilen haft startproblem. Be om batteritest om starten är tveksam.",
+      "sourceIds": ["adac-mazda3-bm"],
+      "action": "check"
+    },
+    {
+      "id": "springs-and-dampers",
+      "title": "Kontrollera fjädrar och dämpare",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Mazda3 BM, TÜV-underlag för generationen utan svensk motor- eller utrustningsuppdelning"},
+      "description": "ADAC anger defekta fjädrar och dämpare som faktorer bakom generationens medelresultat i TÜV-underlaget. AUTO BILD:s senare TÜV-genomgång pekar också ut brutna fjädrar för BM.",
+      "symptoms": ["Klonk eller knack på ojämnt underlag.", "Onormal bilhöjd, läckande dämpare eller besiktningsanmärkning."],
+      "advice": "Provkör på ojämnt underlag och granska besiktningshistoriken. Låt en verkstad bedöma missljud, läckage eller anmärkningar före köp.",
+      "sourceIds": ["adac-mazda3-bm", "tuv-mazda3-bm"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "steering",
+      "title": "Kontrollera styrning och framvagn",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Mazda3 BM, TÜV-underlag för generationen; exakt komponent och svensk felfrekvens är inte angiven"},
+      "description": "En TÜV-baserad genomgång anger styrningsanmärkningar som ett BM-tema. Det går inte av underlaget att dra slutsatsen att samma komponent är felaktig i varje exemplar.",
+      "symptoms": ["Glapp, missljud eller ojämn styrkänsla.", "Ojämnt däckslitage eller styrningsanmärkning i protokoll."],
+      "advice": "Kontrollera styrkänslan vid låg fart och på ojämnt underlag. Be om oberoende framvagnskontroll vid glapp, missljud eller däckslitage.",
+      "sourceIds": ["tuv-mazda3-bm"],
+      "action": "check"
+    },
+    {
+      "id": "brakes",
+      "title": "Granska bromsar och bromsskivor",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 4,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Mazda3 BM, TÜV-underlag för generationen utan motoravgränsning"},
+      "description": "ADAC anger nedsatt bromsfunktion som ett område som drar ned TÜV-resultatet. AUTO BILD beskriver överdrivet slitage på bromsskivor som en BM-kontrollpunkt, utan att ange svensk felfrekvens.",
+      "symptoms": ["Kraftigt rostiga eller slitna skivor.", "Missljud, vibrationer eller ojämn bromsverkan."],
+      "advice": "Läs senaste besiktningsprotokoll, inspektera bromsskivor och provbromsa säkert. Låt en verkstad bedöma vibrationer eller ojämn bromsverkan före köp.",
+      "sourceIds": ["adac-mazda3-bm", "tuv-mazda3-bm"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "recall-status",
+      "title": "Kontrollera VIN för öppna återkallelser",
+      "category": "other",
+      "kind": "general-check",
+      "priority": 5,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Alla Mazda3 BM; kampanjer kan vara motor- och produktionsspecifika och måste verifieras per VIN"},
+      "description": "ADAC dokumenterar flera europeiska kampanjer för generationen, bland annat för vissa bensinbilar med i-ELOOP och för dieselmotorer. Mazda Sverige erbjuder kontroll med 17-ställigt VIN; europeiska kampanjuppgifter är inte ensamma besked för en svensk bil.",
+      "symptoms": ["Saknad dokumentation om återkallelser eller produktkampanjer."],
+      "advice": "Kontrollera VIN hos Mazda före köp och be märkesverkstad bekräfta att alla relevanta åtgärder är utförda. På diesel ska särskilt motorrelaterade kampanjer kontrolleras.",
+      "sourceIds": ["adac-mazda3-bm", "mazda-recall-se"],
+      "action": "resolve-before-buying"
+    }
+  ],
+  "sources": [
+    {"id": "adac-mazda3-bm", "title": "ADAC: Gebrauchtwageninformation Mazda 3 (2013–2019)", "url": "https://assets.adac.de/image/upload/Autodatenbank/GWInfo/gw0238-mazda-3-2013-2019-bericht.pdf", "kind": "independent-test", "accessedAt": "2026-11-14"},
+    {"id": "tuv-mazda3-bm", "title": "AUTO BILD: Mazda3 i TÜV-kontroll", "url": "https://www.autobild.de/artikel/mazda3-im-tuev-check-2026--28176087.html", "kind": "independent-test", "accessedAt": "2026-11-14"},
+    {"id": "mazda-recall-se", "title": "Mazda Sverige: återkallningsinformation", "url": "https://www.mazda.se/agare/handbocker-och-videor/aterkallelse/", "kind": "manufacturer", "accessedAt": "2026-11-14"},
+    {"id": "price-market", "title": "AutoUncle: Mazda 3 årsmodell 2014, svenska marknadsannonser", "url": "https://www.autouncle.se/se/begagnade-bilar/Mazda/3/y-2014", "kind": "market-listings", "accessedAt": "2026-11-14"}
+  ],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": "OpenAI",
+    "model": null,
+    "generatedAt": "2026-11-14",
+    "reviewedBy": null,
+    "reviewedAt": null
+  },
+  "focusYears": {
+    "from": 2013,
+    "to": 2016
+  },
+  "priceObservations": [
+    {"label": "Mazda3 2.0 SKYACTIV-G 120 hk, manuell.", "year": 2014, "mileageMil": 17650, "priceSek": 65000, "observedAt": "2026-11-14", "sourceIds": ["price-market"]},
+    {"label": "Mazda3 2.0 SKYACTIV-G 120 hk, automat.", "year": 2014, "mileageMil": 18000, "priceSek": 89900, "observedAt": "2026-11-14", "sourceIds": ["price-market"]},
+    {"label": "Mazda3 2.2 SKYACTIV-D 150 hk, automat.", "year": 2014, "mileageMil": 19666, "priceSek": 99900, "observedAt": "2026-11-14", "sourceIds": ["price-market"]}
+  ],
+  "viewingChecklist": [
+    "Matcha annonsens motor, effekt och växellåda mot registreringsuppgifter; Mazda3-namnet räcker inte för att fastställa drivlinan.",
+    "För en 2013-bil: fråga om 12-voltsbatteriets ålder och eventuella startproblem.",
+    "Provkör på ojämnt underlag och kontrollera fjädring, dämpare och styrning.",
+    "Granska bromsskivor, läs besiktningshistoriken och provbromsa på en säker plats.",
+    "Kontrollera VIN hos Mazda för öppna återkallelser och produktkampanjer."
+  ]
+}
