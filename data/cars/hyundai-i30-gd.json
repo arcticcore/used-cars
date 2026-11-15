@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "id": "hyundai-i30-gd",
+  "brand": "Hyundai",
+  "model": "i30",
+  "generation": "GD",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Hyundai i30 GD är en kompaktbil för den som prioriterar enkel användning, bra säkerhetsutrustning och praktiska karossalternativ. ADAC beskriver bilen som rymlig för klassen, lätt att använda och trygg på vägen, medan AUTO BILD lyfter den som en lättkörd och rymlig vardagsbil. Svenska prisobservationer för 2013 visar ett stort spann: högre miltal kan ligga långt under 100 000 kr, medan en lågmilad bensin-kombi kan kosta omkring eller över målet. Kontrollera särskilt styrning, bromsar, belysning och batterihistorik före köp.",
+  "researchTasks": [
+    "Verifiera motorkod, kamdrivning, växellådstyp och exakt svensk specifikation för varje enskild bil; detta är inte fastställt i utkastet.",
+    "Kontrollera VIN hos Hyundai eller auktoriserad verkstad för öppna återkallelser och fabriksuppdateringar.",
+    "Komplettera med mer separerat prisunderlag för årsmodell 2015–2016 samt automat och olika karosser, eftersom priset påverkas mycket av miltal och utrustning."
+  ],
+  "variants": [
+    {
+      "id": "14-petrol-99",
+      "label": "1.4 bensin 99 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2013,
+      "yearTo": 2014,
+      "transmission": "Kontrollera växellåda i annons och registreringsuppgifter",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-i30-gd"],
+      "buyerSummary": "ADAC listar denna bensinmotor i generationens motorprogram. Kontrollera motorkod, servicehistorik och exakt växellåda på bilen; de är inte fastställda här."
+    },
+    {
+      "id": "16-gdi-135",
+      "label": "1.6 GDI bensin 135 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Kontrollera växellåda i annons och registreringsuppgifter",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-i30-gd", "price-market"],
+      "buyerSummary": "Ett bensinalternativ som förekommer i de svenska prisobservationerna. Välj efter dokumenterad service, skick och utrustning snarare än enbart effekt och lågt miltal."
+    },
+    {
+      "id": "16-crdi-110",
+      "label": "1.6 CRDi diesel 110 hk",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Kontrollera växellåda i annons och registreringsuppgifter",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-i30-gd", "price-market"],
+      "buyerSummary": "ADAC listar 1.6 CRDi med 110 hk och svenska 2013-annonser visar flera manuella exemplar. Säkerställ verklig motorvariant, användningsmönster och full servicehistorik före köp."
+    }
+  ],
+  "issues": [
+    {
+      "id": "steering-joints",
+      "title": "Kontrollera styrning och styrleder",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Hyundai i30 GD; TÜV-underlag utan svensk motor- eller utrustningsuppdelning"},
+      "description": "ADAC anger slitna styrleder som en återkommande TÜV-anmärkning för generationen. AUTO BILD beskriver styrning och styrleder som en problemzon för GD, men underlaget kan inte avgöra exakt komponent eller skick på ett enskilt svenskt exemplar.",
+      "symptoms": ["Glapp, klonk eller missljud från framvagnen.", "Ojämn styrkänsla, ojämnt däckslitage eller anmärkning i besiktningsprotokoll."],
+      "advice": "Provkör i låg fart och på ojämnt underlag. Läs besiktningshistoriken och låt en verkstad bedöma glapp, missljud eller onormalt däckslitage före köp.",
+      "sourceIds": ["adac-i30-gd", "tuv-i30-gd"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "brakes",
+      "title": "Granska bromsar och bromsskivor",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Hyundai i30 GD; TÜV-underlag utan motoravgränsning"},
+      "description": "ADAC anger bristande bromsfunktion bland vanliga TÜV-anmärkningar för i30. AUTO BILD beskriver bromsfunktion som en svag punkt för äldre i30 och nämner förhöjt bromsskiveslitage i modellserien. Det är kontrollpunkter, inte ett besked om fel på varje bil.",
+      "symptoms": ["Rostiga eller kraftigt slitna bromsskivor.", "Vibrationer, missljud eller ojämn bromsverkan."],
+      "advice": "Inspektera bromsskivor, läs senaste besiktningsprotokoll och provbromsa säkert. Låt en verkstad bedöma vibrationer eller ojämn bromsverkan innan affär.",
+      "sourceIds": ["adac-i30-gd", "tuv-i30-gd"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "lighting",
+      "title": "Kontrollera belysningens funktion och inställning",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Hyundai i30 GD; TÜV-underlag utan motoravgränsning"},
+      "description": "ADAC lyfter defekta belysningsanläggningar i TÜV-underlaget. AUTO BILD anger att halvljuset på GD oftare är felinställt än genomsnittet och att blinkers har en förhöjd anmärkningsnivå i i30-serien.",
+      "symptoms": ["Varningsmeddelande, ur funktion varande lampa eller fukt i lykta.", "Anmärkning om ljus eller blinkers i besiktningsprotokoll."],
+      "advice": "Prova samtliga lampor och blinkers före köp och kontrollera senaste besiktningsresultatet. Åtgärda inte förklarade fel före leverans.",
+      "sourceIds": ["adac-i30-gd", "tuv-i30-gd"],
+      "action": "check"
+    },
+    {
+      "id": "starter-battery-and-spark-plugs",
+      "title": "Fråga om startbatteri och tändstift",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 4,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Startbatteri: modellår 2012–2015 enligt ADAC; tändstift: modellår 2012–2014. Kontrollera årsmodell och motor före tillämpning."},
+      "description": "ADAC:s bärgningsstatistik listar startbatteri för 2012–2015 och tändstift för 2012–2014 bland vanliga komponentfel. AUTO BILD nämner också batteri- och tändstiftsproblem. Det innebär inte att ett enskilt exemplar har fel eller att senare modellår berörs.",
+      "symptoms": ["Trög start eller elektriska varningsmeddelanden.", "Ojämn gång eller dokumenterade tändningsproblem på berörda bensinbilar."],
+      "advice": "Fråga när 12-voltsbatteriet och tändstiften byttes. Be om batteritest vid tveksam start och låt en verkstad felsöka motorvarning eller ojämn gång.",
+      "sourceIds": ["adac-i30-gd", "tuv-i30-gd"],
+      "action": "check"
+    },
+    {
+      "id": "recall-status",
+      "title": "Kontrollera VIN för öppna återkallelser",
+      "category": "other",
+      "kind": "general-check",
+      "priority": 5,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Alla Hyundai i30 GD; återkallelser och uppdateringar avgörs per VIN"},
+      "description": "Hyundai Sverige uppger att auktoriserad verkstad kan kontrollera om bilen berörs av återkallelser eller fabriksuppdateringar och åtgärda en återkallelse utan kostnad. Det här är en generell VIN-kontroll, inte ett påstående om en specifik kampanj för GD.",
+      "symptoms": ["Saknad dokumentation om återkallelser eller fabriksuppdateringar."],
+      "advice": "Be säljaren uppge VIN och kontrollera bilen hos Hyundai eller auktoriserad verkstad. Be om bekräftelse på att relevanta åtgärder är utförda.",
+      "sourceIds": ["hyundai-recall-se"],
+      "action": "resolve-before-buying"
+    }
+  ],
+  "sources": [
+    {"id": "adac-i30-gd", "title": "ADAC: Gebrauchtwageninformation Hyundai i30 (2012–2017)", "url": "https://assets.adac.de/image/upload/w_120/Autodatenbank/GWInfo/gw0185-hyundai-i30-2012-2017-bericht.pdf", "kind": "independent-test", "accessedAt": "2026-11-15"},
+    {"id": "tuv-i30-gd", "title": "AUTO BILD: Hyundai i30 i TÜV-kontroll (2026)", "url": "https://www.autobild.de/artikel/hyundai-i30-im-tuev-check-2026--28133241.html", "kind": "independent-test", "accessedAt": "2026-11-15"},
+    {"id": "hyundai-recall-se", "title": "Hyundai Sverige: återkallelse", "url": "https://www.hyundai.com/se/sv/agare/ager-en-hyundai/service-och-underhaall/aaterkallelse.html", "kind": "manufacturer", "accessedAt": "2026-11-15"},
+    {"id": "price-market", "title": "Wayke: Hyundai i30 årsmodell 2013, svenska marknadsannonser", "url": "https://www.wayke.se/sok/hyundai/i30/2013", "kind": "market-listings", "accessedAt": "2026-11-15"}
+  ],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": "OpenAI",
+    "model": null,
+    "generatedAt": "2026-11-15",
+    "reviewedBy": null,
+    "reviewedAt": null
+  },
+  "focusYears": {"from": 2013, "to": 2016},
+  "priceObservations": [
+    {"label": "Hyundai i30 5-dörrar 1.6 CRDi Select, manuell.", "year": 2013, "mileageMil": 14100, "priceSek": 79900, "observedAt": "2026-11-15", "sourceIds": ["price-market"]},
+    {"label": "Hyundai i30 Kombi 1.6 GDI Business, manuell.", "year": 2013, "mileageMil": 7576, "priceSek": 109800, "observedAt": "2026-11-15", "sourceIds": ["price-market"]},
+    {"label": "Hyundai i30 Kombi 1.6 CRDi 110 hk, manuell.", "year": 2013, "mileageMil": 18722, "priceSek": 64900, "observedAt": "2026-11-15", "sourceIds": ["price-market"]}
+  ],
+  "viewingChecklist": [
+    "Matcha annonsens motor, effekt och växellåda mot registreringsuppgifter; i30-namnet räcker inte för att fastställa drivlinan.",
+    "Provkör på ojämnt underlag och kontrollera styrkänsla, glapp, missljud och däckslitage.",
+    "Kontrollera bromsskivor, läs besiktningshistoriken och provbromsa på en säker plats.",
+    "Prova samtliga lampor och blinkers och kontrollera belysningsanmärkningar i besiktningsprotokoll.",
+    "Fråga när startbatteriet och, för berörda bensinbilar, tändstiften byttes. Kontrollera VIN hos Hyundai för öppna återkallelser och fabriksuppdateringar."
+  ]
+}
