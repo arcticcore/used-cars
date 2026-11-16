@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 2,
+  "id": "skoda-octavia-5e",
+  "brand": "Škoda",
+  "model": "Octavia",
+  "generation": "III (5E)",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Škoda Octavia III (5E) är ett praktiskt val kring 100 000 kr, särskilt som kombi. ADAC lyfter rymlighet, enkel användning, god driftsäkerhet och förhållandevis bränslesnåla motorer, medan AUTO BILD beskriver modellen som långfärdsvänlig. Svenska 2015-annonser visar att priset kan ligga nära målet för både manuella och automatiska bilar, men att motor, miltal och utrustning ger stora skillnader. Kontrollera dokumenterad service, DSG-funktion om bilen har den, fjädring och återkallelser med VIN.",
+  "researchTasks": [
+    "Verifiera motorkod, kamdrivning, exakt DSG-typ och svensk specifikation för varje enskild bil; detta är inte fastställt i utkastet.",
+    "Kontrollera VIN hos Škoda för öppna återkallelser och dokumentera utförda verkstadsåtgärder.",
+    "Komplettera med fler svenska prisobservationer för halvkombi, 4x4 och modellår 2016 eftersom den här sammanställningen främst använder 2015 års kombiannonser."
+  ],
+  "variants": [
+    {
+      "id": "12-tsi-105",
+      "label": "1.2 TSI bensin 105 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2013,
+      "yearTo": 2014,
+      "transmission": "Manuell eller DSG – kontrollera bilen",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-octavia-petrol", "price-market"],
+      "buyerSummary": "ADAC listar 1.2 TSI med 105 hk i det tidiga motorprogrammet och den syns i de svenska prisobservationerna. Kontrollera motorkod, växellåda och servicehistorik för just bilen."
+    },
+    {
+      "id": "14-tsi-140-150",
+      "label": "1.4 TSI bensin 140/150 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell eller DSG – kontrollera bilen",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-octavia-petrol", "price-market"],
+      "buyerSummary": "ADAC listar 1.4 TSI med 140 hk före motoruppdateringen och 150 hk från 2015. Välj efter dokumenterad service och växellådans funktion, inte enbart effekt eller annonsrubrik."
+    },
+    {
+      "id": "16-tdi-105-110",
+      "label": "1.6 TDI diesel 105/110 hk",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2013,
+      "yearTo": 2016,
+      "transmission": "Manuell eller DSG – kontrollera bilen",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-octavia-diesel", "price-market"],
+      "buyerSummary": "ADAC listar 1.6 TDI med 105 hk i starten och 90 eller 110 hk efter 2015 års motoruppdatering. Kontrollera exakt effekt, användningsmönster och servicehistorik före köp."
+    }
+  ],
+  "issues": [
+    {
+      "id": "dsg-drive-away",
+      "title": "Provkör DSG vid igångkörning",
+      "category": "transmission",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": ["DSG"], "equipment": [], "label": "Octavia III (5E) med DSG; exakt DSG-typ och omfattning behöver verifieras per bil"},
+      "description": "ADAC anger att DSG kan ge ryckig igångkörning och AUTO BILD beskriver DSG som en känslig punkt för Octavia III. Underlaget anger inte att varje DSG-bil har ett fel eller vilken DSG-variant som berörs.",
+      "symptoms": ["Ryck, tvekan eller onormalt beteende vid start från stillastående.", "Växlingsproblem eller varningsmeddelande under provkörning."],
+      "advice": "Provkör kall och varm bil i stadstrafik, backning och start i backe. Låt en märkes- eller växellådsspecialist bedöma avvikande funktion före köp.",
+      "sourceIds": ["adac-octavia-petrol", "adac-octavia-diesel", "tuv-octavia-5e"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "springs-and-dampers",
+      "title": "Kontrollera fjädrar och dämpare",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Octavia III (5E); TÜV-underlag, särskilt vid hög körsträcka"},
+      "description": "ADAC lyfter brutna fjädrar som en återkommande TÜV-anmärkning, i materialet kopplad till klart övergenomsnittliga körsträckor. AUTO BILD anger att fjädrar och dämpare inte alltid står emot höga miltal lika väl som genomsnittet.",
+      "symptoms": ["Klonk eller knack på ojämnt underlag.", "Onormal bilhöjd, läckande dämpare eller besiktningsanmärkning."],
+      "advice": "Provkör på ojämnt underlag och granska besiktningshistoriken. Låt verkstad kontrollera missljud, fjäderbrott eller läckage före köp.",
+      "sourceIds": ["adac-octavia-petrol", "tuv-octavia-5e"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "coolant-pump-2013",
+      "title": "2013: fråga om kylvätskepump",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Förstaregistrerad 2013 enligt ADAC:s bärgningsstatistik; motor- och marknadsspecifik omfattning är inte angiven"},
+      "description": "ADAC listar kylvätskepump som en vanlig bärgningsrelaterad komponent för Octavia med förstaregistrering 2013. Det bevisar inte fel på ett enskilt exemplar eller att samma risk gäller senare årsmodeller.",
+      "symptoms": ["Kylvätskevarning, läckage eller dokumenterad överhettning."],
+      "advice": "För en 2013-bil: fråga om pumpbyte, kylvätskeförluster och eventuella temperaturvarningar. Låt en verkstad bedöma läckage eller oklar servicehistorik.",
+      "sourceIds": ["adac-octavia-petrol", "adac-octavia-diesel"],
+      "action": "check"
+    },
+    {
+      "id": "boost-control-2015",
+      "title": "2015: utred motorvarning och effektbortfall",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 4,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Förstaregistrerad 2015 enligt ADAC:s bärgningsstatistik; exakt motor och orsak behöver fastställas för bilen"},
+      "description": "ADAC listar laddtrycksreglering som en vanlig bärgningsrelaterad komponent för Octavia med förstaregistrering 2015. Underlaget specificerar inte motorvariant och ska därför inte tolkas som att varje bensin- eller dieselbil är berörd.",
+      "symptoms": ["Motorvarning eller upplevd effektförlust.", "Dokumenterade felkoder eller oavslutad felsökning."],
+      "advice": "Köp inte en 2015-bil med aktiv motorvarning eller oförklarad effektförlust. Be om verkstadsunderlag och låt en fackverkstad läsa ut felkoder före köp.",
+      "sourceIds": ["adac-octavia-petrol", "adac-octavia-diesel"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "steering-recall",
+      "title": "Kontrollera VIN för styrningsåterkallelse",
+      "category": "other",
+      "kind": "general-check",
+      "priority": 5,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Vissa Škoda Octavia tillverkade 2014–2024 enligt Škoda Sverige; avgörs per VIN"},
+      "description": "Škoda Sverige uppger en återkallelse för vissa Octavia tillverkade 2014–2024: en skruv i styrningens infästning kan rosta av inträngande fukt och omfattande korrosion kan påverka styrförmågan. Detta är VIN-specifikt och gäller inte bevisligen varje 5E.",
+      "symptoms": ["Saknad dokumentation om återkallelseåtgärd."],
+      "advice": "Begär VIN och kontrollera i Škodas tjänst eller hos auktoriserad verkstad att bilen inte har en öppen återkallelse och att eventuell åtgärd är utförd.",
+      "sourceIds": ["skoda-recall-se"],
+      "action": "resolve-before-buying"
+    }
+  ],
+  "sources": [
+    {"id": "adac-octavia-petrol", "title": "ADAC: Gebrauchtwageninformation Škoda Octavia (2013–2020), bensin", "url": "https://assets.adac.de/image/upload/w_120/Autodatenbank/GWInfo/gw0242-skoda-octavia-2013-2020-benziner-bericht.pdf", "kind": "independent-test", "accessedAt": "2026-11-16"},
+    {"id": "adac-octavia-diesel", "title": "ADAC: Gebrauchtwageninformation Škoda Octavia (2013–2020), diesel", "url": "https://assets.adac.de/Autodatenbank/GWInfo/gw0235-skoda-octavia-2013-2020-diesel-bericht.pdf", "kind": "independent-test", "accessedAt": "2026-11-16"},
+    {"id": "tuv-octavia-5e", "title": "AUTO BILD: Škoda Octavia i TÜV-kontroll (2026)", "url": "https://www.autobild.de/artikel/skoda-octavia-im-tuev-check-2026--28080923.html", "kind": "independent-test", "accessedAt": "2026-11-16"},
+    {"id": "skoda-recall-se", "title": "Škoda Sverige: återkallelse", "url": "https://www.skoda.se/service-och-din-bil/aterkallning", "kind": "manufacturer", "accessedAt": "2026-11-16"},
+    {"id": "price-market", "title": "Wayke: Škoda Octavia Kombi årsmodell 2015, svenska marknadsannonser", "url": "https://www.wayke.se/sok/octavia-kombi/2015", "kind": "market-listings", "accessedAt": "2026-11-16"}
+  ],
+  "provenance": {"method": "ai-assisted", "provider": "OpenAI", "model": null, "generatedAt": "2026-11-16", "reviewedBy": null, "reviewedAt": null},
+  "focusYears": {"from": 2013, "to": 2016},
+  "priceObservations": [
+    {"label": "Škoda Octavia Kombi TSI 140 hk, manuell.", "year": 2015, "mileageMil": 13000, "priceSek": 119700, "observedAt": "2026-11-16", "sourceIds": ["price-market"]},
+    {"label": "Škoda Octavia Kombi Ambition bensin, automat.", "year": 2015, "mileageMil": 20153, "priceSek": 99800, "observedAt": "2026-11-16", "sourceIds": ["price-market"]},
+    {"label": "Škoda Octavia Kombi 1.6 TDI 105 hk, manuell.", "year": 2015, "mileageMil": 18063, "priceSek": 84900, "observedAt": "2026-11-16", "sourceIds": ["price-market"]}
+  ],
+  "viewingChecklist": [
+    "Matcha motor, effekt, växellåda och drivning mot registreringsuppgifter; Octavia-namnet räcker inte för att fastställa specifikationen.",
+    "För DSG: provkör kall och varm bil, inklusive igångkörning, backning och start i backe.",
+    "Provkör på ojämnt underlag och kontrollera fjädrar, dämpare, missljud och besiktningshistorik.",
+    "För en 2013- eller 2015-bil: fråga om kylsystem, motorvarning, effektförlust och dokumenterad felsökning.",
+    "Kontrollera VIN hos Škoda för öppna återkallelser och be om underlag för utförda verkstadsåtgärder."
+  ]
+}
