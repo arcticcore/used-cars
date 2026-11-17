@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 2,
+  "id": "ford-focus-mk3-facelift",
+  "brand": "Ford",
+  "model": "Focus",
+  "generation": "Mk3 facelift",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Ford Focus Mk3 facelift är ett körglatt kompaktalternativ kring 100 000 kr, med både halvkombi och rymligare Kombi. ADAC lyfter säker väghållning, god säkerhetsnivå och bekväma säten, och AUTO BILD beskriver den som dynamisk med praktiska kombimodeller. Svenska 2015-annonser ligger från ungefär 56 000 kr för en högmilad dieselkombi till cirka 110 000 kr för en lågmilad 1.0 EcoBoost. Granska belysning, fjädring, avgassystem och motorns servicehistorik noga före köp.",
+  "researchTasks": [
+    "Verifiera motorkod, kamdrivning, växellådstyp och exakt svensk specifikation för varje enskild bil; detta är inte fastställt i utkastet.",
+    "Kontrollera VIN hos Ford eller auktoriserad verkstad för öppna återkallelser och servicebrev.",
+    "Komplettera med fler svenska prisobservationer för automat och modellår 2016, eftersom nuvarande underlag främst är manuella 2015-bilar."
+  ],
+  "variants": [
+    {
+      "id": "10-ecoboost-100-125",
+      "label": "1.0 EcoBoost bensin 100/125 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2015,
+      "yearTo": 2016,
+      "transmission": "Kontrollera växellåda i annons och registreringsuppgifter",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-focus-mk3", "price-market"],
+      "buyerSummary": "ADAC listar 1.0 EcoBoost med 100 och 125 hk efter 2014 års uppdatering och svenska 2015-annonser visar 100 hk med manuell växellåda. Kontrollera motorkod, servicehistorik och utfört kamremsarbete för bilen."
+    },
+    {
+      "id": "15-ecoboost-150",
+      "label": "1.5 EcoBoost bensin 150 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2015,
+      "yearTo": 2016,
+      "transmission": "Kontrollera växellåda i annons och registreringsuppgifter",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-focus-mk3"],
+      "buyerSummary": "ADAC listar 1.5 EcoBoost 150 hk efter 2014 års uppdatering. Kontrollera exakt motor, servicehistorik och provkörning; denna sammanställning kan inte fastställa kamdrivning för exemplaret."
+    },
+    {
+      "id": "16-tdci-95-115",
+      "label": "1.6 TDCi diesel 95/115 hk",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2015,
+      "yearTo": 2015,
+      "transmission": "Kontrollera växellåda i annons och registreringsuppgifter",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-focus-mk3", "price-market"],
+      "buyerSummary": "ADAC anger att 1.6 TDCi 95 och 115 hk utgick under 2015, och båda förekommer i svenska 2015-annonser. Säkerställ exakt effekt, motor och serviceuppgifter före köp."
+    }
+  ],
+  "issues": [
+    {
+      "id": "ecoboost-catalyst",
+      "title": "1.0 EcoBoost: utred motorlampa och katalysatorfel",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {"variantIds": ["10-ecoboost-100-125"], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Focus III med 1.0 EcoBoost; AUTO BILD anger ingen svensk frekvens eller mer exakt årsavgränsning"},
+      "description": "AUTO BILD pekar ut defekta katalysatorer på 1.0 EcoBoost för Focus III. Det är inte ett besked om fel på varje bil eller en fullständig förklaring till varje motorlampa.",
+      "symptoms": ["Motorlampa, felkoder eller dokumenterad avgasrelaterad reparation.", "Ojämn gång, effektförlust eller underkänt avgasprov."],
+      "advice": "Köp inte med aktiv motorlampa eller oförklarad effektförlust. Be om verkstadsunderlag och låt en fackverkstad läsa ut felkoder före köp.",
+      "sourceIds": ["tuv-focus-mk3"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "suspension",
+      "title": "Kontrollera fjädrar, dämpare och hjulupphängning",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Focus III; TÜV-underlag, särskilt från femte kontrollen och vid högre miltal"},
+      "description": "ADAC nämner känsliga hjulupphängningar bland återkommande TÜV-problem. AUTO BILD uppger att fjädrar, dämpning och hjulupphängningar för Focus III bör kontrolleras, särskilt på äldre bilar.",
+      "symptoms": ["Klonk eller knack på ojämnt underlag.", "Onormal bilhöjd, läckande dämpare eller besiktningsanmärkning."],
+      "advice": "Provkör på ojämnt underlag och granska besiktningshistoriken. Låt verkstad kontrollera glapp, fjäderbrott eller läckage före köp.",
+      "sourceIds": ["adac-focus-mk3", "tuv-focus-mk3"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "front-lighting",
+      "title": "Prova främre belysning och blinkers",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Focus III; TÜV-underlag utan motoravgränsning"},
+      "description": "ADAC nämner fel i belysningen som ett återkommande TÜV-problem. AUTO BILD anger att främre belysning, blinkers och halvljus på den äldre Focus-generationen får fler anmärkningar än genomsnittet.",
+      "symptoms": ["Ur funktion varande lampa, varningsmeddelande eller fukt i lykta.", "Anmärkning om ljus eller blinkers i besiktningsprotokoll."],
+      "advice": "Prova alla lampor och blinkers före köp och kontrollera senaste besiktningsresultatet. Avtala om att oförklarade fel åtgärdas före leverans.",
+      "sourceIds": ["adac-focus-mk3", "tuv-focus-mk3"],
+      "action": "check"
+    },
+    {
+      "id": "exhaust-and-emissions",
+      "title": "Kontrollera avgassystem och avgasprov",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 4,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Focus III; TÜV-underlag utan motoravgränsning"},
+      "description": "ADAC anger rostiga avgasanläggningar som ett återkommande problem. AUTO BILD skriver att Focus III ofta har avgasskador och att generationen oftare faller på avgasprovet än genomsnittet.",
+      "symptoms": ["Högt avgasljud, synlig rost eller läckage.", "Anmärkning vid avgasprov eller motorlampa."],
+      "advice": "Kontrollera undersidan, lyssna efter läckage och läs besiktningsprotokollen. Låt verkstad bedöma avgaslukt, missljud, rost eller en tidigare avgasanmärkning.",
+      "sourceIds": ["adac-focus-mk3", "tuv-focus-mk3"],
+      "action": "check"
+    },
+    {
+      "id": "recall-and-service-status",
+      "title": "Kontrollera VIN för återkallelser och servicebrev",
+      "category": "other",
+      "kind": "general-check",
+      "priority": 5,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Alla Focus Mk3 facelift; åtgärder avgörs per VIN och svensk bilspecifikation"},
+      "description": "ADAC dokumenterar flera europeiska återkallelser för Focus III, bland annat för vissa 1.0-litersmotorer, krockkuddar och 1.6 EcoBoost. Ford Sverige hänvisar frågor om servicebrev och återkallelser till sin ägarsupport. De europeiska uppgifterna är inte ensamma besked för en svensk bil.",
+      "symptoms": ["Saknad dokumentation om servicebrev, återkallelser eller verkstadsåtgärder."],
+      "advice": "Be om VIN och be Ford eller auktoriserad verkstad kontrollera öppna kampanjer. Spara bekräftelse på att relevanta åtgärder är utförda.",
+      "sourceIds": ["adac-focus-mk3", "ford-support-se"],
+      "action": "resolve-before-buying"
+    }
+  ],
+  "sources": [
+    {"id": "adac-focus-mk3", "title": "ADAC: Gebrauchtwageninformation Ford Focus (2011–2018), bensin", "url": "https://assets.adac.de/Autodatenbank/GWInfo/gw0222-ford-focus-2011-2018-benziner-bericht.pdf", "kind": "independent-test", "accessedAt": "2026-11-17"},
+    {"id": "tuv-focus-mk3", "title": "AUTO BILD: Ford Focus i TÜV-kontroll (2026)", "url": "https://www.autobild.de/artikel/ford-focus-im-tuev-check-2026--28127601.html", "kind": "independent-test", "accessedAt": "2026-11-17"},
+    {"id": "ford-support-se", "title": "Ford Sverige: support och garanti", "url": "https://www.ford.se/aga/support-och-garanti", "kind": "manufacturer", "accessedAt": "2026-11-17"},
+    {"id": "price-market", "title": "Wayke: Ford Focus årsmodell 2015, svenska marknadsannonser", "url": "https://www.wayke.se/sok/ford/focus/2015", "kind": "market-listings", "accessedAt": "2026-11-17"}
+  ],
+  "provenance": {"method": "ai-assisted", "provider": "OpenAI", "model": null, "generatedAt": "2026-11-17", "reviewedBy": null, "reviewedAt": null},
+  "focusYears": {"from": 2015, "to": 2016},
+  "priceObservations": [
+    {"label": "Ford Focus Kombi 1.6 TDCi 115 hk, manuell.", "year": 2015, "mileageMil": 24661, "priceSek": 60000, "observedAt": "2026-11-17", "sourceIds": ["price-market"]},
+    {"label": "Ford Focus 1.0 EcoBoost Titanium, manuell.", "year": 2015, "mileageMil": 6730, "priceSek": 109800, "observedAt": "2026-11-17", "sourceIds": ["price-market"]},
+    {"label": "Ford Focus Kombi 1.6 TDCi Titanium, manuell.", "year": 2015, "mileageMil": 15350, "priceSek": 64995, "observedAt": "2026-11-17", "sourceIds": ["price-market"]}
+  ],
+  "viewingChecklist": [
+    "Matcha motor, effekt och växellåda mot registreringsuppgifter; Focus-namnet räcker inte för att fastställa drivlinan.",
+    "För 1.0 EcoBoost: be om dokumentation för service, kamremsarbete och eventuell felsökning av motorlampa eller katalysator.",
+    "Provkör på ojämnt underlag och kontrollera fjädrar, dämpare, missljud och besiktningshistorik.",
+    "Prova samtliga lampor och blinkers och läs besiktningsprotokoll för belysning och avgaser.",
+    "Kontrollera VIN hos Ford för öppna återkallelser och servicebrev."
+  ]
+}
