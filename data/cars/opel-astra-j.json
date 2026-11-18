@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 2,
+  "id": "opel-astra-j",
+  "brand": "Opel",
+  "model": "Astra",
+  "generation": "J",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Opel Astra J är ett rymligt och komfortinriktat alternativ kring 100 000 kr, särskilt som Sports Tourer. AUTO BILD lyfter komfort, utrymme och goda vägegenskaper även med last, medan ADAC beskriver TÜV-resultatet som något bättre än genomsnittet. Svenska 2015-annonser för 1.4 Turbo sträcker sig från cirka 70 000 kr för manuell halvkombi till cirka 110 000 kr för automatisk Sports Tourer. Kontrollera särskilt oljeläckage, fjädring och fullgjorda återkallelser.",
+  "researchTasks": [
+    "Verifiera motorkod, kamdrivning, växellådstyp och exakt svensk specifikation för varje enskild bil; detta är inte fastställt i utkastet.",
+    "Kontrollera VIN hos Opel för öppna återkallelser och dokumentera utförda verkstadsåtgärder.",
+    "Komplettera med fler svenska prisobservationer för diesel och årsmodell 2014, eftersom nuvarande prisunderlag främst avser 1.4 Turbo modellår 2015."
+  ],
+  "variants": [
+    {
+      "id": "14-turbo-120-140",
+      "label": "1.4 Turbo bensin 120/140 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2014,
+      "yearTo": 2015,
+      "transmission": "Manuell eller automat – kontrollera bilen",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-astra-j", "price-market"],
+      "buyerSummary": "ADAC listar 1.4 Turbo med 120 och 140 hk och svenska 2015-annonser visar 140 hk både med manuell och automatisk växellåda. Välj efter dokumenterad service, skick och växellåda."
+    },
+    {
+      "id": "16-di-turbo-170",
+      "label": "1.6 DI Turbo bensin 170 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2014,
+      "yearTo": 2015,
+      "transmission": "Kontrollera växellåda i annons och registreringsuppgifter",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-astra-j"],
+      "buyerSummary": "ADAC listar 1.6 DI Turbo med 170 hk i Astra J. Kontrollera motorkod, servicehistorik och provkörning; kamdrivning är inte fastställd i detta utkast."
+    },
+    {
+      "id": "16-cdti-110-136",
+      "label": "1.6 CDTi diesel 110/136 hk",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2014,
+      "yearTo": 2015,
+      "transmission": "Kontrollera växellåda i annons och registreringsuppgifter",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-astra-j"],
+      "buyerSummary": "ADAC anger 1.6 CDTi med 110 och 136 hk från 2014. Säkerställ exakt motorvariant, användningsmönster och dokumenterad service före köp."
+    }
+  ],
+  "issues": [
+    {
+      "id": "oil-leakage",
+      "title": "Kontrollera oljeläckage noga",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Astra J; TÜV-underlag utan motoravgränsning"},
+      "description": "ADAC nämner återkommande oljeförlust för Astra J. AUTO BILD anger att oljeförlusten är särskilt tydlig för typ J i TÜV-underlaget. Det är inte bevis för läckage på varje exemplar.",
+      "symptoms": ["Oljespår under motor eller växellåda.", "Låg oljenivå, oljelukt eller oljerelaterad besiktningsanmärkning."],
+      "advice": "Kontrollera oljenivå, motorutrymme och undersida. Läs besiktningshistoriken och låt verkstad fastställa källa och reparationsbehov vid minsta läckage.",
+      "sourceIds": ["adac-astra-j", "tuv-astra-j"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "springs",
+      "title": "Kontrollera fjädrar och framvagn",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Astra J; TÜV-underlag utan motoravgränsning"},
+      "description": "ADAC lyfter fjädrar i hjulupphängningen som en svag punkt. AUTO BILD anger att Astra J har en övergenomsnittlig andel fjäderbrott, även om hjulupphängningarna i övrigt bedöms som hållbara.",
+      "symptoms": ["Klonk eller knack på ojämnt underlag.", "Onormal bilhöjd, fjäderbrott eller besiktningsanmärkning."],
+      "advice": "Provkör på ojämnt underlag och kontrollera bilens höjd. Låt verkstad bedöma missljud, fjäderbrott eller anmärkningar innan affär.",
+      "sourceIds": ["adac-astra-j", "tuv-astra-j"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "turbocharger-2014",
+      "title": "2014: fråga om turbo och motorvarning",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Förstaregistrerad 2014 enligt ADAC:s bärgningsstatistik; motorvariant är inte angiven"},
+      "description": "ADAC listar turboladdare som en vanlig bärgningsrelaterad komponent för Astra med förstaregistrering 2014. Underlaget anger inte motorvariant och betyder inte att varje 2014-bil är berörd.",
+      "symptoms": ["Motorvarning, effektförlust eller onormalt turborelaterat ljud.", "Dokumenterad felsökning eller reparation av laddsystemet."],
+      "advice": "Köp inte med aktiv motorvarning eller oförklarad effektförlust. Be om verkstadsunderlag och låt fackverkstad felsöka avvikande ljud eller felkoder.",
+      "sourceIds": ["adac-astra-j"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "ignition-coil-2015",
+      "title": "2015: kontrollera tändningsrelaterade problem",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 4,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Förstaregistrerad 2015 enligt ADAC:s bärgningsstatistik; exakt motorvariant är inte angiven"},
+      "description": "ADAC listar tändspole som en vanlig bärgningsrelaterad komponent för Astra med förstaregistrering 2015. Underlaget specificerar inte motorvariant eller svensk felfrekvens.",
+      "symptoms": ["Ojämn tomgång, motorvarning eller misstänkt misständning.", "Dokumenterade tändningsrelaterade felkoder."],
+      "advice": "Provkör med kall och varm motor. Låt verkstad läsa ut felkoder vid ojämn gång eller motorvarning och be om underlag för tidigare reparationer.",
+      "sourceIds": ["adac-astra-j"],
+      "action": "check"
+    },
+    {
+      "id": "parking-brake-recall",
+      "title": "Kontrollera VIN för parkeringsbroms- och återkallelsekampanjer",
+      "category": "other",
+      "kind": "general-check",
+      "priority": 5,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": ["Manuell"], "equipment": [], "label": "Astra J med manuell växellåda och starthjälp i backe enligt ADAC; återkallelser avgörs alltid per VIN"},
+      "description": "ADAC dokumenterar en europeisk kampanj för vissa manuella Astra med starthjälp i backe, där programvaran för elektrisk parkeringsbroms kunde signalera aktivering innan bromsen var aktiverad. Opel Sverige erbjuder VIN-kontroll och uppger att återkallelser åtgärdas kostnadsfritt.",
+      "symptoms": ["Saknad dokumentation om återkallelser eller programuppdateringar."],
+      "advice": "Be om VIN och kontrollera hos Opel innan köp. Be verkstad bekräfta att bilen inte har någon öppen kampanj och att relevanta åtgärder är utförda.",
+      "sourceIds": ["adac-astra-j", "opel-recall-se"],
+      "action": "resolve-before-buying"
+    }
+  ],
+  "sources": [
+    {"id": "adac-astra-j", "title": "ADAC: Gebrauchtwageninformation Opel Astra (2009–2017), bensin", "url": "https://assets.adac.de/Autodatenbank/GWInfo/gw0191-opel-astra-2009-2017-benziner-bericht.pdf", "kind": "independent-test", "accessedAt": "2026-11-18"},
+    {"id": "tuv-astra-j", "title": "AUTO BILD: Opel Astra i TÜV-kontroll (2026)", "url": "https://www.autobild.de/artikel/opel-astra-gebrauchtwagen-check-schwachstellen-und-maengel-laut-tuev-report-28118347.html", "kind": "independent-test", "accessedAt": "2026-11-18"},
+    {"id": "opel-recall-se", "title": "Opel Sverige: återkallelsekampanjer", "url": "https://www.opel.se/servicetjanster/garanti/aterkallelsekampanjer.html", "kind": "manufacturer", "accessedAt": "2026-11-18"},
+    {"id": "price-market", "title": "Wayke: Opel Astra årsmodell 2015, svenska marknadsannonser", "url": "https://www.wayke.se/sok/opel/astra/2015", "kind": "market-listings", "accessedAt": "2026-11-18"}
+  ],
+  "provenance": {"method": "ai-assisted", "provider": "OpenAI", "model": null, "generatedAt": "2026-11-18", "reviewedBy": null, "reviewedAt": null},
+  "focusYears": {"from": 2014, "to": 2015},
+  "priceObservations": [
+    {"label": "Opel Astra 1.4 Turbo Drive 140 hk, manuell.", "year": 2015, "mileageMil": 13200, "priceSek": 69900, "observedAt": "2026-11-18", "sourceIds": ["price-market"]},
+    {"label": "Opel Astra Sports Tourer 1.4 Turbo Drive, automat.", "year": 2015, "mileageMil": 11537, "priceSek": 109900, "observedAt": "2026-11-18", "sourceIds": ["price-market"]}
+  ],
+  "viewingChecklist": [
+    "Matcha motor, effekt, växellåda och kaross mot registreringsuppgifter; Astra-namnet räcker inte för att fastställa specifikationen.",
+    "Kontrollera oljenivå, motorutrymme och undersida för tecken på oljeläckage.",
+    "Provkör på ojämnt underlag och låt verkstad kontrollera missljud, fjädrar och framvagn vid tveksamhet.",
+    "För en 2014- eller 2015-bil: fråga om turbo, motorvarningar, tändningsproblem och dokumenterad felsökning.",
+    "Kontrollera VIN hos Opel för öppna återkallelser, särskilt om bilen är manuell med starthjälp i backe."
+  ]
+}
