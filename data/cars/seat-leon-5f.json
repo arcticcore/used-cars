@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 2,
+  "id": "seat-leon-5f",
+  "brand": "SEAT",
+  "model": "Leon",
+  "generation": "III (5F)",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "SEAT Leon III (5F) är ett kompakt alternativ kring 100 000 kr för den som vill ha en mer sportig känsla än i många jämförbara familjebilar. ADAC placerar generationen i främre mittfältet i sin bärgningsstatistik, medan AUTO BILD lyfter ett stort motorutbud och flera karosser. Svenska 2015-annonser visar allt från en högmilad 1.2 TSI långt under målet till 1.4 TSI och fyrhjulsdrivna dieselversioner över det. Kontrollera särskilt DSG-funktionen, turbo, fjädring och VIN-bundna kampanjer.",
+  "researchTasks": [
+    "Verifiera motorkod, kamdrivning, exakt DSG-typ och svensk specifikation för varje enskild bil; detta är inte fastställt i utkastet.",
+    "Kontrollera VIN hos SEAT för öppna återkallelser och dokumentera utförda verkstadsåtgärder.",
+    "Komplettera med fler svenska prisobservationer för modellår 2014 och 2016 samt vanliga manuella dieselversioner."
+  ],
+  "variants": [
+    {
+      "id": "12-tsi-110",
+      "label": "1.2 TSI bensin 110 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2014,
+      "yearTo": 2016,
+      "transmission": "Manuell eller DSG – kontrollera bilen",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-leon-5f", "price-market"],
+      "buyerSummary": "1.2 TSI 110 hk förekommer i svenska 2015-annonser. Kontrollera motorkod, servicehistorik och exakt växellåda för bilen; kamdrivning är inte fastställd i detta utkast."
+    },
+    {
+      "id": "14-tsi-150",
+      "label": "1.4 TSI bensin 150 hk",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2014,
+      "yearTo": 2016,
+      "transmission": "Manuell eller DSG – kontrollera bilen",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-leon-5f", "price-market"],
+      "buyerSummary": "1.4 TSI 150 hk syns i svenska 2015-annonser kring och över målbudgeten. Välj efter dokumenterad service, skick och växellådans funktion snarare än enbart effekt eller miltal."
+    },
+    {
+      "id": "20-tdi-184",
+      "label": "2.0 TDI 4Drive 184 hk",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2014,
+      "yearTo": 2016,
+      "transmission": "Automat eller manuell – kontrollera bilen",
+      "timingDrive": "unknown",
+      "sourceIds": ["price-market"],
+      "buyerSummary": "Fyrhjulsdrivna 2.0 TDI 184 hk förekommer som X-Perience i svenska 2015-annonser. Exakt motor, växellåda och servicehistorik ska verifieras för bilen."
+    }
+  ],
+  "issues": [
+    {
+      "id": "dsg-operation",
+      "title": "Provkör DSG vid låg fart och igångkörning",
+      "category": "transmission",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": ["DSG"], "equipment": [], "label": "Leon III (5F) med DSG; exakt växellådstyp och omfattning behöver verifieras per bil"},
+      "description": "AUTO BILD pekar ut DSG med ryckiga växlingar som ett Leon III-tema och beskriver ett växellådshaveri i ett enskilt 1.6 TDI-långtest. Det innebär inte att varje DSG eller dieselbil har ett fel.",
+      "symptoms": ["Ryck, tvekan eller onormalt beteende vid växling och start från stillastående.", "Varningsmeddelande, missljud eller dokumenterad växellådsreparation."],
+      "advice": "Provkör kall och varm bil i stadstrafik, vid backning och igångkörning i backe. Låt specialist bedöma avvikande funktion före köp.",
+      "sourceIds": ["tuv-leon-5f"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "turbocharger",
+      "title": "Utred motorvarning, effektbortfall och turboljud",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Leon III (5F); AUTO BILD anger ingen motor- eller årsmodellsavgränsning"},
+      "description": "AUTO BILD nämner enstaka felaktiga turboladdare för Leon III, utan att ange motorvariant, felfrekvens eller svensk tillämplighet. Det är därför en kontrollpunkt för enskilda bilar, inte ett generellt felbesked.",
+      "symptoms": ["Motorvarning, effektförlust eller onormalt laddtrycksrelaterat ljud.", "Dokumenterad felsökning eller reparation av turboladdare."],
+      "advice": "Köp inte med aktiv motorvarning eller oförklarad effektförlust. Be om verkstadsunderlag och låt fackverkstad läsa ut felkoder före köp.",
+      "sourceIds": ["tuv-leon-5f"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "springs-and-dampers",
+      "title": "Kontrollera fjädrar och dämpare",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Leon III (5F); TÜV-underlag utan motoravgränsning"},
+      "description": "ADAC anger att endast fjädring och dämpning avviker negativt i TÜV-underlaget. AUTO BILD beskriver läckande dämpare och brutna fjädrar som återkommande besiktningspunkter.",
+      "symptoms": ["Klonk eller knack på ojämnt underlag.", "Onormal bilhöjd, läckande dämpare eller besiktningsanmärkning."],
+      "advice": "Provkör på ojämnt underlag och granska besiktningshistoriken. Låt verkstad bedöma missljud, fjäderbrott eller dämparläckage före köp.",
+      "sourceIds": ["adac-leon-5f", "tuv-leon-5f"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "camshaft-adjuster-recall",
+      "title": "Verifiera motorfamilj och återkallelse för kamaxelomställare",
+      "category": "engine",
+      "kind": "general-check",
+      "priority": 4,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Bilar med EA211-motor enligt ADAC; motorfamiljen måste verifieras per VIN eller verkstad"},
+      "description": "ADAC dokumenterar en kampanj från 2019 för vissa Leon med EA211-motor, där fel på kamaxelomställaren kan leda till olje- och bränsleläckage. Källan specificerar inte vilka svenska motorer eller årsmodeller som berörs.",
+      "symptoms": ["Saknad dokumentation om kampanjåtgärd eller oklar motoridentitet."],
+      "advice": "Verifiera motorfamilj och VIN hos SEAT eller auktoriserad verkstad. Be om bekräftelse på att eventuell kampanj är genomförd.",
+      "sourceIds": ["adac-leon-5f", "seat-vin-faq"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "rear-door-lock-recall",
+      "title": "Kontrollera VIN för bakre dörrlås och barnspärr",
+      "category": "other",
+      "kind": "general-check",
+      "priority": 5,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Leon III (5F); exakt tillämplighet avgörs per VIN"},
+      "description": "ADAC dokumenterar en kampanj från 2016 för vissa bakre dörrlås där barnspärren kunde avaktiveras av rörelser eller stötar. Detta gäller inte bevisligen varje Leon och behöver kontrolleras per VIN.",
+      "symptoms": ["Saknad dokumentation om återkallelseåtgärd."],
+      "advice": "Begär VIN och kontrollera hos SEAT innan köp. Kontrollera också att barnspärrarnas funktion och bakdörrarnas låsning fungerar vid visning.",
+      "sourceIds": ["adac-leon-5f", "seat-vin-faq"],
+      "action": "resolve-before-buying"
+    }
+  ],
+  "sources": [
+    {"id": "adac-leon-5f", "title": "ADAC: Gebrauchtwageninformation SEAT Leon (2012–2020), bensin", "url": "https://assets.adac.de/Autodatenbank/GWInfo/gw0268-seat-leon-2012---2020-benziner-bericht.pdf", "kind": "independent-test", "accessedAt": "2026-11-19"},
+    {"id": "tuv-leon-5f", "title": "AUTO BILD: SEAT/Cupra Leon i TÜV-kontroll (2026)", "url": "https://www.autobild.de/artikel/seat-cupra-leon-im-tuev-check-2026--28090849.html", "kind": "independent-test", "accessedAt": "2026-11-19"},
+    {"id": "seat-vin-faq", "title": "SEAT: frågor och svar om VIN-kontroll", "url": "https://www.seat.com/faqs", "kind": "manufacturer", "accessedAt": "2026-11-19"},
+    {"id": "price-market", "title": "Wayke: SEAT Leon årsmodell 2015, svenska marknadsannonser", "url": "https://www.wayke.se/sok/seat/leon/2015", "kind": "market-listings", "accessedAt": "2026-11-19"}
+  ],
+  "provenance": {"method": "ai-assisted", "provider": "OpenAI", "model": null, "generatedAt": "2026-11-19", "reviewedBy": null, "reviewedAt": null},
+  "focusYears": {"from": 2014, "to": 2016},
+  "priceObservations": [
+    {"label": "SEAT Leon 1.2 TSI 110 hk, manuell.", "year": 2015, "mileageMil": 22286, "priceSek": 48000, "observedAt": "2026-11-19", "sourceIds": ["price-market"]},
+    {"label": "SEAT Leon 1.4 TSI FR 150 hk, manuell.", "year": 2015, "mileageMil": 11900, "priceSek": 114900, "observedAt": "2026-11-19", "sourceIds": ["price-market"]},
+    {"label": "SEAT Leon X-Perience 2.0 TDI 4Drive, automat.", "year": 2015, "mileageMil": 18387, "priceSek": 129900, "observedAt": "2026-11-19", "sourceIds": ["price-market"]}
+  ],
+  "viewingChecklist": [
+    "Matcha motor, effekt, växellåda och drivning mot registreringsuppgifter; Leon-namnet räcker inte för att fastställa specifikationen.",
+    "För DSG: provkör kall och varm bil, inklusive igångkörning, backning och start i backe.",
+    "Kontrollera motorvarning, effektbortfall och turboljud och begär verkstadsunderlag för tidigare felsökning.",
+    "Provkör på ojämnt underlag och kontrollera fjädrar, dämpare, missljud och besiktningshistorik.",
+    "Kontrollera VIN hos SEAT för öppna återkallelser och verifiera att barnspärrarna fungerar."
+  ]
+}
