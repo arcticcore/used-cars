@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 2,
+  "id": "renault-megane-iii",
+  "brand": "Renault",
+  "model": "Mégane",
+  "generation": "III",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Renault Mégane III är ett prisvärt alternativ kring 100 000 kr, särskilt som Grandtour för den som behöver lastutrymme. AUTO BILD lyfter flera karosser och användbart lastutrymme, men påpekar att baksätet är bäst i kombin. Svenska 2015-annonser visar Grandtour från cirka 50 000 kr för högmilad diesel till cirka 90 000 kr för en lågmilad 1.2 TCe. Granska framvagn, belysning, bromsar, elektronik och motorhistorik noga före köp.",
+  "researchTasks": [
+    "Verifiera motorkod, kamdrivning, exakt växellåda och svensk specifikation för varje enskild bil; detta är inte fastställt i utkastet.",
+    "Kontrollera VIN hos Renault eller auktoriserad verkstad för öppna återkallelser och dokumentera utförda verkstadsåtgärder.",
+    "Komplettera med fler svenska prisobservationer för årsmodell 2014 och 2016 samt automatbilar."
+  ],
+  "variants": [
+    {
+      "id": "12-tce-115",
+      "label": "1.2 TCe 115 hk bensin",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2014,
+      "yearTo": 2016,
+      "transmission": "Kontrollera växellåda i annons och registreringsuppgifter",
+      "timingDrive": "unknown",
+      "sourceIds": ["price-market", "tce-investigation"],
+      "buyerSummary": "1.2 TCe 115 hk förekommer i svenska 2015-annonser. Undersök särskilt oljeförbrukning och dokumenterad service; motorkod och kamdrivning behöver bekräftas för bilen."
+    },
+    {
+      "id": "15-dci",
+      "label": "1.5 dCi diesel",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2014,
+      "yearTo": 2016,
+      "transmission": "Kontrollera växellåda i annons och registreringsuppgifter",
+      "timingDrive": "unknown",
+      "sourceIds": ["price-market", "tuv-megane-iii"],
+      "buyerSummary": "1.5 dCi förekommer i svenska 2015-annonser som manuell Grandtour. Säkerställ effektvariant, servicehistorik och exakt kamdrivning före köp."
+    }
+  ],
+  "issues": [
+    {
+      "id": "tce-oil-consumption",
+      "title": "1.2 TCe: utred oljeförbrukning och motorhistorik",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {"variantIds": ["12-tce-115"], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "1.2 TCe producerad före mitten av 2016 enligt Renaults uttalande återgivet av Le Monde; tillämpning på en enskild svensk bil måste verifieras"},
+      "description": "Le Monde rapporterar att Renault bekräftat risk för hög oljeförbrukning på vissa 1.2 TCe-motorer tillverkade före mitten av 2016. Renault uppgav samtidigt att någon återkallelse inte bedömts nödvändig. Det är inte ett bevis för skada på varje 1.2 TCe.",
+      "symptoms": ["Ovanligt frekvent påfyllning av motorolja.", "Oljevarning, dokumenterad motordiagnos eller oklar historik kring oljeförbrukning."],
+      "advice": "Fråga om uppmätt oljeförbrukning, serviceintervall och tidigare motorarbete. Köp inte med oljevarning eller oklar motorhistorik utan en oberoende verkstadsbedömning.",
+      "sourceIds": ["tce-investigation"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "suspension-and-steering",
+      "title": "Kontrollera framvagn, fjädrar och styrleder",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Mégane III; TÜV-underlag utan motoravgränsning"},
+      "description": "ADAC anger drivaxlar, styrleder, hjulupphängning, fjädrar och dämpning som negativa punkter i TÜV-underlaget. AUTO BILD pekar särskilt på utslitna krängningshämmarlänkar, brutna fjädrar, läckande dämpare och slitna styrledsändar för Mégane III.",
+      "symptoms": ["Klonk, knack eller glapp på ojämnt underlag.", "Onormal bilhöjd, läckande dämpare, ojämnt däckslitage eller besiktningsanmärkning."],
+      "advice": "Provkör på ojämnt underlag och kontrollera besiktningshistoriken. Låt verkstad bedöma glapp, fjäderbrott, dämparläckage och däckslitage före köp.",
+      "sourceIds": ["adac-megane-iii", "tuv-megane-iii"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "lighting-and-brakes",
+      "title": "Prova belysning och granska bromsar",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Mégane III; TÜV-underlag utan motoravgränsning"},
+      "description": "ADAC lyfter återkommande fel i belysning och bromsar. AUTO BILD anger fler anmärkningar än genomsnittet för halv- och bakljus, bromsar och bromsskivor för Mégane III.",
+      "symptoms": ["Ur funktion varande lampa, varningsmeddelande eller anmärkning om ljus.", "Vibrationer, missljud eller ojämn bromsverkan."],
+      "advice": "Prova samtliga lampor, läs senaste besiktningsprotokoll och provbromsa säkert. Låt verkstad bedöma bromsvibrationer eller ljusfel före köp.",
+      "sourceIds": ["adac-megane-iii", "tuv-megane-iii"],
+      "action": "check"
+    },
+    {
+      "id": "electrical-functions",
+      "title": "Kontrollera luftkonditionering och centrallås",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 4,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Mégane III; AUTO BILD anger ingen motor- eller årsmodellsavgränsning"},
+      "description": "AUTO BILD beskriver fel i luftkonditionering och centrallås kopplade till känslig elektronik för Mégane III. Det är kontrollpunkter och inte ett besked om att varje bil har fel.",
+      "symptoms": ["AC kyler inte som väntat.", "Dörrar eller baklucka låser inte konsekvent med fjärrkontroll eller knapp."],
+      "advice": "Testa klimatanläggning, samtliga dörrlås, baklucka och fjärrnycklar flera gånger före köp. Låt felkoder och intermittent funktion felsökas innan affär.",
+      "sourceIds": ["tuv-megane-iii"],
+      "action": "check"
+    },
+    {
+      "id": "recall-status",
+      "title": "Kontrollera VIN för öppna återkallelser",
+      "category": "other",
+      "kind": "general-check",
+      "priority": 5,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Mégane III; återkallelser är VIN- och produktionsspecifika"},
+      "description": "ADAC dokumenterar flera europeiska kampanjer för Mégane III, bland annat för bromskraftförstärkning, EDC-växellådans programvara och vissa vakuumpumpar. Renault Sverige hänvisar till kundservice och auktoriserade verkstäder för bilinformation med chassinummer. Europeiska kampanjuppgifter är inte ensamma besked för en svensk bil.",
+      "symptoms": ["Saknad dokumentation om återkallelser, servicekampanjer eller programuppdateringar."],
+      "advice": "Begär VIN och låt Renault eller auktoriserad verkstad kontrollera öppna kampanjer. Be om skriftligt underlag för utförda åtgärder.",
+      "sourceIds": ["adac-megane-iii", "renault-contact-se"],
+      "action": "resolve-before-buying"
+    }
+  ],
+  "sources": [
+    {"id": "adac-megane-iii", "title": "ADAC: Gebrauchtwageninformation Renault Mégane (2008–2016), bensin", "url": "https://assets.adac.de/image/upload/Autodatenbank/GWInfo/gw0195-renault-megane-2008-2016-benziner-bericht.pdf", "kind": "independent-test", "accessedAt": "2026-11-20"},
+    {"id": "tuv-megane-iii", "title": "AUTO BILD: Renault Mégane i TÜV-kontroll (2026)", "url": "https://www.autobild.de/artikel/renault-megane-im-tuev-check-2026--28328939.html", "kind": "independent-test", "accessedAt": "2026-11-20"},
+    {"id": "tce-investigation", "title": "Le Monde: utredning om Renaults 1.2 TCe-motorer", "url": "https://www.lemonde.fr/economie/article/2025/06/26/motorgate-renault-vise-par-une-enquete-de-la-direction-de-la-repression-des-fraudes-a-propos-de-ses-moteurs-defectueux_6615992_6653400.html", "kind": "independent-test", "accessedAt": "2026-11-20"},
+    {"id": "renault-contact-se", "title": "Renault Sverige: kontakt och serviceinformation", "url": "https://www.renault.se/om-oss/kontakt", "kind": "manufacturer", "accessedAt": "2026-11-20"},
+    {"id": "price-market", "title": "Wayke: Renault Mégane årsmodell 2015, svenska marknadsannonser", "url": "https://www.wayke.se/sok/renault/megane/2015", "kind": "market-listings", "accessedAt": "2026-11-20"}
+  ],
+  "provenance": {"method": "ai-assisted", "provider": "OpenAI", "model": null, "generatedAt": "2026-11-20", "reviewedBy": null, "reviewedAt": null},
+  "focusYears": {"from": 2014, "to": 2016},
+  "priceObservations": [
+    {"label": "Renault Mégane Grandtour 1.5 dCi, manuell.", "year": 2015, "mileageMil": 19700, "priceSek": 69990, "observedAt": "2026-11-20", "sourceIds": ["price-market"]},
+    {"label": "Renault Mégane Grandtour 1.2 TCe 115, manuell.", "year": 2015, "mileageMil": 5400, "priceSek": 89800, "observedAt": "2026-11-20", "sourceIds": ["price-market"]},
+    {"label": "Renault Mégane Grandtour 1.5 dCi, manuell.", "year": 2015, "mileageMil": 20020, "priceSek": 49900, "observedAt": "2026-11-20", "sourceIds": ["price-market"]}
+  ],
+  "viewingChecklist": [
+    "Matcha motor, effekt, växellåda och kaross mot registreringsuppgifter; Mégane-namnet räcker inte för att fastställa drivlinan.",
+    "För 1.2 TCe: fråga om oljeförbrukning, serviceintervall och tidigare motorarbete.",
+    "Provkör på ojämnt underlag och kontrollera fjädring, styrning, däckslitage och besiktningshistorik.",
+    "Prova belysning, bromsar, klimatanläggning, centrallås och samtliga fjärrnycklar.",
+    "Kontrollera VIN hos Renault för öppna återkallelser och dokumentera utförda verkstadsåtgärder."
+  ]
+}
