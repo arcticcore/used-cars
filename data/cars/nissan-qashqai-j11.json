@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 2,
+  "id": "nissan-qashqai-j11",
+  "brand": "Nissan",
+  "model": "Qashqai",
+  "generation": "J11",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Nissan Qashqai J11 är ett kompakt SUV-alternativ kring 100 000 kr. ADAC lyfter gott om plats, lättbegripliga reglage och en exakt manuell växellåda, men bärgningsstatistiken är svag främst på grund av startbatterier. Svenska 2015-annonser visar flera motor- och växellådsalternativ nära målbudgeten. Granska batteri, bromsar, belysning, framvagn och VIN-bundna kampanjer före köp.",
+  "researchTasks": [
+    "Verifiera motorkod, kamdrivning, exakt växellåda och svensk specifikation för varje enskild bil; detta är inte fastställt i utkastet.",
+    "Kontrollera VIN hos Nissan eller auktoriserad verkstad för öppna återkallelser och dokumentera utförda verkstadsåtgärder.",
+    "Komplettera med fler svenska prisobservationer för årsmodell 2014 och 2016, särskilt för bensin- och automatbilar."
+  ],
+  "variants": [
+    {
+      "id": "12-dig-t-115",
+      "label": "1.2 DIG-T 115 hk bensin",
+      "engineCodes": [],
+      "fuel": "petrol",
+      "yearFrom": 2014,
+      "yearTo": 2016,
+      "transmission": "Manuell eller XTRONIC-CVT; kontrollera bilen",
+      "timingDrive": "unknown",
+      "sourceIds": ["price-market", "tuv-qashqai-j11"],
+      "buyerSummary": "1.2 DIG-T 115 hk förekommer i svenska 2015-annonser med både manuell och automatisk växellåda. Identifiera motorkod, kamdrivning och exakt växellåda i registreringsuppgifter och verkstadsunderlag före köp."
+    },
+    {
+      "id": "15-dci-110",
+      "label": "1.5 dCi 110 hk diesel",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2014,
+      "yearTo": 2016,
+      "transmission": "Manuell; kontrollera bilen",
+      "timingDrive": "unknown",
+      "sourceIds": ["price-market", "adac-qashqai-j11"],
+      "buyerSummary": "1.5 dCi 110 hk förekommer som manuell i svenska 2015-annonser. Säkerställ effektvariant, motorkod, servicehistorik och kamdrivning för den enskilda bilen."
+    },
+    {
+      "id": "16-dci-130",
+      "label": "1.6 dCi 130 hk diesel",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2014,
+      "yearTo": 2016,
+      "transmission": "Manuell eller XTRONIC-CVT; kontrollera bilen",
+      "timingDrive": "unknown",
+      "sourceIds": ["price-market", "adac-qashqai-j11"],
+      "buyerSummary": "1.6 dCi 130 hk förekommer i svenska 2015-annonser med både manuell och XTRONIC-CVT. Säkerställ motorkod, växellåda, servicehistorik och kamdrivning för den enskilda bilen."
+    }
+  ],
+  "issues": [
+    {
+      "id": "starter-battery",
+      "title": "Svagt startbatteri i bärgningsstatistiken",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Qashqai J11 årsmodell 2014–2016; ADAC anger startbatterier för 2014–2021"},
+      "description": "ADAC bedömer Qashqai svagt i sin bärgningsstatistik, främst på grund av startbatterier. ADAC:s komponentöversikt listar startbatteri för årsmodellerna 2014–2021. Det betyder inte att varje bil har ett batterifel.",
+      "symptoms": ["Trög start eller startproblem efter korta körningar.", "Elektriska varningar eller dokumenterade problem med 12-voltsbatteriet."],
+      "advice": "Fråga om batteriets ålder och tidigare startproblem. Be om ett batteritest och avstå från köp med olösta start- eller laddningsproblem utan verkstadsbedömning.",
+      "sourceIds": ["adac-qashqai-j11", "tuv-qashqai-j11"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "suspension-and-steering",
+      "title": "Kontrollera framvagn och styrning",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Qashqai J11 årsmodell 2014–2016; TÜV- och ADAC-underlag utan motoravgränsning"},
+      "description": "ADAC lyfter hjulupphängning och styrdelar som svaga punkter i TÜV-underlaget. AUTO BILD beskriver att Qashqai J11 i medelåldern inte är bättre än föregångaren för fjädring och leder. Detta är kontrollpunkter, inte ett besked om att varje bil har glapp.",
+      "symptoms": ["Klonk, knack eller glapp på ojämnt underlag.", "Ojämnt däckslitage eller anmärkning om styrning eller hjulupphängning vid besiktning."],
+      "advice": "Provkör på ojämnt underlag, läs besiktningshistoriken och låt verkstad kontrollera glapp, däckslitage och framvagn före köp.",
+      "sourceIds": ["adac-qashqai-j11", "tuv-qashqai-j11"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "brake-disc-wear",
+      "title": "Granska bromsskivor och bromskomponenter",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Qashqai J11 årsmodell 2014–2016; TÜV- och ADAC-underlag utan motoravgränsning"},
+      "description": "ADAC anger bromskomponenter som en återkommande punkt i TÜV-underlaget. AUTO BILD uppger att bromsskivor kan slitas snabbt även vid lägre körsträcka, medan bromsledningar och slangar beskrivs som goda. Kontrollera alltså slitdelarna snarare än att utgå från ett systemfel.",
+      "symptoms": ["Vibrationer, missljud eller ojämn bromsverkan.", "Kantiga, rostiga eller kraftigt slitna bromsskivor och besiktningsanmärkningar."],
+      "advice": "Provbromsa säkert, granska skivor och belägg visuellt och begär besiktningsprotokoll. Låt verkstad bedöma vibrationer eller ojämn bromsverkan före köp.",
+      "sourceIds": ["adac-qashqai-j11", "tuv-qashqai-j11"],
+      "action": "check"
+    },
+    {
+      "id": "lighting-functions",
+      "title": "Prova fram- och bakbelysning",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 4,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Qashqai J11 årsmodell 2014–2016; AUTO BILD:s TÜV-underlag utan motoravgränsning"},
+      "description": "AUTO BILD anger att problem med fram- och bakbelysning förekommer oftare än väntat även på yngre Qashqai. Det är en kontrollpunkt och inte ett besked om att varje bil har ett ljusfel.",
+      "symptoms": ["Varningsmeddelande eller lampa som inte fungerar.", "Fukt, skador eller återkommande anmärkningar om belysning i besiktningshistoriken."],
+      "advice": "Prova halvljus, helljus, varselljus, bromsljus, blinkers, backljus och skyltbelysning före köp. Låt återkommande varningar eller fuktproblem felsökas.",
+      "sourceIds": ["tuv-qashqai-j11"],
+      "action": "check"
+    },
+    {
+      "id": "recall-status",
+      "title": "Kontrollera VIN för öppna återkallelser",
+      "category": "other",
+      "kind": "general-check",
+      "priority": 5,
+      "appliesTo": {"variantIds": [], "bodyStyles": [], "transmissions": [], "equipment": [], "label": "Qashqai J11 årsmodell 2014–2016; återkallelser är VIN- och produktionsspecifika"},
+      "description": "ADAC dokumenterar europeiska kampanjer för bland annat en hjulhusinnerskärm som kan beröra bromsledning, kabeldragning till spegelblinkers och programvara för felvarning. Nissan Sverige uppger att auktoriserade Nissan-återförsäljare kan kontrollera andra aktiva kampanjer och åtgärda dem kostnadsfritt. Europeiska kampanjuppgifter är inte ensamma besked för en svensk bil.",
+      "symptoms": ["Saknad dokumentation om återkallelser, servicekampanjer eller programuppdateringar."],
+      "advice": "Begär VIN och låt Nissan eller auktoriserad verkstad kontrollera öppna kampanjer. Be om dokumentation för utförda åtgärder.",
+      "sourceIds": ["adac-qashqai-j11", "nissan-recall-se"],
+      "action": "resolve-before-buying"
+    }
+  ],
+  "sources": [
+    {"id": "adac-qashqai-j11", "title": "ADAC: Gebrauchtwageninformation Nissan Qashqai (2014–2021), diesel", "url": "https://assets.adac.de/Autodatenbank/GWInfo/gw0384-nissan-qashqai-2014-2021-diesel-bericht.pdf", "kind": "independent-test", "accessedAt": "2026-11-21"},
+    {"id": "tuv-qashqai-j11", "title": "AUTO BILD: Nissan Qashqai i TÜV-kontroll (2026)", "url": "https://www.autobild.de/artikel/nissan-qashqai-im-tuev-check-2026--28242167.html", "kind": "independent-test", "accessedAt": "2026-11-21"},
+    {"id": "nissan-recall-se", "title": "Nissan Sverige: avisering om återkallelse", "url": "https://www.nissan.se/agande/avisering-om-aterkallelse.html", "kind": "manufacturer", "accessedAt": "2026-11-21"},
+    {"id": "price-market", "title": "Wayke: Nissan Qashqai årsmodell 2015, svenska marknadsannonser", "url": "https://www.wayke.se/sok/nissan/qashqai/2015", "kind": "market-listings", "accessedAt": "2026-11-21"}
+  ],
+  "provenance": {"method": "ai-assisted", "provider": "OpenAI", "model": null, "generatedAt": "2026-11-21", "reviewedBy": null, "reviewedAt": null},
+  "focusYears": {"from": 2014, "to": 2016},
+  "priceObservations": [
+    {"label": "Nissan Qashqai 1.6 dCi DPF XTRONIC-CVT, automat.", "year": 2015, "mileageMil": 18928, "priceSek": 99900, "observedAt": "2026-11-21", "sourceIds": ["price-market"]},
+    {"label": "Nissan Qashqai 1.5 dCi 110 hk, manuell.", "year": 2015, "mileageMil": 11200, "priceSek": 94000, "observedAt": "2026-11-21", "sourceIds": ["price-market"]},
+    {"label": "Nissan Qashqai 1.2 DIG-T 115 hk, manuell.", "year": 2015, "mileageMil": 12528, "priceSek": 84800, "observedAt": "2026-11-21", "sourceIds": ["price-market"]}
+  ],
+  "viewingChecklist": [
+    "Matcha motor, effekt, växellåda och kaross mot registreringsuppgifter; Qashqai-namnet räcker inte för att fastställa drivlinan.",
+    "Fråga om batteriets ålder och tidigare startproblem, och begär ett batteritest.",
+    "Provkör på ojämnt underlag och kontrollera framvagn, styrning, däckslitage och besiktningshistorik.",
+    "Prova samtliga lampor och bromsar; kontrollera skivor och tidigare besiktningsanmärkningar.",
+    "Kontrollera VIN hos Nissan för öppna återkallelser och dokumentera utförda verkstadsåtgärder."
+  ]
+}
