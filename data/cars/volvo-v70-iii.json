@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 2,
+  "id": "volvo-v70-iii",
+  "brand": "Volvo",
+  "model": "V70",
+  "generation": "III (P3)",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Volvo V70 III är en rymlig kombi för den som vill hitta ett exemplar nära 100 000 kr. ADAC lyfter byggkvalitet, långlivad teknik, komfort, säkerhet och stort bagageutrymme, men pekar också på höga körsträckor, trög basdiesel och blandat resultat i bärgningsstatistiken. Svenska 2014-annonser sträcker sig från ungefär 84 000 kr för högmilade D2/D3 till omkring 140 000 kr för D4. Granska styrning, fram- och bakvagn, bromsar, eventuella oljeläckage och VIN-bundna kampanjer före köp.",
+  "researchTasks": [
+    "Verifiera motorkod, kamdrivning, exakt effekt och växellåda för den enskilda svenska bilen; detta är inte fastställt i utkastet.",
+    "Kontrollera VIN hos Volvoverkstad för öppna återkallelser och dokumentation över utförda kampanjåtgärder.",
+    "Komplettera med fler svenska prisobservationer nära 100 000 kr för årsmodell 2011–2013 och olika växellådor."
+  ],
+  "variants": [
+    {
+      "id": "d2-115",
+      "label": "D2 115 hk diesel",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2011,
+      "yearTo": 2014,
+      "transmission": "Manuell eller automat; kontrollera bilen",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-v70-iii", "price-market"],
+      "buyerSummary": "D2 115 hk förekommer i svenska 2014-annonser med automat. ADAC beskriver de snåla basdieslarna som svaga för den stora kombin; kontrollera därför körkänsla, exakt växellåda, motorkod och servicehistorik för bilen."
+    },
+    {
+      "id": "d3-136",
+      "label": "D3 136 hk diesel",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2012,
+      "yearTo": 2014,
+      "transmission": "Manuell eller automat; kontrollera bilen",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-v70-iii", "price-market"],
+      "buyerSummary": "D3 136 hk förekommer som manuell i svenska 2014-annonser. ADAC listar D3 bland V70:s dieselvarianter; motorkod, kamdrivning och exakt växellåda behöver bekräftas för den enskilda bilen."
+    },
+    {
+      "id": "d4-163",
+      "label": "D4 163 hk diesel",
+      "engineCodes": [],
+      "fuel": "diesel",
+      "yearFrom": 2013,
+      "yearTo": 2014,
+      "transmission": "Manuell eller automat; kontrollera bilen",
+      "timingDrive": "unknown",
+      "sourceIds": ["adac-v70-iii", "price-market"],
+      "buyerSummary": "D4 163 hk förekommer i svenska 2014-annonser med både manuell och automat. Kontrollera motorkod och effekt mot registreringsuppgifter, eftersom senare modellår också fick andra motoralternativ."
+    }
+  ],
+  "issues": [
+    {
+      "id": "suspension-and-steering",
+      "title": "Kontrollera hjulupphängning och styrning",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {"variantIds": [], "bodyStyles": ["Kombi"], "transmissions": [], "equipment": [], "label": "V70 III årsmodell 2011–2014; ADAC:s underlag utan motoravgränsning"},
+      "description": "ADAC pekar ut hjulupphängning, styrning och styrleder som problemområden i TÜV-underlaget för V70. Detta är en kontrollpunkt och inte ett besked om glapp på varje bil.",
+      "symptoms": ["Klonk, knack eller glapp på ojämnt underlag.", "Ojämnt däckslitage eller besiktningsanmärkning om styrning eller hjulupphängning."],
+      "advice": "Provkör på ojämnt underlag, kontrollera däckslitage och läs besiktningshistoriken. Låt verkstad bedöma glapp eller felaktig hjulinställning före köp.",
+      "sourceIds": ["adac-v70-iii"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "rear-axle-bushings",
+      "title": "Granska bussningar i bakvagnen",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {"variantIds": [], "bodyStyles": ["Kombi"], "transmissions": [], "equipment": [], "label": "V70 III årsmodell 2011–2014; AUTO BILD beskriver slitage omkring 16 000 mil beroende på användning"},
+      "description": "AUTO BILD uppger att bussningarna i bakaxeln, beroende på användning, kan få glapp omkring 16 000 mil. Det är inte ett fast bytesintervall eller ett besked om fel på varje V70.",
+      "symptoms": ["Klonk eller orolig känsla från bakvagnen på ojämnt underlag.", "Ojämnt däckslitage eller anmärkning om bussningar vid besiktning."],
+      "advice": "Låt en verkstad kontrollera bakvagnens bussningar vid provkörning eller test före köp, särskilt på bilar med hög körsträcka.",
+      "sourceIds": ["autobild-v70-iii"],
+      "action": "check"
+    },
+    {
+      "id": "rear-brakes",
+      "title": "Kontrollera bakre bromsar och ok",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {"variantIds": [], "bodyStyles": ["Kombi"], "transmissions": [], "equipment": [], "label": "V70 III årsmodell 2011–2014; AUTO BILD:s begagnatunderlag utan motoravgränsning"},
+      "description": "AUTO BILD beskriver den bakre bromsen som mindre hållbar och anger att bromsok kan fallera. Uppgiften är en riktad kontrollpunkt, inte ett påstående om att varje V70 har bromsfel.",
+      "symptoms": ["Vibrationer, missljud eller ojämn bromsverkan.", "Varmt hjul efter körning, kärvande broms eller anmärkning om bromsverkan."],
+      "advice": "Provbromsa säkert, kontrollera senaste besiktningsprotokoll och låt verkstad bedöma ojämn bromsverkan, missljud eller ett varmt hjul före köp.",
+      "sourceIds": ["autobild-v70-iii"],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "oil-leakage",
+      "title": "Kontrollera motor och underrede för oljeläckage",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 4,
+      "appliesTo": {"variantIds": [], "bodyStyles": ["Kombi"], "transmissions": [], "equipment": [], "label": "V70 III årsmodell 2011–2014; ADAC anger enstaka oljeförluster på yngre bilar"},
+      "description": "ADAC uppger att oljeläckage förekommer då och då på yngre V70. Det är inte ett besked om att varje motor läcker eller om läckagets källa.",
+      "symptoms": ["Oljespår på motor eller underrede.", "Oljefläckar på marken, sjunkande oljenivå eller besiktningsanmärkning."],
+      "advice": "Kontrollera motor, växellåda och underrede när bilen är kall och efter provkörning. Låt en verkstad identifiera aktivt läckage innan affär.",
+      "sourceIds": ["adac-v70-iii"],
+      "action": "check"
+    },
+    {
+      "id": "recall-status",
+      "title": "Kontrollera VIN för öppna återkallelser",
+      "category": "other",
+      "kind": "general-check",
+      "priority": 5,
+      "appliesTo": {"variantIds": [], "bodyStyles": ["Kombi"], "transmissions": [], "equipment": [], "label": "V70 III årsmodell 2011–2014; återkallelser är VIN- och produktionsspecifika"},
+      "description": "ADAC dokumenterar flera europeiska kampanjer för V70, bland annat för femcylindriga dieselmotorers remspännare och vissa dieselrelaterade komponenter. Volvo Cars hänvisar till VIN-kontroll och Volvohandlare vid frågor om återkallelser. De europeiska kampanjuppgifterna är inte ensamma besked för en svensk bil.",
+      "symptoms": ["Saknad dokumentation om återkallelser, servicekampanjer eller programuppdateringar."],
+      "advice": "Begär VIN och låt Volvo eller auktoriserad Volvoverkstad kontrollera öppna kampanjer. Be om dokumentation för utförda åtgärder.",
+      "sourceIds": ["adac-v70-iii", "volvo-recalls-se"],
+      "action": "resolve-before-buying"
+    }
+  ],
+  "sources": [
+    {"id": "adac-v70-iii", "title": "ADAC: Gebrauchtwageninformation Volvo V70 (2007–2016), diesel", "url": "https://assets.adac.de/image/upload/Autodatenbank/GWInfo/gw0323-volvo-v70-2007-2016-diesel-bericht.pdf", "kind": "independent-test", "accessedAt": "2026-11-23"},
+    {"id": "autobild-v70-iii", "title": "AUTO BILD: Volvo V70 III, begagnattest", "url": "https://www.autobild.de/artikel/volvo-v70-iii-gebrauchtwagen-test-11513161.html", "kind": "independent-test", "accessedAt": "2026-11-23"},
+    {"id": "volvo-recalls-se", "title": "Volvo Cars Sverige: återkallelser", "url": "https://www.volvocars.com/se/l/aterkallelse/", "kind": "manufacturer", "accessedAt": "2026-11-23"},
+    {"id": "price-market", "title": "Wayke: Volvo V70 årsmodell 2014, svenska marknadsannonser", "url": "https://www.wayke.se/sok/volvo/v70/2014", "kind": "market-listings", "accessedAt": "2026-11-23"}
+  ],
+  "provenance": {"method": "ai-assisted", "provider": "OpenAI", "model": null, "generatedAt": "2026-11-23", "reviewedBy": null, "reviewedAt": null},
+  "focusYears": {"from": 2011, "to": 2014},
+  "priceObservations": [
+    {"label": "Volvo V70 D3 Momentum Business Pro, manuell.", "year": 2014, "mileageMil": 27994, "priceSek": 83900, "observedAt": "2026-11-23", "sourceIds": ["price-market"]},
+    {"label": "Volvo V70 D2 Kinetic, automat.", "year": 2014, "mileageMil": 21000, "priceSek": 84900, "observedAt": "2026-11-23", "sourceIds": ["price-market"]},
+    {"label": "Volvo V70 D4 Momentum, automat.", "year": 2014, "mileageMil": 17579, "priceSek": 139900, "observedAt": "2026-11-23", "sourceIds": ["price-market"]}
+  ],
+  "viewingChecklist": [
+    "Matcha motor, effekt, växellåda och kaross mot registreringsuppgifter; V70-namnet räcker inte för att fastställa drivlinan.",
+    "Provkör på ojämnt underlag och kontrollera styrning, framvagn, bakvagn och däckslitage.",
+    "Prova bromsarna säkert och kontrollera skivor, ok och tidigare besiktningsanmärkningar.",
+    "Kontrollera motor och underrede för oljeläckage samt dokumenterad servicehistorik.",
+    "Kontrollera VIN hos Volvo för öppna återkallelser och dokumentera utförda verkstadsåtgärder."
+  ]
+}
