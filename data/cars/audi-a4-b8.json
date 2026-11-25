@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 2,
+  "id": "audi-a4-b8",
+  "brand": "Audi",
+  "model": "A4",
+  "generation": "B8",
+  "status": "draft",
+  "market": "SE",
+  "focusYears": {
+    "from": 2013,
+    "to": 2013
+  },
+  "budgetTargetSek": 100000,
+  "summary": "A4 Avant passar den som söker en kombi för längre resor. AUTO BILD lyfter riktningsstabiliteten och hur väl kupén håller för många mil. Två svenska annonspriser låg över målbudgeten: 104 900 kr för manuell diesel och 119 900 kr för bensin med automat. Drivlinan avgör vad som är viktigast att undersöka före köp.",
+  "researchTasks": [
+    "Fastställ motorkoder, kamdrivning och automatlådans typ i svensk fabriksdokumentation.",
+    "Kontrollera modellåret på dieselbilen. Wayke anger 2013 och säljartext på annan marknadsplats anger 2012."
+  ],
+  "variants": [
+    {
+      "id": "tdi",
+      "label": "2.0 TDI 136 hk",
+      "fuel": "diesel",
+      "transmission": "Manuell",
+      "buyerSummary": "Den manuella dieseln låg närmast budgeten. Jämför servicekvitton och provkör med fokus på kopplingen.",
+      "engineCodes": [],
+      "timingDrive": "unknown",
+      "yearFrom": 2013,
+      "yearTo": 2013,
+      "sourceIds": [
+        "pris-d",
+        "test"
+      ]
+    },
+    {
+      "id": "tfsi",
+      "label": "1.8 TFSI 170 hk",
+      "fuel": "petrol",
+      "transmission": "Automat",
+      "buyerSummary": "Bensinbilen i urvalet kostade 15 000 kr mer. Be om uppgifter om oljeförbrukning och kontrollera vilken automatlåda bilen har.",
+      "engineCodes": [],
+      "timingDrive": "unknown",
+      "yearFrom": 2013,
+      "yearTo": 2013,
+      "sourceIds": [
+        "pris-b",
+        "test"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "koppling",
+      "title": "Prova kopplingen på den manuella dieseln",
+      "category": "transmission",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {
+        "variantIds": [
+          "tdi"
+        ],
+        "transmissions": [
+          "Manuell"
+        ],
+        "bodyStyles": [
+          "Kombi"
+        ],
+        "equipment": [],
+        "label": "Manuell TDI, B8 Avant i urvalet för 2013"
+      },
+      "description": "AUTO BILD beskriver sliten koppling och fel på dubbelmassesvänghjulet på B8-dieslar. Underlaget anger ingen separat felfrekvens för 136 hk.",
+      "symptoms": [
+        "Varvtalet stiger utan motsvarande fartökning, eller drivlinan vibrerar när bilen börjar rulla."
+      ],
+      "advice": "Låt en verkstad skilja kopplingsslitage från fel på svänghjulet och lämna offert före köp.",
+      "sourceIds": [
+        "test",
+        "tuv"
+      ],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "olja",
+      "title": "Fråga hur mycket olja bensinmotorn drar",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {
+        "variantIds": [
+          "tfsi"
+        ],
+        "transmissions": [],
+        "bodyStyles": [
+          "Kombi"
+        ],
+        "equipment": [],
+        "label": "1.8 TFSI, B8 Avant i urvalet för 2013"
+      },
+      "description": "AUTO BILD rapporterar hög oljeförbrukning hos vissa B8 med 1.8 TFSI. Motorkod och tillverkningsperiod behöver kontrolleras för just 170-hästarsmotorn.",
+      "symptoms": [
+        "Säljaren behöver fylla på olja upprepade gånger mellan servicetillfällena."
+      ],
+      "advice": "Be om antal liter och körsträcka mellan påfyllningarna. Begär ett förbrukningstest om uppgifterna är oklara.",
+      "sourceIds": [
+        "test",
+        "tuv"
+      ],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "multitronic",
+      "title": "Provkör den steglösa automatlådan",
+      "category": "transmission",
+      "kind": "known-problem",
+      "priority": 3,
+      "appliesTo": {
+        "variantIds": [],
+        "transmissions": [
+          "Multitronic"
+        ],
+        "bodyStyles": [
+          "Kombi"
+        ],
+        "equipment": [],
+        "label": "Endast B8 Avant med bekräftad Multitronic, urval 2013"
+      },
+      "description": "AUTO BILD fick problem med Multitronic i sitt långtest och beskriver reparationerna som kostsamma. Kontrollpunkten gäller bilar där lådan identifierats som Multitronic.",
+      "symptoms": [
+        "Bilen tvekar eller rycker när du lägger i drivläge och kör iväg."
+      ],
+      "advice": "Bekräfta lådtypen via verkstaden. Prova framåt och bakåt och be om felsökning vid ryck.",
+      "sourceIds": [
+        "test",
+        "tuv"
+      ],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "kampanjer",
+      "title": "Be Audi kontrollera öppna kampanjer",
+      "category": "other",
+      "kind": "general-check",
+      "priority": 4,
+      "appliesTo": {
+        "variantIds": [],
+        "transmissions": [],
+        "bodyStyles": [
+          "Kombi"
+        ],
+        "equipment": [],
+        "label": "B8 Avant 2013, omfattningen avgörs av chassinumret"
+      },
+      "description": "För B8 har det funnits återkallelser för bland annat bromsservo och krockkuddar. Audi Sveriges separata dieselkontroll gäller utsläppsmjukvaran på vissa dieselbilar.",
+      "symptoms": [
+        "Det saknas besked om vilka kampanjer som gäller bilens chassinummer."
+      ],
+      "advice": "Be en Audiverkstad kontrollera säkerhetsåterkallelser och utförda åtgärder. För diesel, kontrollera också utsläppskampanjen.",
+      "sourceIds": [
+        "tuv",
+        "audi"
+      ],
+      "action": "resolve-before-buying"
+    }
+  ],
+  "sources": [
+    {
+      "id": "test",
+      "title": "AUTO BILD:s begagnattest av A4 B8",
+      "url": "https://www.autobild.de/artikel/audi-a4-b8-gebrauchtwagen-test-10634987.html",
+      "kind": "independent-test",
+      "accessedAt": "2026-11-24"
+    },
+    {
+      "id": "tuv",
+      "title": "AUTO BILD:s genomgång av besiktningar för A4 och A5",
+      "url": "https://www.autobild.de/artikel/audi-a4-a5-im-tuev-check-2026--28217247.html",
+      "kind": "independent-test",
+      "accessedAt": "2026-11-24"
+    },
+    {
+      "id": "audi",
+      "title": "Audi Sveriges kontroll av dieselåtgärden",
+      "url": "https://online.audi.se/carcheck/",
+      "kind": "manufacturer",
+      "accessedAt": "2026-11-24"
+    },
+    {
+      "id": "pris-d",
+      "title": "Wayke, A4 Avant 2.0 TDI manuell",
+      "url": "https://www.wayke.se/objekt/b79de488-ad0d-4a7a-9c49-205277677106",
+      "kind": "market-listings",
+      "accessedAt": "2026-11-25"
+    },
+    {
+      "id": "pris-b",
+      "title": "Wayke, A4 Avant 1.8 TFSI automat",
+      "url": "https://www.wayke.se/objekt/4a899666-2cb7-47c7-8eb9-b72f50656504",
+      "kind": "market-listings",
+      "accessedAt": "2026-11-25"
+    }
+  ],
+  "priceObservations": [
+    {
+      "label": "Avant 2.0 TDI manuell, modellår enligt Wayke",
+      "year": 2013,
+      "mileageMil": 11000,
+      "priceSek": 104900,
+      "observedAt": "2026-11-25",
+      "sourceIds": [
+        "pris-d"
+      ]
+    },
+    {
+      "label": "Avant 1.8 TFSI automat",
+      "year": 2013,
+      "mileageMil": 9036,
+      "priceSek": 119900,
+      "observedAt": "2026-11-25",
+      "sourceIds": [
+        "pris-b"
+      ]
+    }
+  ],
+  "viewingChecklist": [
+    "Stämmer modellår, motorkod och växellåda med verkstadens uppgifter?",
+    "Kan säljaren visa servicekvitton med miltal och uppgifter om oljepåfyllning?",
+    "Hur känns drivlinan när bilen startar kall och när den blivit varm?",
+    "Vilka återkallelser har verkstaden kontrollerat på chassinumret?"
+  ],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": "OpenAI",
+    "model": "gpt-6.2-astra",
+    "generatedAt": "2026-11-25",
+    "reviewedBy": null,
+    "reviewedAt": null
+  }
+}
