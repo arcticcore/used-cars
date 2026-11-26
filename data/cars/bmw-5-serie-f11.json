@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 2,
+  "id": "bmw-5-serie-f11",
+  "brand": "BMW",
+  "model": "5-serie Touring",
+  "generation": "F11",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "520d Touring med 184 hk ger plats åt fyra vuxna med packning. ADAC uppskattade komforten och uppmätte 0,54 liter diesel per mil i sin testbil. Den fyrcylindriga motorn går mindre mjukt än märkets sexor. Två svenska automater av årsmodell 2012 annonserades för 90 000 respektive 99 000 kr. Vid de här miltalen väger servicekvitton och framvagnens skick tungt.",
+  "researchTasks": [
+    "Låt en mänsklig granskare bekräfta svensk motorspecifikation och vilka produktionsserier som berörs av respektive kampanj.",
+    "Komplettera med svenska verkstadsdata om kedjeslitage på just N47D20C."
+  ],
+  "variants": [
+    {
+      "id": "520d",
+      "label": "520d Touring 184 hk",
+      "fuel": "diesel",
+      "engineCodes": [
+        "N47D20C"
+      ],
+      "timingDrive": "chain",
+      "yearFrom": 2012,
+      "yearTo": 2012,
+      "transmission": "Steptronic (automat) i prisurvalet",
+      "buyerSummary": "Tvålitersdiesel med fyra cylindrar och kamkedja. Båda prisexemplen har automat. Kontrollera motorkoden mot bilens handlingar och prova växlingarna både kall och varm.",
+      "sourceIds": [
+        "test",
+        "annons-a",
+        "annons-b"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "kedja",
+      "title": "Lyssna vid kallstart",
+      "category": "engine",
+      "kind": "known-problem",
+      "priority": 1,
+      "appliesTo": {
+        "variantIds": [
+          "520d"
+        ],
+        "bodyStyles": [
+          "Kombi"
+        ],
+        "transmissions": [],
+        "equipment": [],
+        "label": "520d med N47, urval 2012. Underlaget gäller motorfamiljen."
+      },
+      "description": "Reservdelsleverantören FAI beskriver metalliskt rassel från kedjesidan på N47-motorer. Underlaget ger ingen svensk felfrekvens för 520d från 2012.",
+      "symptoms": [
+        "Metalliskt rassel baktill på motorn vid start eller på tomgång."
+      ],
+      "advice": "Be att få starta bilen kall. Låt en BMW-kunnig verkstad fastställa orsaken till kvarstående rassel före köp.",
+      "sourceIds": [
+        "test",
+        "fai"
+      ],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "leder",
+      "title": "Kontrollera glapp i framvagnen",
+      "category": "other",
+      "kind": "known-problem",
+      "priority": 2,
+      "appliesTo": {
+        "variantIds": [],
+        "bodyStyles": [
+          "Kombi"
+        ],
+        "transmissions": [],
+        "equipment": [],
+        "label": "F11 Touring, urval 2012. ADAC:s underlag omfattar även sedan."
+      },
+      "description": "ADAC lyfter slitna leder i framvagnen i sin begagnatguide för femseriens dieslar. En bil kan därför ha god servicehistorik och ändå behöva arbete i framvagnen.",
+      "symptoms": [
+        "Knackningar över ojämnheter eller anmärkningar om glapp i besiktningsprotokollet."
+      ],
+      "advice": "Be om senaste protokollet och låt verkstad kontrollera lederna på lyft om framvagnen låter.",
+      "sourceIds": [
+        "guide"
+      ],
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "egr",
+      "title": "Kontrollera återkallelsen för avgaskylaren",
+      "category": "engine",
+      "kind": "general-check",
+      "priority": 3,
+      "appliesTo": {
+        "variantIds": [
+          "520d"
+        ],
+        "bodyStyles": [
+          "Kombi"
+        ],
+        "transmissions": [],
+        "equipment": [],
+        "label": "520d Touring 2012 om chassinumret omfattas."
+      },
+      "description": "ADAC listar en kampanj för vissa BMW-dieslar där kylvätska kan läcka in i systemet för avgasåterföring (EGR). Vilka svenska bilar som berörs avgörs med chassinumret.",
+      "symptoms": [
+        "Saknat besked om kampanjstatus eller återkommande behov av att fylla på kylvätska."
+      ],
+      "advice": "Kontrollera chassinumret hos BMW och be om besked om utförda åtgärder. Låt verkstad utreda kylvätskeförlust även om kampanjen är avslutad.",
+      "sourceIds": [
+        "test",
+        "bmw"
+      ],
+      "action": "resolve-before-buying"
+    }
+  ],
+  "sources": [
+    {
+      "id": "test",
+      "title": "ADAC:s test och tekniska data för 520d Touring",
+      "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/bmw/5er-reihe/f07-f10-f10m-f11/222707/",
+      "kind": "independent-test",
+      "accessedAt": "2026-11-26"
+    },
+    {
+      "id": "guide",
+      "title": "ADAC:s begagnatguide för BMW 5-serie diesel 2010–2017",
+      "url": "https://assets.adac.de/Autodatenbank/GWInfo/gw0133-bmw-5er-reihe-2010-2017-diesel-bericht.pdf",
+      "kind": "independent-test",
+      "accessedAt": "2026-11-26"
+    },
+    {
+      "id": "fai",
+      "title": "FAI:s tekniska bulletin om kamkedjan i N47",
+      "url": "https://www.faiauto.com/wp-content/uploads/2026/04/Final-TB0092-BMW-N47.pdf",
+      "kind": "manufacturer",
+      "accessedAt": "2026-11-26"
+    },
+    {
+      "id": "bmw",
+      "title": "BMW Sveriges kontroll av återkallelser",
+      "url": "https://www.bmw.se/sv/kontakt/bli-kontaktad.html",
+      "kind": "manufacturer",
+      "accessedAt": "2026-11-26"
+    },
+    {
+      "id": "annons-a",
+      "title": "Blocket, 520d Touring vid 20 667 mil",
+      "url": "https://www.blocket.se/mobility/item/28542199",
+      "kind": "market-listings",
+      "accessedAt": "2026-11-26"
+    },
+    {
+      "id": "annons-b",
+      "title": "Blocket, 520d Touring vid 32 000 mil",
+      "url": "https://www.blocket.se/mobility/item/28073124",
+      "kind": "market-listings",
+      "accessedAt": "2026-11-26"
+    }
+  ],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": "OpenAI",
+    "model": "gpt-6.2-astra",
+    "generatedAt": "2026-11-26",
+    "reviewedBy": null,
+    "reviewedAt": null
+  },
+  "focusYears": {
+    "from": 2012,
+    "to": 2012
+  },
+  "priceObservations": [
+    {
+      "label": "520d Touring Steptronic 184 hk, begärt pris.",
+      "year": 2012,
+      "mileageMil": 20667,
+      "priceSek": 99000,
+      "observedAt": "2026-11-26",
+      "sourceIds": [
+        "annons-a"
+      ]
+    },
+    {
+      "label": "520d Touring Steptronic 184 hk, begärt pris.",
+      "year": 2012,
+      "mileageMil": 32000,
+      "priceSek": 90000,
+      "observedAt": "2026-11-26",
+      "sourceIds": [
+        "annons-b"
+      ]
+    }
+  ],
+  "viewingChecklist": [
+    "Finns kvitton med miltal för service och eventuellt kedjearbete?",
+    "Hur låter motorn vid första starten för dagen?",
+    "Växlar bilen mjukt när du kör iväg och efter att den blivit varm?",
+    "Vad visar besiktningsprotokollet om framvagnen och BMW:s register om återkallelser?"
+  ]
+}
