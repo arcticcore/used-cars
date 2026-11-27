@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 2,
+  "id": "toyota-prius-plug-in-zvw35",
+  "brand": "Toyota",
+  "model": "Prius Plug-in Hybrid",
+  "generation": "I (ZVW35)",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Första Prius Plug-in passar särskilt den som kan ladda hemma och ofta kör korta sträckor. ADAC uppskattade den låga förbrukningen och det lättlastade bagaget, men noterade begränsad runtomsikt, stor vändcirkel och svag kupévärme. Två svenska exemplar av årsmodell 2012 annonserades för 94 950 och 98 000 kr. Prova laddningen och värmen på den bil du överväger.",
+  "researchTasks": [
+    "Verifiera svensk kampanjomfattning för högvoltsbatteriets säkring hos Toyota Sverige.",
+    "Komplettera med svenska verkstadsdata om batteriernas kapacitet och reparationskostnader vid omkring 20 000 mil."
+  ],
+  "variants": [
+    {
+      "id": "18-plug-in",
+      "label": "1.8 Plug-in Hybrid 136 hk",
+      "fuel": "hybrid",
+      "engineCodes": [
+        "2ZR-FXE"
+      ],
+      "timingDrive": "chain",
+      "yearFrom": 2012,
+      "yearTo": 2012,
+      "transmission": "Elektroniskt styrd steglös automat (e-CVT)",
+      "buyerSummary": "Bensinmotorn ger 99 hk och drivlinan som helhet 136 hk. Ladduttaget och litiumjonbatteriet kännetecknar laddhybriden. När den laddade elräckvidden är förbrukad kan bilen fortsätta som bensinhybrid.",
+      "sourceIds": [
+        "adac",
+        "pris-b"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "sakring",
+      "title": "Kontrollera kampanjstatus för batteriets säkring",
+      "kind": "general-check",
+      "description": "Toyota dokumenterade i USA att säkringen kunde spricka efter upprepad hög belastning vid eldrift. Följden kunde bli minskad effekt eller förlorad drivning.",
+      "symptoms": [
+        "Hybridvarning, effektbortfall eller oklar kampanjhistorik."
+      ],
+      "advice": "Be Toyota kontrollera öppna och utförda återkallelser mot chassinumret. Låt verkstad utreda en aktiv hybridvarning före köp.",
+      "sourceIds": [
+        "sakring-us",
+        "toyota-se"
+      ],
+      "priority": 1,
+      "category": "other",
+      "action": "resolve-before-buying",
+      "appliesTo": {
+        "variantIds": [
+          "18-plug-in"
+        ],
+        "bodyStyles": [
+          "Halvkombi"
+        ],
+        "transmissions": [],
+        "equipment": [],
+        "label": "Amerikansk kampanj 17V-718 för vissa Prius PHV 2012–2015. Svensk tillämplighet avgörs per bil."
+      }
+    },
+    {
+      "id": "batteri",
+      "title": "Prova laddningen och begär batteriprotokoll",
+      "kind": "general-check",
+      "description": "Toyota erbjuder kontroll av hybridsystem och hybridbatteri. Ett färskt protokoll och en provtur med laddat batteri ger bättre beslutsunderlag än räckviddssiffran i annonsen.",
+      "symptoms": [
+        "Laddningen avbryts eller bilen visar felmeddelande."
+      ],
+      "advice": "Prova med den medföljande kabeln. Kontrollera att laddningen startar och be säljaren visa vad senaste batterikontrollen faktiskt omfattade.",
+      "sourceIds": [
+        "halsa",
+        "adac"
+      ],
+      "priority": 2,
+      "category": "other",
+      "action": "check",
+      "appliesTo": {
+        "variantIds": [
+          "18-plug-in"
+        ],
+        "bodyStyles": [
+          "Halvkombi"
+        ],
+        "transmissions": [],
+        "equipment": [],
+        "label": "Prius Plug-in 2012 med extern laddning."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "adac",
+      "title": "ADAC:s test av Prius 1.8 Plug-in Hybrid Life",
+      "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/toyota/prius/zvw30-zvw35-facelift/233817/",
+      "kind": "independent-test",
+      "accessedAt": "2026-11-27"
+    },
+    {
+      "id": "sakring-us",
+      "title": "Toyotas amerikanska återkallelserapport för Prius PHV",
+      "url": "https://static.nhtsa.gov/odi/rcl/2017/RCLRPT-17V718-8033.PDF",
+      "kind": "manufacturer",
+      "accessedAt": "2026-11-27"
+    },
+    {
+      "id": "toyota-se",
+      "title": "Toyota Sveriges återkallelsekontroll",
+      "url": "https://www.toyota.se/forms/recall",
+      "kind": "manufacturer",
+      "accessedAt": "2026-11-27"
+    },
+    {
+      "id": "halsa",
+      "title": "Toyota Sverige om kontroll av hybridbatteriet",
+      "url": "https://www.toyota.se/artiklar/hur-lange-haller-ett-hybridbatteri",
+      "kind": "manufacturer",
+      "accessedAt": "2026-11-27"
+    },
+    {
+      "id": "pris-a",
+      "title": "Blocket, laddhybrid vid 20 900 mil",
+      "url": "https://www.blocket.se/mobility/item/27707464",
+      "kind": "market-listings",
+      "accessedAt": "2026-11-27"
+    },
+    {
+      "id": "pris-b",
+      "title": "Blocket, laddhybrid vid 19 638 mil",
+      "url": "https://www.blocket.se/mobility/item/28521635",
+      "kind": "market-listings",
+      "accessedAt": "2026-11-27"
+    }
+  ],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": "OpenAI",
+    "model": "gpt-6.2-astra",
+    "generatedAt": "2026-11-27",
+    "reviewedBy": null,
+    "reviewedAt": null
+  },
+  "focusYears": {
+    "from": 2012,
+    "to": 2012
+  },
+  "priceObservations": [
+    {
+      "label": "Prius Plug-in Hybrid 1.8, automat, annonspris.",
+      "year": 2012,
+      "mileageMil": 20900,
+      "priceSek": 98000,
+      "observedAt": "2026-11-27",
+      "sourceIds": [
+        "pris-a"
+      ]
+    },
+    {
+      "label": "Prius Plug-in Hybrid 1.8, automat, annonspris.",
+      "year": 2012,
+      "mileageMil": 19638,
+      "priceSek": 94950,
+      "observedAt": "2026-11-27",
+      "sourceIds": [
+        "pris-b"
+      ]
+    }
+  ],
+  "viewingChecklist": [
+    "Kan du ladda bilen med kabeln som följer med?",
+    "Vad visar senaste protokollet för hybridbatteriet?",
+    "Hur fungerar kupévärmen och sikten när du provkör?",
+    "Har Toyota bekräftat kampanjstatus för bilens chassinummer?"
+  ]
+}
