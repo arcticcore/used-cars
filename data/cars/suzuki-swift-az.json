@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 2,
+  "id": "suzuki-swift-az",
+  "brand": "Suzuki",
+  "model": "Swift",
+  "generation": "AZ",
+  "status": "draft",
+  "market": "SE",
+  "budgetTargetSek": 100000,
+  "summary": "Swift 1.2 Dualjet är en femdörrars småbil för den som klarar sig med 265 liters bagageutrymme. Två manuella bilar av årsmodell 2018 annonserades för omkring 100 000 kr. Bromsarna som helhet klarar sig bra i tyska besiktningar, men hos de tidiga bilarna förtjänar bromsledningarna en närmare titt. Kontrollera också säkerhetspaketet när du jämför två exemplar.",
+  "researchTasks": [
+    "Verifiera med Suzuki Sverige vilka chassinummer som omfattas av krockkuddekampanjen och hur säkerhetspaketet identifieras på svensksålda bilar.",
+    "Komplettera med svenskt underlag om motor- och växellådsfel för den manuella 90-hästarsversionen."
+  ],
+  "variants": [
+    {
+      "id": "12-dualjet",
+      "label": "1.2 Dualjet 90 hk, manuell",
+      "fuel": "petrol",
+      "yearFrom": 2018,
+      "yearTo": 2018,
+      "engineCodes": [
+        "K12C"
+      ],
+      "transmission": "Femväxlad manuell",
+      "timingDrive": "chain",
+      "sourceIds": [
+        "adac",
+        "pris-a",
+        "pris-b"
+      ],
+      "buyerSummary": "Den undersökta bensinversionen har kamkedja och fem manuella växlar. Kontrollera drivlinan i bilens handlingar eftersom även mildhybrider annonseras som 1.2 Dualjet."
+    }
+  ],
+  "issues": [
+    {
+      "id": "airbag",
+      "title": "Kontrollera uppdateringen av krockkuddarnas styrenhet",
+      "category": "other",
+      "kind": "general-check",
+      "description": "ADAC beskriver en kampanj från 2019 där en felprogrammerad styrenhet kunde lösa ut sidokrockkuddar, krockgardiner och bältessträckare när en bakdörr stängdes hårt. Åtgärden var omprogrammering.",
+      "symptoms": [
+        "Det saknas besked om bilens kampanjstatus."
+      ],
+      "advice": "Be en Suzukiverkstad slå på chassinumret och bekräfta om bilen berörs och om uppdateringen har utförts.",
+      "sourceIds": [
+        "adac"
+      ],
+      "priority": 1,
+      "appliesTo": {
+        "variantIds": [],
+        "bodyStyles": [
+          "Halvkombi"
+        ],
+        "transmissions": [],
+        "equipment": [],
+        "label": "Vissa Swift i den europeiska kampanjen. För en svensk 2018 avgör chassinumret."
+      },
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "bromsledningar",
+      "title": "Låt verkstaden kontrollera bromsledningarna",
+      "category": "rust",
+      "kind": "known-problem",
+      "description": "I TÜV-underlaget för de tidiga årsmodellerna av denna generation var rost på bromsledningarna något vanligare än genomsnittet. En provbromsning visar inte hur rören ser ut under bilen.",
+      "symptoms": [
+        "Rostangrepp på bromsrören eller en tidigare besiktningsanmärkning."
+      ],
+      "advice": "Läs senaste protokollet. Be om kontroll på lyft och ett kostnadsförslag om ledningarna är angripna.",
+      "sourceIds": [
+        "tuv"
+      ],
+      "priority": 2,
+      "appliesTo": {
+        "variantIds": [],
+        "bodyStyles": [
+          "Halvkombi"
+        ],
+        "transmissions": [],
+        "equipment": [],
+        "label": "Tidiga Swift i generationen 2017–2024, tyskt besiktningsunderlag."
+      },
+      "action": "resolve-before-buying"
+    },
+    {
+      "id": "ljus",
+      "title": "Prova framljusen",
+      "category": "other",
+      "kind": "known-problem",
+      "description": "Tyska besiktningar av generationen visar återkommande anmärkningar på främre belysningen.",
+      "symptoms": [
+        "En lampa lyser svagt, ojämnt eller inte alls."
+      ],
+      "advice": "Prova halvljus, helljus och positionsljus med bilen stilla och jämför höger och vänster sida.",
+      "sourceIds": [
+        "tuv"
+      ],
+      "priority": 3,
+      "appliesTo": {
+        "variantIds": [],
+        "bodyStyles": [
+          "Halvkombi"
+        ],
+        "transmissions": [],
+        "equipment": [],
+        "label": "Generation 2017–2024, utan motoravgränsning i TÜV-underlaget."
+      },
+      "action": "check"
+    }
+  ],
+  "sources": [
+    {
+      "id": "adac",
+      "title": "ADAC:s specifikation och återkallelser för Swift 1.2 Dualjet Comfort",
+      "url": "https://www.adac.de/rund-ums-fahrzeug/autokatalog/marken-modelle/suzuki/swift/6generation/273546/",
+      "kind": "independent-test",
+      "accessedAt": "2026-11-28"
+    },
+    {
+      "id": "tuv",
+      "title": "AUTO BILD:s genomgång av TÜV:s besiktningar av Suzuki Swift",
+      "url": "https://www.autobild.de/artikel/suzuki-swift-im-tuev-check-2026--28278343.html",
+      "kind": "independent-test",
+      "accessedAt": "2026-11-28"
+    },
+    {
+      "id": "ncap",
+      "title": "Euro NCAP:s två säkerhetsbetyg för Swift 2017",
+      "url": "https://news.euroncap.com/safercars/suzuki-swift---euro-ncap-results-2017/s/b7d6e247-4b85-4a58-abec-e29b9cb71583",
+      "kind": "independent-test",
+      "accessedAt": "2026-11-28"
+    },
+    {
+      "id": "pris-a",
+      "title": "Blocket, Swift 1.2 vid 8 025 mil",
+      "url": "https://www.blocket.se/mobility/item/27074874",
+      "kind": "market-listings",
+      "accessedAt": "2026-11-28"
+    },
+    {
+      "id": "pris-b",
+      "title": "Blocket, Swift 1.2 vid 12 377 mil",
+      "url": "https://www.blocket.se/mobility/item/26618808",
+      "kind": "market-listings",
+      "accessedAt": "2026-11-28"
+    }
+  ],
+  "provenance": {
+    "method": "ai-assisted",
+    "provider": "OpenAI",
+    "model": "gpt-6.2-astra",
+    "generatedAt": "2026-11-28",
+    "reviewedBy": null,
+    "reviewedAt": null
+  },
+  "focusYears": {
+    "from": 2018,
+    "to": 2018
+  },
+  "priceObservations": [
+    {
+      "label": "Swift 1.2 Dualjet 90 hk, fem dörrar, manuell. Begärt pris.",
+      "year": 2018,
+      "mileageMil": 8025,
+      "priceSek": 99900,
+      "observedAt": "2026-11-28",
+      "sourceIds": [
+        "pris-a"
+      ]
+    },
+    {
+      "label": "Swift 1.2 Dualjet 90 hk, fem dörrar, manuell. Begärt pris.",
+      "year": 2018,
+      "mileageMil": 12377,
+      "priceSek": 99500,
+      "observedAt": "2026-11-28",
+      "sourceIds": [
+        "pris-b"
+      ]
+    }
+  ],
+  "viewingChecklist": [
+    "Har bilen säkerhetspaketet som gav fyra stjärnor i Euro NCAP:s test 2017? Standardbilen fick tre.",
+    "Finns dokumentation om krockkuddekampanjen och bromsledningarnas skick?",
+    "Fungerar alla framljus?",
+    "Går alla fem växlar i utan missljud under provkörningen?"
+  ]
+}
